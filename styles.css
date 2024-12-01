@@ -1,0 +1,56 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.division {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.division-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.division-hq {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.brigade-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.brigade {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    background-color: #e8e8e8;
+    width: 250px;
+    text-align: center;
+}
+
+.brigade-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.unit {
+    font-size: 16px;
+    margin: 5px 0;
+}
