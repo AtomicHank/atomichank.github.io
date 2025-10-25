@@ -1,0 +1,13 @@
+Warning 6: Normalized/laundered field name: 'SRCLATLON (G=GoogleLowRes H=GoogleHighRes X=not found)' to 'SRCLATLON'
+Warning 6: Normalized/laundered field name: 'R1DIMSRC (G=googlelowres H=googlehighres)' to 'R1DIMSRC ('
+Warning 1: Field 'R2len' already exists. Renaming it as 'R2len2'
+Warning 6: Normalized/laundered field name: 'MILPURPOSECODE' to 'MILPURPOSE'
+Warning 6: Normalized/laundered field name: 'SRCLATLON (G=GoogleLowRes H=GoogleHighRes X=not found)' to 'SRCLATLON'
+Warning 6: Normalized/laundered field name: 'R1DIMSRC (G=googlelowres H=googlehighres)' to 'R1DIMSRC ('
+Warning 1: Field 'R2len' already exists. Renaming it as 'R2len2'
+Warning 6: Normalized/laundered field name: 'MILPURPOSECODE' to 'MILPURPOSE'
+Warning 6: Normalized/laundered field name: 'SRCLATLON (G=GoogleLowRes H=GoogleHighRes X=not found)' to 'SRCLATLON'
+Warning 6: Normalized/laundered field name: 'R1DIMSRC (G=googlelowres H=googlehighres)' to 'R1DIMSRC ('
+Warning 1: Field 'R2len' already exists. Renaming it as 'R2len2'
+Warning 6: Normalized/laundered field name: 'MILPURPOSECODE' to 'MILPURPOSE'
+Warning 1: Value 'Greem Bell is the northernmost airfield in the world that regularly handles jet aircraft.  It operates under the authority of OGA (Arctic Control Group).  It appears to have been constructed in the late 1950s to guard the north approaches to Novaya Zemlya against reconnaissance flights, or as a front-line interceptor base for incoming American bombers.  Four Tu-128 long-range interceptors belonging to 72 GV AP (from Amderma) were based here in 1979.' of field NOTES has been truncated to 254 characters.  This warning will not be emitted any more for that layer.
