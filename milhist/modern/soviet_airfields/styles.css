@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url("https://use.typekit.net/kva4hup.css");
+
+   
+/* CSS Document */
+	body {
+    background-color: #041C2C;
+    	}
+      .container {
+        width:100%;
+        background-color:#041C2C;
+        margin: 0 auto;
+      }
+/* Main Text Box Border*/
+      .divy{
+        border:1px solid #B1B3B3;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .header{
+        height: 210px
+      }
+      .footer{
+        height: 100px
+	    color: #041C2C
+	    padding: 20px
+      }
+/* Main Text Box */
+      .main{
+        width:80%;
+        float:right;
+        background-color: #041C2C;
+		color: #888B8D
+      }
+/* Side Menu */
+      .bgcolor{
+        background-color:#041C2C;
+      }
+/* Main Text Box Sections*/
+      div.para {
+      text-indent: 50px;
+      }
+/* Main Text Box List */
+      div.para-list {
+      text-indent: 0px;
+      color: #000000
+      }
+/* H1 Text */
+      h1{
+        color: #888B8D;
+        text-decoration: underline;
+      }
+/* H3 Text */
+      h3 {
+      color: #888B8D;
+      }
+/* Side Menu Background*/
+      .sidemenu {
+        width:20%;
+        float:left;
+        color: #041C2C;
+      }
+/* Side Menu Tab Border */
+      .sidemenu li {
+        display: vertical-block;
+        height: 50px;
+        line-height:45px;
+        font-size: 18px;
+        border:1px;
+        border-bottom: 10px solid #041C2C;
+        min-width: 70px;
+        padding: 0px
+      }
+/* Side Menu Text */
+      .sidemenu a{
+        text-decoration: none;
+        color: #041C2C;
+        display: block;
+      }
+       .sidemenu a: hover{
+        background-color: red;
+        color: white;
+      }
+/* Side Menu Tabs */
+       .sidemenu ul {
+        background-color: #FFD478;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 10;
+      }
+      .clearfix{
+        clear:both;
+         }
+/* Footer */
+    .col-1{
+        width:100%;
+		background-color: #888B8D;
+        display: inline-block;
+        margin-bottom: 20px;
+        color: black;
+	    padding-left:10px
+    }
+/* Footer Link Color*/
+      .col-1 a{
+        text-decortation: none;
+        color:black;
+      }
+/* Footer */
+    .col-2{
+        width:33%;
+		background-color: #888B8D;
+        display: inline-block;
+        color: black
+    }
