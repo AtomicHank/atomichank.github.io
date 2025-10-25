@@ -5,33 +5,147 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Load Leaflet CSS -->
-    <link rel="stylesheet" href="../../../../leaflet/leaflet.css" />
+    <!-- Load Leaflet CSS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        .airfield-popup {
+            max-width: 300px;
+        }
+        .airfield-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .airfield-info {
+            font-size: 12px;
+            margin: 4px 0;
+        }
+    </style>
 </head>
 <body>
-    <div id="map" style="width: 3000px; height: 800px;"></div>
+    <div id="map"></div>
     
-    <!-- Load Leaflet JS -->
-    <script src="../../../../leaflet/leaflet.js"></script>
+    <!-- Load Leaflet JS from CDN -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([61.273317, 89.560231], 3.5); // Center on Moscow, Russia
+        // Initialize the map centered on former Soviet Union territory
+        var map = L.map('map').setView([55.7558, 60.0], 4); // Center roughly on Russia/Former USSR
 
-        // Add a base layer (OpenStreetMap)
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        }).addTo(map);
-        
+        // Add multiple base layer options
+        var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri',
+            maxZoom: 18
+        });
+
+        var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 19
+        });
+
+        var topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap',
+            maxZoom: 17
+        });
+
+        // Add satellite layer as default
+        satelliteLayer.addTo(map);
+
+        // Create layer control
+        var baseLayers = {
+            "Satellite": satelliteLayer,
+            "Street Map": osmLayer,
+            "Topographic": topoLayer
+        };
+
+        L.control.layers(baseLayers).addTo(map);
+
+        // Custom icon for airfields
+        var airfieldIcon = L.divIcon({
+            html: '<div style="background-color: red; width: 8px; height: 8px; border-radius: 50%; border: 1px solid white;"></div>',
+            className: 'airfield-marker',
+            iconSize: [10, 10],
+            iconAnchor: [5, 5]
+        });
+
         // Load GeoJSON data
         fetch('sovietbase.geojson')
-            .then(response => response.json())
-            .then(data => {
-                // Add GeoJSON layer to the map
-                L.geoJSON(data).addTo(map);
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
-            .catch(err => console.log(err));
+            .then(data => {
+                console.log('Loaded ' + data.features.length + ' airfields');
+                
+                // Add GeoJSON layer to the map with custom styling and popups
+                L.geoJSON(data, {
+                    pointToLayer: function(feature, latlng) {
+                        return L.marker(latlng, {icon: airfieldIcon});
+                    },
+                    onEachFeature: function(feature, layer) {
+                        // Create popup content
+                        var props = feature.properties;
+                        var popupContent = '<div class="airfield-popup">';
+                        
+                        // Airfield name
+                        if (props['NAME (ENG)']) {
+                            popupContent += '<div class="airfield-name">' + props['NAME (ENG)'] + '</div>';
+                        }
+                        
+                        // Key information
+                        if (props['ALT NAMES']) {
+                            popupContent += '<div class="airfield-info"><strong>Alt Names:</strong> ' + props['ALT NAMES'] + '</div>';
+                        }
+                        if (props['ICAO'] && props['ICAO'].trim()) {
+                            popupContent += '<div class="airfield-info"><strong>ICAO:</strong> ' + props['ICAO'] + '</div>';
+                        }
+                        if (props['OBLAST']) {
+                            popupContent += '<div class="airfield-info"><strong>Oblast:</strong> ' + props['OBLAST'] + '</div>';
+                        }
+                        if (props['COUNTRY']) {
+                            popupContent += '<div class="airfield-info"><strong>Country:</strong> ' + props['COUNTRY'] + '</div>';
+                        }
+                        if (props['ELEV1FT']) {
+                            popupContent += '<div class="airfield-info"><strong>Elevation:</strong> ' + props['ELEV1FT'] + ' ft</div>';
+                        }
+                        if (props['USE']) {
+                            popupContent += '<div class="airfield-info"><strong>Use:</strong> ' + props['USE'] + '</div>';
+                        }
+                        if (props['OPR']) {
+                            popupContent += '<div class="airfield-info"><strong>Operator:</strong> ' + props['OPR'] + '</div>';
+                        }
+                        if (props['R1L']) {
+                            popupContent += '<div class="airfield-info"><strong>Runway Length:</strong> ' + props['R1L'] + ' m</div>';
+                        }
+                        if (props['NOTES'] && props['NOTES'].trim()) {
+                            popupContent += '<div class="airfield-info"><strong>Notes:</strong> ' + props['NOTES'] + '</div>';
+                        }
+                        
+                        // Coordinates
+                        popupContent += '<div class="airfield-info"><strong>Coordinates:</strong> ' + 
+                                      props['LAT'].toFixed(4) + '°, ' + props['LON'].toFixed(4) + '°</div>';
+                        
+                        popupContent += '</div>';
+                        
+                        layer.bindPopup(popupContent);
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON:', error);
+                alert('Error loading airfield data. Please ensure sovietbase.geojson is in the same directory as this HTML file.');
+            });
     </script>
 </body>
 </html>
-
