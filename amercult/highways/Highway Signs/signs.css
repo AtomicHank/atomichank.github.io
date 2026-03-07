@@ -1,0 +1,190 @@
+/* Last modified October 8, 2007 */
+/* Previously modified January 26, 1998 */
+
+BODY {
+  background: white;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+form {
+  margin: 0;
+}
+
+H1 {
+  color: black;
+}
+
+H2 {
+  color: #339900;
+}
+
+H1, H2 {
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0em;
+}
+
+H3 {
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+H4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+H5 {
+  color: black;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+P.caption {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+P.author {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  background: #cccccc;
+  color: black;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  padding: 0.25em;
+  margin: 0em;
+}
+
+#navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+}
+
+#navbar ul {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline;
+} 
+
+#navbar ul li {
+  margin-left: 0;
+  padding: 0.25em 1em;
+  list-style: none;
+  display: inline;
+}
+	
+#navbar ul li.about {
+  text-align: right;
+}
+
+#navbar_2 {
+  float: right;
+  margin: 1em;
+  padding: 0em;
+  background: #dddddd;
+  color: black;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: smaller;
+}
+
+div#navbar_2 {
+  border-top: 0.5em solid #bbbbbb;
+}
+
+#navbar_2 a {
+  text-decoration: none;
+}
+
+#navbar_2 a:hover {
+  text-decoration: underline;
+}
+
+#navbar_2 ul {
+  margin: 0;
+  padding: 0.5em;
+  border-bottom: 1em solid white;
+} 
+
+#navbar_2 select {
+  width: 10.5em;
+}
+
+#navbar_2 ul li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+#navbar_2 ul li.last {
+  margin-bottom: 0em;
+}
+
+#content {
+  padding: 1em;
+  width: 70%;
+}
+
+#footer {
+  background: #cccccc;
+  color: black;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  padding: 1em;
+  margin: 0em;
+}
+
+.prev_arrow {
+  margin-right: 0.5em;
+}
+
+.next_arrow {
+  margin-left: 0.5em;
+}
+
+.sign_images {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.sign_images .column {
+  width: 50%;
+}
+
+.sign_info {
+}
+
+.sign_info img {
+  border: none;
+  vertical-align: middle;
+}
+
+.sign_thumbnail {
+  width: 60px;
+}
+
+.sign_caption {
+}
+
+.sign_caption .info {
+  font-size: small;
+}
+
+.source {
+  font-size: small;
+  color: #666666;
+}
+
+.license {
+  font-size: small;
+  color: #666666;
+}

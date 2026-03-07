@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url("https://use.typekit.net/kva4hup.css");
+
+  body{
+    width:auto;
+    background-color: #041C2C;
+  }
+	
+	 section#div1{
+      float: left;
+      width: 411px;
+      height: 550px;
+      margin: 20px 0px 0px 20px;
+      background-color: #FFD478;
+      border: 2px solid black;
+      padding: 0px 0px 0px 0px;
+      text-align: center;
+    }
+	
+    section#div2{
+      float: left;
+      width: 370px;
+      height: 250px;
+      margin: 20px 50px 0px 20px;
+      background-color: #888B8D;
+      border: 2px solid black;
+      padding: 0px 0px 0px 0px;
+      text-align: center;
+    }

@@ -1,0 +1,12 @@
+.banner {
+   background: #408614;
+}
+
+#navbar ul li.selected {
+   background: #408614;
+   color: white;
+}
+
+#navbar ul li.selected a {
+   color: white;
+}
