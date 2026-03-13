@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Land Nav</title>
+	  <link rel="stylesheet" href="../styles.css">
+    <style>
+	body {
+    background-color: #041C2C;
+    	}
+      .container {
+        width:1080px;
+        background-color: #041C2C;
+        margin: 0 auto;
+      }
+      .divy{
+        border:1px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .header{
+        height: 210px
+      }
+      .footer{
+        height: 100px
+	      color: white
+	      padding: 20px
+      }
+      .main{
+        width:100%;
+        float:right;
+        background-color:white;
+      }
+      .bgcolor{
+        background-color:white;
+      }
+      div.tab {
+      text-indent: 50px;
+      }
+      div.para-list {
+      text-indent: 0px;
+      color: black
+      }
+      h1{
+        color: black;
+        text-decoration: underline;
+      }
+      h3 {
+      color: black;
+      text-decoration: underline;
+    }
+     </style>
+</head>
+
+  <body>
+    <div class="container">
+        <div id="block1" class="header"><img src="images/legend.png" height="210px" width="100%"></div>
+      <div class="bgcolor">
+      <div class="main">
+        <div id="block2" class="divy">
+          <h1 align-text="centered";>Map Reading</h1>
+            <h3>Intro to Maps</h3>
+              <div class="tab">
+              <p style="color:black;"> A map is a graphic representation of a portion of the earth’s surface drawn to scale, as seen from above. It uses colors, symbols, and labels to represent features found on the ground. There are many types of maps, and they have evolved from maps that were simply drawings to maps that scientifically convey information, portray what the ground looks like, and display information about a topic or area. Examples of maps include globes, road maps, geographic maps, and topographical maps. Any map can be printed or digital. A collection of maps is referred to as an atlas.<br>
+			<br>
+			  A globe is a representative model of the earth. It is three-dimensional and shows the earth at a very small scale. Because they are sphereical, globes don’t have to deal with the problem of making a spherical world flat. They show shapes and distance as they actually are. A road map or route map is a map that primarily displays roads and transport systems rather than natural geographical information. It commonly includes political boundaries and labels, points of interest, major features such as airports or prominent buildings, parks, and hotels. <br>
+			<br>
+			  When we’re trying to convey information that relates to areas, we often use geographical maps. Geographical maps convey information in ways related to both physical and human geography. They may not be to scale, or truly represent the shape of the actual area depicted. They display information as a picture, making it more interesting and easier to understand. In modern mapping, a topographic map is a type of map characterized by large-scale detail and quantitative representation of relief, usually using contour lines. Topographic maps typically show both natural and human features.<br>
+			<br>
+            <h3>Map Projections</h3>
+              <div class="tab">
+              <p style="color:black;"> The Earth is spherical, which makes it hard to recreate on a flat map. Any attempt to convey the earth’s features on a flat map will result in distortion. Map projections are different ways to portray the spherical earth on a two-dimensional plane. Over the past few centuries, mapmakers have come up with different ways to deal with the distortions.<br>
+<br>
+			  Some have innovative ways of cutting out the parts of an area that don’t have important information to show, and the pattern of the map helps keep the important areas together and more accurate. Others sacrifice accuracy in one area, like size and shape of a continent, for better accuracy in another, like navigational angles. You can select the type of map projection that best conveys what you need from the map, but it’s best to know what type of information on your map isn’t shown accurately.
+			<br>
+			<h3>Scale</h3>
+              <div class="tab">
+              <p style="color:black;"> Map scale is the extent of reduction required to display a portion of the Earth’s surface on a map. Scale determines the informational content and size of the area being represented. The scale of a map is the ratio of a distance on the map to the corresponding distance on the ground. Map scales may be expressed in words (a lexical scale), as a ratio, or as a fraction. The smaller the number on the right, the larger the scale of the map. Small scale maps have a scale of 1:1,000,000 and smaller. These maps are used for general planning and strategic studies. The standard small scale map is 1:1,000,000. Medium scale maps are maps of scales that are larger than 1:1,000,000 but smaller than 1:75,000. In the military, these maps are used for operational planning. The standard medium scale map is 1:250,000. Large scale maps are larger than 1:75,000. The standard large scale military map is 1:50,000, but 1:24,000 or 1:25,000 are popular as well. Scale is also depicted graphically in the marginal information on a map. Map readers can measure a distance on the map and use the map scale to determine what it is.
+			<br>
+			<h3>Latitude and Longitude</h3>
+              <div class="tab">
+              <p style="color:black;"> Longitude lines (also called meridians) are perpendicular to the equator, and latitude lines (also called parallels) are parallel to the equator. A geographic coordinate system is a coordinate system that enables every location on the Earth to be specified by a set of numbers or letters, or symbols.<br>
+
+			Some significant lines of latitude or longitude have names:<br>
+
+			The Arctic Circle is at Latitude 60° North.<br>
+ 
+			The Tropic of Cancer is just over Latitude 23° North, the most northerly circle of latitude where the sun can be overhead, which occurs on the June solstice.<br>
+
+			The Equator is at Latitude 0°.<br>
+ 
+
+			The Tropic of Capricorn is just over Latitude 23° South, the most southerly circle of latitude where the sun can be overhead, which occurs on the December solstice.<br>
+
+			The Antarctic Circle is at Latitude 60° South.<br>
+
+			The North Pole is at Latitude 90° North, and the South Pole is at Latitude 90° South (not shown on this map projection).<br>
+
+			The Prime Meridian is at Longitude 0° and passes though Greenwich, England.<br>
+				  
+			Latitudinal and Longitudinal coordinates can specify any point on earth. Latitude and longitude are expressed in degrees (°), minutes (‘) and seconds (“) (For Example: N 34°- 17’ 52” W 115°- 27’ 24”) but may also be described in degrees (°), minutes (‘) and decimals (For Example: N 34°- 17.87’ W 115°- 27.43’) . The two examples above are the same spot on earth, but the seconds are converted to decimals of minutes by dividing by 60. These are the two most common ways to display lat/long coordinates.
+
+			The length of one degree of latitude is 60 nautical miles, which equals 111 kilometers, or 69 statute miles. There are 60 minutes in a degree and 60 seconds in a minute.
+
+			Longitude is harder to measure, since longitudinal lines are not parallel to each other – they merge at the North and South Poles. At the Equator, a degree of longitude is the same length as a degree of latitude – about 111 km, or 69 miles. At 60°, a degree of longitude is 55.8 km, or 35 miles.
+			<br>
+		<h3>Military Grid Reference System (MGRS)</h3>
+              <div class="tab">
+              <p style="color:black;"> Text.			  
+	<h1 align-text="centered";>Topographical Map Basics</h1>
+		<h3>Intro to Maps</h3>
+              <div class="tab">
+              <p style="color:black;"> The feature that most distinguishes topographic maps from maps of other types is the use of contour lines to portray the shape and elevation of the land. Topographic maps render the three-dimensional ups and downs of terrain on a two-dimensional surface.
+
+			  Topographic maps usually portray both natural and human made features. They portray works of nature including mountains, valleys, plains, lakes, rivers, and vegetation. They also identify the principal works of man, such as roads, boundaries, transmission lines, and major buildings.
+
+			  In the margins of a topographical (and most other types of) map, there is a lot of information that helps you read and interpret the symbols on the map. This is called, for obvious reasons, marginal information. The most common batch of marginal information is the map legend or sometimes called the map key.
+			
+			  The legend or key will...
+<br>
+			<h3>Map Colors</h3>
+              <div class="tab">
+              <p style="color:black;"> A topographic map uses certain colors to help tell you what a graphic or symbol is. The colors on a topo map are:
+<br>
+			<ul>
+			<li><b><span style="color:#000000">Black</span></b> - human geography on a map (buildings, railroads, bridges, boundaries, and names)</li>
+
+			<li><b><span style="color:#3d85c6">Blue</span></b> - any type of water (lakes, ponds, rivers, streams, water well, and marshes)</li>
+
+			<li><b><span style="color:#634b00">Brown</span></b> - relief features (contour lines and elevation)</li>
+
+			<li><b><span style="color:##8CB14F">Green</span></b> - areas of heavy vegetation (forest, woodlands, orchards)</li>
+
+			<li><b><span style="color:#BC131F">Red</span></b> - larger roads and surveying lines (two or four-lane roads, first and second level borders)</li>
+
+			<li><b><span style="color:#9530CE">Purple</span></b> - for overprinting (Revisions added from aerial photographs but not yet field-checked, or planned additions)</li>
+
+			<li><b><span style="color:#000000">White</span></b> - open area (mostly clear of trees, fields, meadows, rocky slopes, and other open country)</li>
+			</ul>
+			<br>
+			<h3>Map Symbols</h3>
+              <div class="tab">
+              <p style="color:black;"> The symbols used on a map are generally shown in the marginal information. These include roads, rivers, manmade objects like buildings or mines, and even sometimes the type of building, like a church or a school.
+			<br>
+		<h1 align-text="centered";>Elevation and Terrain Features</h1>
+		<h3>Contour Lines and Contour Intervals</h3>
+              <div class="tab">
+              <p style="color:black;"> Relief lines represent the shapes of hills, valleys, streams and other features of the earth’s surface. Most often, relief is shown by CONTOUR LINES. Contour lines are what makes a map the equivalent of 3D. They are lines that connect points of equal elevation on the earth’s surface, and are used to illustrate topography, or relief, on a map. On American maps, they are usually in feet. For example, numerous contour lines that are close together indicate hilly or mountainous terrain; when far apart, they represent a gentler slope.<br>
+<br>
+			  There are three types of contour lines: index, intermediate, and supplementary. Index lines are the HEAVY or DARK colored contour lines. They are usually every fifth contour line, and are labeled with an elevation number. For example, if an index contour line is labeled with 100, then usually the next index line will be 200. Intermediate contour lines fall between the index lines and are NOT labeled with their elevation. In the previous example, the intermediate lines would represent elevations of 120, 140, 160, and 180. Supplementary contour lines are generally DASHED lines that show one-half the contour interval. They are often used on maps where the contour interval is large, and the terrain somewhat featureless overall. Keeping with our example, a dashed line would represent 150.<br>
+			<br>
+			  A contour interval is the vertical distance between two contour lines. The interval measurement is given in the map’s marginal information. The numbered Index contour lines, give that particular line’s elevation. Find an Index contour line to get a reference point for elevation, and then count up or down using the contour interval. Contour interval isn’t the same on all maps. When there is a lot of change in elevation on a map, and the slopes are steep, the contour interval tends to be bigger – otherwise there would be too many lines, and they would blend together too much. So the mapmakers increase the contour interval, and instead of 10 feet, it might be 20 or 50 between each contour line. What’s the contour interval on this map? Even though we don’t have the marginal information, you can tell by comparing the Index contour lines.
+				  
+			  You can see a 400’ Index Contour, then a 600’ Index Contour.
+
+			  600-400 = 200 feet between Index Lines. 200 ÷ 5 = 40’
+
+			  So the Contour Interval is 40 feet. Each contour line represents a point that’s 40 feet higher than the contour line below it.
+
+			  Can you determine the elevation of the Water Tank?
+
+			  It’s on the second contour line up from the 400’ Index, so it’s 480 feet.
+
+			  How about the hilltop?
+
+			  If the hilltop didn’t have its elevation marked (882’), you would estimate it by finding the contour line that defines the hilltop (no other contour lines within it), then add half of the contour interval. That gives us an estimate of 860 feet. It’s nice when they put the exact height of hilltops!
+
+			  Sometimes, you will see a notation such as “BM 214” on a map. That means that map makers have measured that particular spot on the earth’s surface to be exactly 214 feet above sea level. Some benchmarks have actual markers on the ground, but often the markers aren’t there anymore.
+			<br>				  
+				<h3>Terrain Features</h3>
+              <div class="tab">
+              <p style="color:black;"> Terrain features are identified the same way on all maps, regardless of the contour interval. However, a hill in the Rocky Mountains will be much bigger than one in south Florida. You must be able to recognize all the terrain features to locate a point on the ground or to navigate from one point to another.
+<br>
+			The five major terrain features are: Hill, Ridge, Valley, Saddle, and Depression. The three minor terrain features are: Draw, Spur and Cliff. The two supplementary terrain features are: Cut and Fill.<br>
+<br>			
+			HILL- a point or small area of high ground. When on a hilltop, the ground slopes down in all directions.<br>
+<br> 
+			<img align="middle" src="images/hill.png" ><br>
+<br>				  
+			RIDGE- a line of high ground with height variations along its crest. The ridge is not simply a line of hills; all points of the ridge crest are higher than the ground on both sides of the ridge.<br>
+<br>
+			<img src="images/ridge.png"><br>
+<br>				  
+			VALLEY- reasonably level ground bordered on the sides by higher ground. A valley may or may not contain some type of moving water. Contour lines indicating a valley are U- shaped and tend to parallel a body of moving water before crossing it.<br>
+<br>
+			<img src="images/valley.png"><br>
+<br>				  
+			SADDLE- a dip or low point along the crest of a ridge. A saddle is not necessarily the lower ground between two hilltops; it may be a break along an otherwise level ridge crest.<br>
+<br>
+			<img src="images/saddle.png"><br>
+<br>				  
+			DEPRESSION- a low point or hole in the ground, surrounded on all sides by higher ground.<br>
+<br>
+			<img src="images/depression.png"><br>
+<br>				  
+			DRAW- similar to a valley, except that it normally is a less developed stream course in which there is generally no level ground and, therefore, little or no maneuver room. The ground slopes upward on each side and toward the head of the draw.<br>
+<br>
+			<img src="images/draw.png"><br>
+<br>				  
+			SPUR- a usually short, continuously sloping line of higher ground, normally jutting out from the side of a ridge. A spur is often formed by two thoroughly parallel streams cutting draws down the side of a ridge.<br>
+<br>
+			<img src="images/spur.png"><br>
+<br>				  
+			CLIFF- a vertical or near-vertical slope. A cliff may be shown on a map by contour lines being close together, touching, or by a ticked "carrying" contour line. The ticks always point toward lower ground.<br>
+<br> 
+			<img src="images/cliff.png"><br>
+<br>				  
+			CUT and FILL- a feature where terrain has been cut away – essentially a minor cliff, and where it has been filled in, creating more level ground than would normally be seen on the natural terrain feature. Often done to create a stable platform for a road or railroad.
+			<br>  
+<br> 
+			<img src="images/cutfill.png"><br>
+<br>				  
+	<h1 align-text="centered";>Grid Coordinates</h1>
+
+		<h3>Reading Coordinates</h3>
+              <div class="tab">
+              <p style="color:black;"> Grid lines are a series of straight lines intersecting at right angles forming squares on a topographic map. Horizontal grid lines are numbered west to east. Vertical lines are numbered south to north. The basic rule about reading grid coordinates is to read right on the vertical grid lines, then up on the horizontal grid lines, or “Read Right then Up”.
+				  
+				The map has vertical lines (top to bottom) and horizontal lines (left to right). These lines form small squares 1,000 meters on each side called grid squares. The lines that form grid squares are numbered along the outside edge of the map picture. No two grid squares have the same number.
+
+			A grid square’s coordinates are found by combining the identities of the horizontal and vertical grid lines that intersect at the lower left hand corner of the grid.
+				  
+			The most accurate way to determine the coordinates of a point on a map is to use a coordinate scale. You do not have to use imaginary lines; you can find the exact coordinates using a Coordinate Scale and Protractor.
+ 
+
+			First, locate the grid square in which the point is located. The number of the vertical grid line on the left (west) side of the grid square is the first and second digits of the coordinates.
+
+
+			The number of the horizontal grid line on the bottom (south) side of the grid square is the fourth and fifth digits of the coordinates.
+
+			To determine the third and sixth digits of the coordinates, place the coordinate scale on the bottom horizontal grid line of the grid square containing Point A, with the vertical scale going through the point. Line up the vertical line so it goes through your point, leaving the horizontal line along the horizontal grid line.
+				  
+			On the bottom scale, the 100 meter mark nearest the vertical grid line provides the third digit, 5. On the vertical scale, the 100 meter mark nearest Point A provides the sixth digit, 3. Therefore the six-digit grid coordinate is 115813.
+			Grid squares are 1000 meters square.
+
+			They are subdivided into 100 meter and 10 meter marks.
+
+			The Grid Coordinate Scale helps you measure the grid square and determine a more accurate grid coordinate.
+
+			A 4-digit grid coordinate is accurate to 1000 meters
+			A 6-digit grid coordinate is accurate to 100 meters An 8-digit grid coordinate is accurate to 10 meters
+ 
+			To find the grid coordinate of a point:
+			►	Determine the scale of your map. Find the correct scale to use on your protractor.
+			►	Determine the grid square the point is in. This gives 4 digits: 12xx56xx.
+			►	Next, using the correct scale on your protractor, align the bottom right corner of the protractor scale to the bottom right corner of the grid square.
+			►	Slide the protractor to the left until the line forming the right edge of the scale intersects the point.
+			►	Read off the horizontal and vertical position: 49551885
+				  
+			Finally, a grid coordinate isn’t complete without the Grid Zone Designator. This is a 2-letter designation that is unique to a 100,000 meter area. (This is where the grid numbers start over again at 00.) The Grid Reference Box in the Marginal Data shows the Grid Zones that are on that map. The correct depiction of a grid coordinate ALWAYS includes the Grid Zone. i.e. ET 99450076, which is 100,000 meters from FT 99450076.
+			<br>
+				<h3>Measuring Distance</h3>
+              <div class="tab">
+              <p style="color:black;"> You can use your map to measure the distance between two places. The maps are drawn to scale. This means that a certain distance on a map equals a certain distance on the earth. The scale is printed at the bottom and top of each map (i.e. Scale 1:50,000). This means that 1 inch on the map equals 50,000 inches on the ground. Or 1 centimeter on the map equals 50,000 centimeters (or 500 meters) on the ground. To change map distance to miles, meters, or yards, use the bar scales at the bottom of the map. Take a ruler or the edge of a paper and mark on it the straight line distance between your two points. Then, put the ruler or the paper just under one of the bar scales and read the ground distance, in miles, meters, or yards. The bar scale here shows a ground distance of 1500 meters. To measure distance along a road that isn’t straight, break up the road into little bits that are more or less straight, measure each leg, and add them together. You can do this on your straight piece of paper by making a tick mark where the road turns, then rotate the paper and make the next tick mark at the next turn. In the end, you have a series of tick marks, but one complete line on your paper.
+			<br>
+		<h3>Direction</h3>
+              <div class="tab">
+              <p style="color:black;"> Direction – a course along which someone or something moves – is usually expressed in map reading as a degree or azimuth, or as a variant of North, South, East, and West. From any point on a plane, there are 360 degrees leading out from it in a circle. In almost all coordinate systems, north is portrayed at 0 degrees. 
+				  
+				  True North is a line from any point on the earth’s surface to the North Pole. All lines of longitude are true north lines. True North is usually symbolized in marginal information with a star.
+
+				Magnetic North, as shown by the compass needle, points to the north magnetic pole, which is not the same as the geographic North Pole. It is shown in marginal information as a half-arrow.
+
+				Grid North is the north that mapmakers put on a map, dependent of the map projection used. It is shown in the marginal information by the letters GN on a vertical line.
+			<br>	
+				  
+				<h3>G-M Angle: Declination Diagram</h3>
+              <div class="tab">
+              <p style="color:black;"> If you’re going to use a map and compass together, you must know how to make the information compatible. The map shows Grid North. The compass shows Magnetic North. The Declination Diagram on the marginal information shows the relationship between the three norths, and how to determine the G-M Angle.
+
+			The Declination Diagram:
+			-Shows the 3 norths
+			-Tells you the G-M Angle (21° in this case)
+			-Tells you how to convert: East G-M Angle:
+			-Magnetic to Grid – ADD
+			-Grid to Magnetic – SUBTRACT West G-M Angle:
+			-Magnetic to Grid – SUBTRACT
+			-Grid to Magnetic – ADD
+
+ 
+			This example is an EAST G-M Angle (the Magnetic North is east of Grid North)
+ 
+			Why does every map need a declination diagram?
+
+			Because different parts of the globe have different declinations (and they also change over time). For example, the declination varies from 16 degrees west in Maine, to 6 in Florida, to 0 degrees in Louisiana, to 4 degrees east in Texas. Without knowing the G-M Angle, you can’t really use a map and compass together. If Magnetic North (MN) is West of Grid North (GN), you subtract when going from magnetic to grid. If MN is East of GN, you add when going from magnetic to grid. And going from grid to magnetic you do the opposite!
+				  
+			Let’s try some conversions!
+
+			1.	You shoot a magnetic azimuth of 215°. Your G-M Angle is 21° East. Convert your magnetic azimuth to a grid azimuth.
+
+			•	Magnet to Grid – Add in the East.
+			•	215 + 21 = 236°
+ 
+			2.	You have a grid azimuth of 95°. Your G-M Angle is 5° West. Convert your grid azimuth to a magnetic azimuth.
+
+			•	Grid to Magnetic – Add in the West
+			•	95 + 5 = 100 °
+
+			3.	You have a grid azimuth of 5°. Your G-M Angle is 21° East. Convert your grid azimuth to a magnetic azimuth.
+
+			•	Grid to Magnetic – Subtract in the East
+			•	5° is the same as 365°
+			•	365 – 21 = 344°
+			<br>
+		<h1 align-text="centered";>Navigation</h1>
+		<h3>Compass</h3>
+              <div class="tab">
+              <p style="color:black;"> We generally use one of two types of compass in the Cadet Corps – the lensatic compass or the Silva compass – and sometimes both depending on what we’re doing. There are many styles and types of compass, but they all share one thing: they point you to Magnetic North. In this lesson, we’ll use a Silva Compass, but we’ll cover the use of the lensatic compass later on.
+
+			The lensatic compass is the compass used by the military in field operations. It is simple to use and more accurate than most other simple compasses. It includes a sight, sighting wire and lens to more easily focus on the target and read the dial, luminous features for use in the dark, a thumb ring to hold it steady, and a straight edge for measuring distance on 1:50,000 maps. It folds up for protection, and the rear sight locks the needle, which extends the compass life. The movable bezel ring can be used to preset an azimuth.
+
+ 
+			The Silva Compass, or models like it, is a simple, inexpensive compass that’s great for map reading and orienteering. Some have an adjustable baseplate that allows you to adjust for declination, so you can ignore converting grid to magnetic azimuths and back. The compass has direction lines that help align the compass on your map, and assist in pointing along your route. It is not as accurate as a lensatic compass, but works well in an orienteering environment where terrain association is your primary method of finding your way.
+
+
+
+			The key thing to know about a compass is that it points toward Magnetic North. On a Silva Compass, it’s the red part of the compass needle that points north.
+
+			You've got a dial that turns on your compass. We call it the compass housing (it may also be referred to as a bezel ring. On the edge of the compass housing, you will probably have a scale from 0 to 360. Those are the degrees or the azimuth (or you may also call it the bearing in some contexts). And you might have the letters N, S, W and E for North, South, West and East. If you want to go in a direction between two of these, you would combine them. If you would like to go in a direction just between North and West, you simply say: "I would like to go Northwest ".
+
+			Turn the compass housing so that northwest on the housing comes exactly there where the large direction of travel- arrow meets the housing. Hold the compass in your hand. And you'll have to hold it quite flat, so that the compass needle can turn. Then turn yourself, your hand, the entire compass, just make sure the compass housing doesn't turn, and turn it until the compass needle is aligned with the lines inside the compass housing.
+
+			Now, time to be careful!. It is extremely important that the red, north part of the compass needle points at north in the compass housing. If south points at north, you would walk off in the exact opposite direction of what you want! And it's a very common mistake among beginners. So always take a second look to make sure you did it right!
+
+			A second problem might be local magnetic attractions. If you are carrying something of iron or something like that, it might disturb the arrow. Even a staple in your map might be a problem. Make sure there is nothing of the sort around.
+
+			When you are sure you've got it right, walk off in the direction the direction of travel-arrow is pointing. To avoid getting off the course, make sure to look at the compass every hundred steps or so. Once you have the direction, aim on some point in the distance, and go there without staring down at the compass.
+
+			If you are out there without a map, and you don't know exactly where you are, but you know from your experience in the area that there is a road, trail, stream, river or something long and big you can't miss if you go in the right direction…
+
+			Then all you need to do is to turn the compass housing so that the direction you want to go in is where the direction of travel-arrow meets the housing. And follow the steps you were just shown.
+
+			But why isn't this sufficient? First, it is not very accurate. You are going in the right direction, and you won't go around in circles, but you're very lucky if you hit a small spot this way.
+
+			And, this requires you to have a mental image of the area you are in and what direction those landmarks might be in.
+
+			That’s why using the compass with a map is much, much better. How to “shoot an azimuth” in three easy steps:
+			1.	Turn the dial of the compass to the given azimuth
+
+			2.	Keep the compass flat in front of you with the “Direction of Travel Arrow” pointing straight ahead.
+
+			3.	Turn your body so the red (north pointing) needle of the compass lines up inside the red housing on the base of the compass.
+
+			There are three kinds of azimuth:
+
+			Magnetic Azimuth: direction expressed as the angular difference between Magnetic North and the direction line (i.e. 140°)
+
+			Grid Azimuth: the angle measured between Grid North and a line plotted between two points on a map.
+
+			Back Azimuth: the opposite direction of an azimuth. The back azimuth is 180° from an azimuth. For azimuths more than 180°, subtract 180. For azimuths less than 180°, add 180. A back azimuth of 180° is either 0° or 360°.
+
+			The Protractor. There are several types of protractors – circular, half-circle, square, and rectangular.
+
+			All have a scale around the outer edge and an index mark in the middle.
+
+			On military protractors, you read the inner of the two scales because it is broken into degrees from 0 to 360. Each tick mark on the degree scale represents one degree.
+
+			You have several coordinate scales for measuring grid coordinates, one for each of the most common map scales you might use.
+
+ 
+			Index – where the N/S and E/W lines cross in the middle. It’s the central point from which you measure an azimuth.
+
+			360 Degrees - usually the inner of two types of direction marks
+
+			Mils – the outer measuring marks found on Army protractors. Used in field artillery plotting. You can ignore them (or even carefully cut them off your protractor!)
+ 
+			Next, we’ll learn how to use the protractor to determine an azimuth between two points.
+
+			1.	Find the two points you want to measure an azimuth between (Figure 49).
+			2.	Line up the protractor so the index lines are exactly parallel to the map’s grid lines (Figure 50).
+			3.	Align a straight edge along both points. Check carefully to see where it crosses the protractor’s degree scale. 39°! (Figure 51).
+			<br>				  
+
+			<h3>Polar Coordinates</h3>
+              <div class="tab">
+              <p style="color:black;"> A method of locating or plotting an unknown position from a known point by giving a direction and a distance along that direction line is called polar coordinates. The following elements must be present when using polar coordinates.
+			–	Current known location on the map
+			–	Azimuth (grid or magnetic)
+			–	Distance (in meters)
+			This is a common task on a land navigation (Land Nav) course!
+
+			1.	Place the index mark of the protractor at the center of mass on the point from which you are measuring. Figure 52
+			2.	Locate the desired azimuth on the protractor scale and place a dot on the map at this azimuth. In our example, this will be 56°. Figure 53
+			3.	Remove the protractor and connect the point and dot with a straight line. Figure 54
+			4.	Select the appropriate scale measurement (we’ll use meters) and place a paper straight edge on the scale. Figure 55
+			5.	Determine the desired distance to measure from the scale and mark the paper at this distance using tick marks. We’ll use 3400 meters. Figure 56
+ 
+			6.	Align the straight edge with the azimuth line. Ensure the first tick mark is center of mass on the known point. Figure 57
+			7.	Place a dot on the map at the second tick mark from the straight edge on the map. The position of the second tick mark is the position of the unknown point. Figure 58
+			8.	Remove the straight edge and determine the grid coordinate to the second point. Figure 59
+			<br>				  
+			<h3>Triangulation</h3>
+              <div class="tab">
+              <p style="color:black;">  Text
+			<br>		  
+				  
+				  
+				  
+				  
+				  
+				  
+			<br>
+          </div>
+        </div>
+    </div>
+      <div class="clearfix">
+      </div>
+      </div>
+   </div>
+  </body>
+</html>

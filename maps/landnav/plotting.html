@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Land Nav</title>
+    <style>
+	body {
+    background-color: #041C2C;
+    	}
+      .container {
+        width:1080px;
+        background-color: #041C2C;
+        margin: 0 auto;
+      }
+      .divy{
+        border:1px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .header{
+        height: 210px
+      }
+      .footer{
+        height: 100px
+	      color: white
+	      padding: 20px
+      }
+      .main{
+        width:100%;
+        float:right;
+        background-color:white;
+      }
+      .bgcolor{
+        background-color:white;
+      }
+      div.tab {
+      text-indent: 50px;
+      }
+      div.para-list {
+      text-indent: 0px;
+      color: black
+      }
+      h1{
+        color: black;
+        text-decoration: underline;
+      }
+      h3 {
+      color: black;
+      text-decoration: underline;
+    }
+     </style>
+</head>
+
+  <body>
+    <div class="container">
+        <div id="block1" class="header"><img src="images/legend.png" height="210px" width="100%"></div>
+      <div class="bgcolor">
+      <div class="main">
+        <div id="block2" class="divy">
+
+				<h3>G-M Angle: Declination Diagram</h3>
+              <div class="tab">
+              <p style="color:black;"> If you’re going to use a map and compass together, you must know how to make the information compatible. The map shows Grid North. The compass shows Magnetic North. The Declination Diagram on the marginal information shows the relationship between the three norths, and how to determine the G-M Angle.
+
+			The Declination Diagram:
+			-Shows the 3 norths
+			-Tells you the G-M Angle (21° in this case)
+			-Tells you how to convert: East G-M Angle:
+			-Magnetic to Grid – ADD
+			-Grid to Magnetic – SUBTRACT West G-M Angle:
+			-Magnetic to Grid – SUBTRACT
+			-Grid to Magnetic – ADD
+
+ 
+			This example is an EAST G-M Angle (the Magnetic North is east of Grid North)
+ 
+			Why does every map need a declination diagram?
+
+			Because different parts of the globe have different declinations (and they also change over time). For example, the declination varies from 16 degrees west in Maine, to 6 in Florida, to 0 degrees in Louisiana, to 4 degrees east in Texas. Without knowing the G-M Angle, you can’t really use a map and compass together. If Magnetic North (MN) is West of Grid North (GN), you subtract when going from magnetic to grid. If MN is East of GN, you add when going from magnetic to grid. And going from grid to magnetic you do the opposite!
+				  
+			Let’s try some conversions!
+
+			1.	You shoot a magnetic azimuth of 215°. Your G-M Angle is 21° East. Convert your magnetic azimuth to a grid azimuth.
+
+			•	Magnet to Grid – Add in the East.
+			•	215 + 21 = 236°
+ 
+			2.	You have a grid azimuth of 95°. Your G-M Angle is 5° West. Convert your grid azimuth to a magnetic azimuth.
+
+			•	Grid to Magnetic – Add in the West
+			•	95 + 5 = 100 °
+
+			3.	You have a grid azimuth of 5°. Your G-M Angle is 21° East. Convert your grid azimuth to a magnetic azimuth.
+
+			•	Grid to Magnetic – Subtract in the East
+			•	5° is the same as 365°
+			•	365 – 21 = 344°
+			<br>
+
+			<br>
+          </div>
+        </div>
+    </div>
+      <div class="clearfix">
+      </div>
+      </div>
+   </div>
+  </body>
+</html>
