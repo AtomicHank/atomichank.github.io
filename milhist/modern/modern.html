@@ -6,6 +6,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Modern Era</title>
 <link href="../../css/grid.css" rel="stylesheet" type="text/css">
+<style>
+.modern-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 24px;
+  row-gap: 35px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.modern-gallery .thumbnail {
+  width: auto;
+  float: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modern-gallery .thumbnail a {
+  display: block;
+}
+
+.modern-gallery .cards {
+  width: 100%;
+  max-width: none;
+  height: 220px;
+  max-height: none;
+  object-fit: cover;
+  display: block;
+}
+
+.modern-gallery .text_column {
+  width: auto;
+  float: none;
+  padding-right: 20px;
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .modern-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .modern-gallery .cards {
+    height: 200px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- Main Container -->
@@ -19,7 +69,7 @@
       <p>After World War II, military history was shaped by nuclear deterrence, decolonization, proxy wars, precision-guided weapons, and the rapid expansion of air, naval, and information warfare. The Cold War drove large-scale military planning even when direct superpower conflict was avoided, while regional wars in Asia, the Middle East, Africa, Europe, and the Americas revealed new doctrines, technologies, and political constraints. The modern era also includes counterinsurgency, special operations, cyber conflict, and the growing role of intelligence, satellites, drones, and long-range strike systems in shaping the battlefield.</p>
   </section>
   <!-- Stats Gallery Section -->
-  <div class="gallery">
+  <div class="gallery modern-gallery">
     <div class="thumbnail"> <a href="inchon.html"><img src="../images/placeholder.png" alt="" width="2000" class="cards"/></a>
       <h4>The Battle of Inchon (1950)</h4>
       <p class="tag">Korean War, Amphibious, UN, MacArthur</p>
@@ -45,8 +95,6 @@
       <p class="tag">Vietnam War, Offensive, Urban, Psychological</p>
       <p class="text_column">Though costly to North Vietnam militarily, the Tet Offensive transformed the political perception of the Vietnam War and demonstrated the strategic power of shock and surprise.</p>
     </div>
-  </div>
-  <div class="gallery">
     <div class="thumbnail"> <a href="hamburger hill.html"><img src="../images/placeholder.png" alt="" width="2000" class="cards"/></a>
       <h4>The Battle of Hamburger Hill (1969)</h4>
       <p class="tag">Vietnam War, Air Assault, Attrition, A Shau Valley</p>
@@ -72,14 +120,12 @@
       <p class="tag">Iraq, Islamic State, Urban, Coalition</p>
       <p class="text_column">The battle for Mosul was the largest urban campaign in Iraq since 2003 and demonstrated the complexity of modern coalition warfare against entrenched non-state forces.</p>
     </div>
-  </div>
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="Castle_Bravo_Blast.jpg" alt="" width="2000" class="cards"/></a>
+    <div class="thumbnail"> <a href="Atomic Sites/atomicsite.html"><img src="Castle_Bravo_Blast.jpg" alt="" width="2000" class="cards"/></a>
       <h4>Atomic Research and Detonation Sites</h4>
       <p class="tag">Map, Nuclear, Research, Testing</p>
       <p class="text_column">A reference card for atomic research and detonation locations connected to the nuclear age.</p>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="Nike_family_02.jpg" alt="" width="2000" class="cards"/></a>
+    <div class="thumbnail"> <a href="Nike Sites/nikesite.html"><img src="Nike_family_02.jpg" alt="" width="2000" class="cards"/></a>
       <h4>Nike Missile Sites</h4>
       <p class="tag">Cold War, Air Defense, United States, Missile</p>
       <p class="text_column">A reference card for U.S. Nike missile sites and the air-defense network built during the Cold War.</p>

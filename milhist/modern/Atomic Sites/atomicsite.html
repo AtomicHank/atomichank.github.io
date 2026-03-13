@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atomic Sites</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Load Leaflet CSS -->
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+</head>
+<body>
+    <div id="map" style="width: 3000px; height: 800px;"></div>
+    
+    <!-- Load Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([35.823016, -48.391293], 3.5); // Center on 
+
+        // Add a base layer (OpenStreetMap)
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        }).addTo(map);
+        
+        function getSiteRadius(zoom) {
+            return Math.max(4, Math.round(zoom * 1.5));
+        }
+
+        function updateMarkerSizes(layerGroup) {
+            var radius = getSiteRadius(map.getZoom());
+            layerGroup.eachLayer(function (layer) {
+                if (layer instanceof L.CircleMarker) {
+                    layer.setRadius(radius);
+                }
+            });
+        }
+
+        // Load GeoJSON data
+        fetch('./atomicsite.geojson')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status} loading GeoJSON`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                var atomicSitesLayer = L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, {
+                            radius: getSiteRadius(map.getZoom()),
+                            fillColor: '#ef4444',
+                            color: '#111827',
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.9
+                        });
+                    },
+                    onEachFeature: function (feature, layer) {
+                        var props = feature.properties || {};
+                        var name = props.Name || 'Unnamed atomic site';
+                        var type = props.Type ? `<br>${props.Type}` : '';
+                        layer.bindPopup(`<strong>${name}</strong>${type}`);
+                    }
+                }).addTo(map);
+
+                map.on('zoomend', function () {
+                    updateMarkerSizes(atomicSitesLayer);
+                });
+            })
+            .catch(err => console.error('GeoJSON load failed:', err));
+    </script>
+</body>
+</html>
+
