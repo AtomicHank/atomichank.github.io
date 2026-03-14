@@ -3,14 +3,12 @@
 
 :root {
   --bg: #07141f;
-  --bg-soft: #0f2230;
   --panel: rgba(8, 28, 44, 0.8);
   --panel-strong: rgba(10, 35, 54, 0.95);
-  --line: rgba(177, 179, 179, 0.25);
+  --line: rgba(177, 179, 179, 0.22);
   --text: #d7dee2;
   --muted: #9eaab1;
   --accent: #ffd478;
-  --accent-deep: #e0b454;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -83,7 +81,7 @@ a {
 .hero-copy {
   position: relative;
   z-index: 1;
-  width: min(680px, 100%);
+  width: min(720px, 100%);
   padding: 56px 48px;
 }
 
@@ -111,7 +109,7 @@ h1 {
 
 .hero-text {
   margin: 20px 0 0;
-  max-width: 58ch;
+  max-width: 60ch;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.75;
@@ -125,7 +123,7 @@ h1 {
   align-items: start;
 }
 
-.sidemenu {
+.sidebar {
   position: sticky;
   top: 20px;
 }
@@ -154,17 +152,18 @@ h1 {
   letter-spacing: 0.12em;
 }
 
-.sidemenu ul {
+.nav-menu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.sidemenu li + li {
+.nav-menu li + li {
   margin-top: 10px;
 }
 
-.sidemenu a {
+.nav-link,
+.nav-link-disabled {
   display: block;
   padding: 14px 16px;
   border: 1px solid rgba(255, 212, 120, 0.14);
@@ -180,13 +179,19 @@ h1 {
     color 180ms ease;
 }
 
-.sidemenu a:hover,
-.sidemenu a:focus-visible {
+.nav-link:hover,
+.nav-link:focus-visible {
   transform: translateX(4px);
   border-color: rgba(255, 212, 120, 0.45);
   background: rgba(255, 212, 120, 0.08);
   color: #fff4cf;
   outline: none;
+}
+
+.nav-link-disabled {
+  color: #7d8a92;
+  cursor: default;
+  opacity: 0.7;
 }
 
 .main {
@@ -237,6 +242,10 @@ h1 {
   background: rgba(12, 34, 50, 0.95);
 }
 
+.topic-card-muted {
+  opacity: 0.78;
+}
+
 .topic-card h2 {
   margin: 0 0 12px;
   color: #f4f7f8;
@@ -257,13 +266,16 @@ h1 {
   font-weight: 700;
 }
 
-.footer-panel a {
+.footer-panel a,
+.home-link {
   color: var(--accent);
   text-decoration: none;
 }
 
 .footer-panel a:hover,
-.footer-panel a:focus-visible {
+.footer-panel a:focus-visible,
+.home-link:hover,
+.home-link:focus-visible {
   color: #fff4cf;
 }
 
@@ -272,7 +284,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .sidemenu {
+  .sidebar {
     position: static;
   }
 

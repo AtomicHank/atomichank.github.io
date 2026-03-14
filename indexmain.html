@@ -1,73 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="American Geek Interests Hub collects material on military history, culture, maps, aviation, building, and other long-running interests."
+    >
     <title>AGIH</title>
-	<link rel="stylesheet" href="stylesconst.css">
+    <link rel="stylesheet" href="stylesconst.css">
   </head>
   <body>
-    <div class="container">
-    <div id="block1" class="header"><img src="header.jpg" width="100%" height="100%"></div>
-     <div class="bgcolor">
-      <div class="main">
-        <div id="block2" class="divy">
-          <div class="para">
-              <p style="color:grey;">
-			<h3>The eternal question...why? Why does anyone collect information on a website and make it accessible to the world at large? I've seen many websites throughout the years and for the most part, it seems the hobbyist programmers wanted to nerd out and program a website. So, they chose another hobby, usually just as nerdy, organized it into 0s and 1s, and threw it out there. <br><br>
-			
-			As I ask myself why I am doing this, I come up with much the same answer. I've spent more years than I care to remember trying to learn web programming and wanting to try my hand at creating content. I endeavor to not only put information out there, but also action that information.  <br><br>
-			
-			For example, you will find a section on land navigation as a part of the maps section.  I present the “academic theory” of land navigation, but also couple it with YouTube videos explaining it, walking through the steps, and actually doing it.<br><br>
-			
-			Though I don’t consider myself a “content creator”, nor do I plan on making money from this, I would like to create and catalog information regarding my various hobbies and interests. Why? Maybe for posterity’s sake, maybe because I have hard drives full of rando information I’ve collected over three decades of surfing the internet and want an excuse to organize it. Maybe for the best reason of all… just because!<br><br>
-			
-			</h3></p><br>
-            </div>
-
-	    <h2><b><u>Military History</u></b></h2>
-		  <h3>Military history deals with man's progress in warfare from ancient conflicts to modern warfare, thus indicating strategies, technologies, and individuals who have shaped human civilization. Military history is a discipline that maps tactics and innovations; it is the influence of historical moments through the causes and effects of wars and their profound impact on societies. Through military history, one can trace all of the complexities in how geopolitical dynamics have changed over time, how military technology has evolved through the ages, and how the human spirit has remained indomitable, carrying humanity through conflict after conflict—all together offering a holistic understanding as to how past military events have charted a course that continues to influence the present and future.</h3><br><br>
-
-        <h2><b><u>American Culture</u></b></h2> 
-		  <h3>American culture is a dynamic tapestry of diverse influences, reflecting the two-century-long history of immigration and innovation that has typified the country. It has elements from various traditions of Native American, European, African, Asian, and Latin American cultures that combine to make it unique and dynamic. Some of the essential constituents of U.S. culture are individualism, freedom, and democracy, as well as a fondness for popular culture, sports, and technology. American culture is celebrated for the ingenuity it shows in its music, film, and art forms and by the spirit of entrepreneurship and progress, insuring change is always constant and fascinating.</h3><br><br>
-
-        <h2><b><u>Nerd Stuff</u></b></h2>
-		  <h3>Text</h3><br><br>
-
-        <h2><b><u>Wargaming</u></b></h2>
-		  <h3>Text</h3><br><br>
-
-		<h2><b><u>Aviation</u></b></h2>
-		  <h3>Text</h3><br><br>
-
-		<h2><b><u>Maps</u></b></h2>
-		  <h3>Text</h3><br><br>
-
-		<h2><b><u>Building Stuff</u></b></h2>
-		  <h3>Text</h3><br><br>
-
-			</div>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="header.jpg" alt="AGIH header image">
         </div>
-    </div>
-      <div class="sidemenu">
-        <div id="block6" class=""></div>
+        <div class="hero-copy">
+          <p class="eyebrow">American Geek Interests Hub</p>
+          <h1>A personal archive for hobbies, history, and useful rabbit holes.</h1>
+          <p class="hero-text">
+            A long-form collection of notes, links, articles, and reference material built to organize decades of interests into something readable.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidemenu" aria-label="Site sections">
+          <div class="menu-panel">
+            <p class="menu-title">Browse the site</p>
             <ul>
-            <li><a href="blog/blog.html"><b>Blog</b></a></li>
-            <li><a href="milhist/milhist_v2.html"><b>Military History</b></a></li>
-            <li><a href="amercult/amercult.html"><b>American Culture</b></a></li>
-            <li><a href="nerdlab/nerdlab_v2.html"><b>Nerd Stuff</b></a></li>
-            <li><a href="wargame/wargame_v2.html"><b>Wargaming</b></a></li>
-            <li><a href="aviation/aviation.html"><b>Aviation</b></a></li>
-	        <li><a href="maps/maps_v2.html"><b>Maps</b></a></li>
-	        <li><a href="building/build.html"><b>Building Stuff</b></a></li>
-		  </ul>
+              <li><a href="blog/blog.html">Blog</a></li>
+              <li><a href="milhist/milhist_v2.html">Military History</a></li>
+              <li><a href="amercult/amercult.html">American Culture</a></li>
+              <li><a href="nerdlab/nerdlab_v2.html">Nerd Stuff</a></li>
+              <li><a href="wargame/wargame_v2.html">Wargaming</a></li>
+              <li><a href="aviation/aviation.html">Aviation</a></li>
+              <li><a href="maps/maps_v2.html">Maps</a></li>
+              <li><a href="building/build.html">Building Stuff</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Why build a site like this?</h2>
+            <p>
+              The eternal question: why? Why does anyone collect information on a website and make it accessible to the world at large? Over the years, I have seen plenty of hobbyist sites built by people who wanted to nerd out on the web and organize another hobby, usually one just as nerdy, into something useful.
+            </p>
+            <p>
+              As I ask myself why I am doing this, I come up with much the same answer. I have spent more years than I care to remember trying to learn web programming and wanting to try my hand at creating content. I want to put information out there, but also make that information practical.
+            </p>
+            <p>
+              For example, you will find a section on land navigation as part of the maps section. I present the &ldquo;academic theory&rdquo; of land navigation, then pair it with YouTube videos that explain it, walk through the steps, and show it in practice.
+            </p>
+            <p>
+              I do not consider myself a &ldquo;content creator,&rdquo; and I am not planning to make money from this. I would like to create and catalog information around my hobbies and interests. Maybe that is for posterity, maybe it is because I have hard drives full of random information collected over three decades of surfing the internet and finally want an excuse to organize it. Maybe it is for the best reason of all: just because.
+            </p>
+          </section>
+
+          <section class="topic-grid" aria-label="Featured topics">
+            <article class="topic-card">
+              <h2>Military History</h2>
+              <p>
+                Military history tracks the development of warfare from ancient conflicts to modern operations, connecting tactics, technology, leadership, and the larger political forces that shape civilizations.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>American Culture</h2>
+              <p>
+                American culture is a changing mix of regional traditions, immigration, innovation, media, and industry, with plenty of room to explore the details that make it broad and distinct.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>Nerd Stuff</h2>
+              <p>
+                A place for technical interests, experiments, hobbies, and the kinds of side topics that do not fit anywhere else but still deserve a home.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>Wargaming</h2>
+              <p>
+                Board wargames, rulesets, scenarios, and design notes collected from years of reading, playing, and digging through the hobby.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>Aviation</h2>
+              <p>
+                Civilian, military, and space topics with room for aircraft, operations, history, and technical references.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>Maps</h2>
+              <p>
+                Mapping, design, terrain reading, and land navigation, with an emphasis on combining theory with useful demonstrations.
+              </p>
+            </article>
+
+            <article class="topic-card">
+              <h2>Building Stuff</h2>
+              <p>
+                Practical projects, fabrication, and hands-on work across materials, methods, and whatever seems worth making.
+              </p>
+            </article>
+          </section>
+        </main>
       </div>
-      <div class="clearfix">
-      </div>
-      </div>
-        <div class="footer"></div>
-	            <div>
-                <div class="col-1">Maintained by AGIH
-                <p>Submit corrections to <a href="mailto: atomicgihank@gmail.com">Hank</a></p>
-                </div>
-            </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

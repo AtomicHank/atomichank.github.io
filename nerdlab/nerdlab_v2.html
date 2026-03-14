@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Nerd Stuff at AGIH covers computing, electronics, math, amateur radio, models, model railroading, and Lego."
+    >
     <title>Nerd Stuff - AGIH</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <img src="images/placeholder.jpg" alt="Nerd Stuff Header" class="header-image">
-        </header>
-
-        <!-- Main Layout -->
-        <div class="layout">
-            <!-- Sidebar Navigation -->
-            <nav class="sidebar">
-                <ul class="nav-menu">
-                    <li><a href="computers.html" class="nav-link">Computers</a></li>
-                    <li><a href="electronics.html" class="nav-link">Electronics</a></li>
-                    <li><a href="math.html" class="nav-link">Math</a></li>
-                    <li><a href="amateurradio.html" class="nav-link">Amateur Radio</a></li>
-                    <li><a href="models.html" class="nav-link">Models</a></li>
-                    <li><a href="modelrail.html" class="nav-link">Model Railroading</a></li>
-                    <li><a href="lego.html" class="nav-link">Lego</a></li>
-                </ul>
-            </nav>
-
-            <!-- Main Content -->
-            <main class="main-content">
-                <div class="content-wrapper">
-                    <!-- Overview Section -->
-                    <section class="welcome-section">
-                        <div class="intro-text">
-                            <h1 style="text-align: center; color: #f1f5f9; margin-bottom: 2rem;">Nerd Stuff Overview</h1>
-                            <p>Welcome to the intersection of technology, science, and passionate hobbies. This section explores the technical pursuits and geeky interests that drive innovation, creativity, and endless curiosity about how things work.</p>
-                        </div>
-                    </section>
-
-                    <!-- Topics Grid -->
-                    <section class="topics-grid">
-                        <article class="topic-card">
-                            <h2>Computers</h2>
-                            <p>Dive into the world of computing, from hardware architecture to software development. Explore programming languages, system administration, and the evolution of personal computing technology.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Electronics</h2>
-                            <p>Understanding circuits, components, and electronic systems. From basic resistors and capacitors to complex microcontroller projects and embedded systems design.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Math</h2>
-                            <p>The language of science and engineering. Explore mathematical concepts, problem-solving techniques, and the beautiful patterns that govern our universe through numbers and equations.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Amateur Radio</h2>
-                            <p>The art and science of radio communication. Learn about frequencies, antennas, propagation, and the global community of ham radio operators connecting across the airwaves.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Models</h2>
-                            <p>Scale modeling brings history and imagination to life. From plastic aircraft to detailed dioramas, discover the craftsmanship and attention to detail that define this hobby.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Model Railroading</h2>
-                            <p>Creating miniature worlds of transportation. Explore layout design, scenery techniques, and the technical aspects of running model trains in realistic settings.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Lego</h2>
-                            <p>The ultimate building system for creativity and engineering. From simple brick constructions to complex Technic mechanisms and custom MOCs (My Own Creations).</p>
-                        </article>
-                    </section>
-                </div>
-            </main>
+    <link rel="stylesheet" href="../css/section-home.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="images/placeholder.jpg" alt="Nerd Stuff header image">
         </div>
+        <div class="hero-copy">
+          <p class="eyebrow">American Geek Interests Hub</p>
+          <h1>Nerd Stuff</h1>
+          <p class="hero-text">
+            Technical hobbies, systems, models, radio, math, and all the side interests that reward curiosity and patience.
+          </p>
+        </div>
+      </header>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>Maintained by AGIH</p>
-                <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com" class="footer-link">Hank</a></p>
-            </div>
-        </footer>
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Nerd Stuff navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Browse the section</p>
+            <ul class="nav-menu">
+              <li><a class="nav-link" href="computers.html">Computers</a></li>
+              <li><a class="nav-link" href="electronics.html">Electronics</a></li>
+              <li><a class="nav-link" href="math.html">Math</a></li>
+              <li><a class="nav-link" href="amateurradio.html">Amateur Radio</a></li>
+              <li><a class="nav-link" href="models.html">Models</a></li>
+              <li><a class="nav-link" href="modelrail.html">Model Railroading</a></li>
+              <li><a class="nav-link" href="lego.html">Lego</a></li>
+              <li><a class="nav-link" href="../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This is the intersection of technology, science, making, and the kinds of hobbies that turn into deep rabbit holes once you start collecting notes.
+            </p>
+            <p>
+              Some of these topics are highly technical, some are hands-on, and some are just hard to categorize anywhere else, which is exactly why they fit here.
+            </p>
+          </section>
+
+          <section class="topic-grid" aria-label="Nerd Stuff topics">
+            <article class="topic-card">
+              <h2>Computers</h2>
+              <p>Hardware, software, operating systems, programming, and the long trail of tools and ideas that define personal and technical computing.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Electronics</h2>
+              <p>Circuits, components, troubleshooting, and the practical side of understanding how electronic systems behave and fail.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Math</h2>
+              <p>Concepts, problem-solving methods, and the useful formalism that sits underneath engineering, computing, and scientific thinking.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Amateur Radio</h2>
+              <p>Frequencies, propagation, antennas, equipment, and the global hobby built around radio communication and experimentation.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Models</h2>
+              <p>Scale models and related hobby work where patience, reference material, and detail matter more than speed.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Model Railroading</h2>
+              <p>Layouts, scenery, operations, rolling stock, and the satisfying combination of craft, mechanics, and miniature world-building.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Lego</h2>
+              <p>A modular building system that can swing from simple nostalgia to serious engineering and custom design projects.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

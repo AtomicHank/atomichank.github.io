@@ -1,79 +1,136 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Former Soviet Airfields Map</title>
-    <meta charset="utf-8" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Load Leaflet CSS -->
-    <link rel="stylesheet"
+    <title>Former Soviet Airfields Map - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin="" />
-</head>
-<body>
-    <div id="map" style="width: 3000px; height: 800px;"></div>
-    
-    <!-- Load Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-    
+      crossorigin=""
+    >
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="../TU95.jpg" alt="Soviet bomber image">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>Soviet Airfields Map</h1>
+          <p class="hero-text">
+            An interactive map of former Soviet airfields, built for browsing the network geographically instead of alphabetically.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Soviet airfields map navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><a class="nav-link" href="index_v3.html">Airfields Overview</a></li>
+              <li><span class="nav-link-active">Clickable Map</span></li>
+              <li><a class="nav-link" href="list_v2.html">Alphabetical List</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This map centers the Soviet airfield network spatially, which is useful for seeing regional clusters, Arctic distribution, and relationships between major strategic areas.
+            </p>
+            <p>
+              Zoom in to inspect individual airfields and open their labels directly from the map.
+            </p>
+          </section>
+
+          <section class="topic-card map-panel" aria-label="Soviet airfields map panel">
+            <div class="map-frame">
+              <div id="map"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([61.273317, 89.560231], 3.5); // Center on Moscow, Russia
+      var map = L.map("map").setView([61.273317, 89.560231], 3.5);
 
-        // Add a base layer (OpenStreetMap)
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        }).addTo(map);
-        
-        function getAirfieldIcon(zoom) {
-            var size = Math.max(14, Math.round(zoom * 4 + 12));
-            return L.icon({
-                iconUrl: './TU95.png',
-                iconSize: [size, size],
-                iconAnchor: [size / 2, size / 2],
-                popupAnchor: [0, -size / 2]
-            });
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+          attribution:
+            "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
         }
+      ).addTo(map);
 
-        function updateMarkerIcons(layerGroup) {
-            var icon = getAirfieldIcon(map.getZoom());
-            layerGroup.eachLayer(function (layer) {
-                if (layer instanceof L.Marker) {
-                    layer.setIcon(icon);
-                }
-            });
-        }
+      function getAirfieldIcon(zoom) {
+        var size = Math.max(14, Math.round(zoom * 4 + 12));
+        return L.icon({
+          iconUrl: "./TU95.png",
+          iconSize: [size, size],
+          iconAnchor: [size / 2, size / 2],
+          popupAnchor: [0, -size / 2]
+        });
+      }
 
-        // Load GeoJSON data
-        fetch('./sovietbase.geojson')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status} loading GeoJSON`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                var airfieldsLayer = L.geoJSON(data, {
-                    pointToLayer: function (feature, latlng) {
-                        return L.marker(latlng, { icon: getAirfieldIcon(map.getZoom()) });
-                    },
-                    onEachFeature: function (feature, layer) {
-                        var props = feature.properties || {};
-                        var name = props['NAME (ENG)'] || props.NAME || 'Unnamed airfield';
-                        var altName = props['ALT NAMES'] ? `<br>${props['ALT NAMES']}` : '';
-                        layer.bindPopup(`<strong>${name}</strong>${altName}`);
-                    }
-                }).addTo(map);
+      function updateMarkerIcons(layerGroup) {
+        var icon = getAirfieldIcon(map.getZoom());
+        layerGroup.eachLayer(function (layer) {
+          if (layer instanceof L.Marker) {
+            layer.setIcon(icon);
+          }
+        });
+      }
 
-                map.on('zoomend', function () {
-                    updateMarkerIcons(airfieldsLayer);
-                });
-            })
-            .catch(err => console.error('GeoJSON load failed:', err));
+      fetch("./sovietbase.geojson")
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("HTTP " + response.status + " loading GeoJSON");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          var airfieldsLayer = L.geoJSON(data, {
+            pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, { icon: getAirfieldIcon(map.getZoom()) });
+            },
+            onEachFeature: function (feature, layer) {
+              var props = feature.properties || {};
+              var name = props["NAME (ENG)"] || props.NAME || "Unnamed airfield";
+              var altName = props["ALT NAMES"] ? "<br>" + props["ALT NAMES"] : "";
+              layer.bindPopup("<strong>" + name + "</strong>" + altName);
+            }
+          }).addTo(map);
+
+          map.on("zoomend", function () {
+            updateMarkerIcons(airfieldsLayer);
+          });
+        })
+        .catch(function (err) {
+          console.error("GeoJSON load failed:", err);
+        });
     </script>
-</body>
+  </body>
 </html>
-

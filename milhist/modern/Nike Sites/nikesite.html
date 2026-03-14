@@ -1,79 +1,132 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Former Nike Missile Sites</title>
-    <meta charset="utf-8" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Load Leaflet CSS -->
-    <link rel="stylesheet"
+    <title>Former Nike Missile Sites - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin="" />
-</head>
-<body>
-    <div id="map" style="width: 3000px; height: 800px;"></div>
-    
-    <!-- Load Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-    
+      crossorigin=""
+    >
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="../Nike_family_02.jpg" alt="Nike missile family image">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>Former Nike Missile Sites</h1>
+          <p class="hero-text">
+            An interactive map of Nike sites showing the scale and geographic spread of the Cold War air-defense system.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Nike site map navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><a class="nav-link" href="index.html">Nike Sites Overview</a></li>
+              <li><span class="nav-link-active">Interactive Site Map</span></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This map collects former Nike missile sites into one interactive view. Zooming in reveals individual locations and their labels.
+            </p>
+          </section>
+
+          <section class="topic-card map-panel" aria-label="Nike site map panel">
+            <div class="map-frame">
+              <div id="map"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([35.823016, -48.391293], 3.5); // Center on 
+      var map = L.map("map").setView([35.823016, -48.391293], 3.5);
 
-        // Add a base layer (OpenStreetMap)
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        }).addTo(map);
-        
-        function getNikeIcon(zoom) {
-            var size = Math.max(14, Math.round(zoom * 4 + 8));
-            return L.icon({
-                iconUrl: './nikemissile.png',
-                iconSize: [size, size],
-                iconAnchor: [size / 2, size / 2],
-                popupAnchor: [0, -size / 2]
-            });
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+          attribution:
+            "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
         }
+      ).addTo(map);
 
-        function updateMarkerIcons(layerGroup) {
-            var icon = getNikeIcon(map.getZoom());
-            layerGroup.eachLayer(function (layer) {
-                if (layer instanceof L.Marker) {
-                    layer.setIcon(icon);
-                }
-            });
-        }
+      function getNikeIcon(zoom) {
+        var size = Math.max(14, Math.round(zoom * 4 + 8));
+        return L.icon({
+          iconUrl: "./nikemissile.png",
+          iconSize: [size, size],
+          iconAnchor: [size / 2, size / 2],
+          popupAnchor: [0, -size / 2]
+        });
+      }
 
-        // Load GeoJSON data
-        fetch('./nikemissilesite.geojson')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status} loading GeoJSON`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                var nikeSitesLayer = L.geoJSON(data, {
-                    pointToLayer: function (feature, latlng) {
-                        return L.marker(latlng, { icon: getNikeIcon(map.getZoom()) });
-                    },
-                    onEachFeature: function (feature, layer) {
-                        var props = feature.properties || {};
-                        var name = props.name || 'Unnamed Nike site';
-                        var type = props.type ? `<br>${props.type}` : '';
-                        layer.bindPopup(`<strong>${name}</strong>${type}`);
-                    }
-                }).addTo(map);
+      function updateMarkerIcons(layerGroup) {
+        var icon = getNikeIcon(map.getZoom());
+        layerGroup.eachLayer(function (layer) {
+          if (layer instanceof L.Marker) {
+            layer.setIcon(icon);
+          }
+        });
+      }
 
-                map.on('zoomend', function () {
-                    updateMarkerIcons(nikeSitesLayer);
-                });
-            })
-            .catch(err => console.error('GeoJSON load failed:', err));
+      fetch("./nikemissilesite.geojson")
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("HTTP " + response.status + " loading GeoJSON");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          var nikeSitesLayer = L.geoJSON(data, {
+            pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, { icon: getNikeIcon(map.getZoom()) });
+            },
+            onEachFeature: function (feature, layer) {
+              var props = feature.properties || {};
+              var name = props.name || "Unnamed Nike site";
+              var type = props.type ? "<br>" + props.type : "";
+              layer.bindPopup("<strong>" + name + "</strong>" + type);
+            }
+          }).addTo(map);
+
+          map.on("zoomend", function () {
+            updateMarkerIcons(nikeSitesLayer);
+          });
+        })
+        .catch(function (err) {
+          console.error("GeoJSON load failed:", err);
+        });
     </script>
-</body>
+  </body>
 </html>
-

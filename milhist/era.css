@@ -1,0 +1,74 @@
+@charset "utf-8";
+@import url("../css/section-home.css");
+
+.nav-link-active {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 212, 120, 0.5);
+  border-radius: 14px;
+  background: rgba(255, 212, 120, 0.12);
+  color: #fff4cf;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.battle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.battle-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.battle-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 212, 120, 0.35);
+  background: rgba(12, 34, 50, 0.95);
+}
+
+.battle-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.battle-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.battle-content {
+  padding: 22px 24px 24px;
+}
+
+.battle-content h2 {
+  margin: 0 0 10px;
+  color: #f4f7f8;
+  font-size: 1.3rem;
+}
+
+.battle-tag {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.battle-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 960px) {
+  .battle-grid {
+    grid-template-columns: 1fr;
+  }
+}

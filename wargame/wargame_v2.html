@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Wargaming at AGIH covers fundamentals, models, games, companies, D&D, and related hobby material."
+    >
     <title>Wargaming - AGIH</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <img src="images/fifthcorpsfulda.png" alt="Wargaming Header" class="header-image">
-        </header>
-
-        <!-- Main Layout -->
-        <div class="layout">
-            <!-- Sidebar Navigation -->
-            <nav class="sidebar">
-                <ul class="nav-menu">
-                    <li><a href="basics.html" class="nav-link">Fundamentals</a></li>
-                    <li><a href="models.html" class="nav-link">Models</a></li>
-                    <li><a href="simulations.html" class="nav-link">Simulations</a></li>
-                    <li><a href="games.html" class="nav-link">Games</a></li>
-                    <li><a href="companies.html" class="nav-link">Companies</a></li>
-                    <li><a href="specgames.html" class="nav-link">Specific Games</a></li>
-                    <li><a href="dandd.html" class="nav-link">D&D</a></li>
-                </ul>
-            </nav>
-
-            <!-- Main Content -->
-            <main class="main-content">
-                <div class="content-wrapper">
-                    <!-- Overview Section -->
-                    <section class="welcome-section">
-                        <div class="intro-text">
-                            <h1 style="text-align: center; color: #f1f5f9; margin-bottom: 2rem;">Wargaming Overview</h1>
-                            <p>Wargaming combines strategy, history, and imagination to recreate and explore military conflicts across time and space. From tabletop miniatures to complex simulations, wargaming offers unique insights into tactics, strategy, and the human experience of conflict.</p>
-                        </div>
-                    </section>
-
-                    <!-- Topics Grid -->
-                    <section class="topics-grid">
-                        <article class="topic-card">
-                            <h2>Fundamentals</h2>
-                            <p>Learn the basic principles of wargaming, from understanding scales and rules systems to developing tactical thinking and strategic planning skills that apply across all gaming formats.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Models</h2>
-                            <p>The art of miniature warfare comes alive through detailed models. Explore painting techniques, army building, and the craftsmanship that brings historical and fictional forces to the tabletop.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Simulations</h2>
-                            <p>Computer-based wargaming offers unprecedented complexity and scale. From grand strategy games to tactical simulators, digital wargaming pushes the boundaries of what's possible.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Games</h2>
-                            <p>Explore the diverse world of wargames, from simple introductory systems to complex historical recreations. Each game offers unique mechanics and perspectives on conflict.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Companies</h2>
-                            <p>Meet the publishers and designers who create the games we love. Learn about the history and philosophy of major wargaming companies and their contributions to the hobby.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Specific Games</h2>
-                            <p>In-depth analysis of particular wargames, including rules explanations, strategy guides, and historical context for the conflicts they represent.</p>
-                        </article>
-
-                        <article class="topic-card">
-                            <h2>Dungeons & Dragons</h2>
-                            <p>The granddaddy of role-playing games that grew from wargaming roots. Explore D&D's evolution, mechanics, and its massive impact on gaming culture and storytelling.</p>
-                        </article>
-                    </section>
-                </div>
-            </main>
+    <link rel="stylesheet" href="../css/section-home.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="images/fifthcorpsfulda.png" alt="Wargaming header image">
         </div>
+        <div class="hero-copy">
+          <p class="eyebrow">American Geek Interests Hub</p>
+          <h1>Wargaming</h1>
+          <p class="hero-text">
+            Tabletop and hobby wargaming from rules and models to publishers, simulations, and the wider game culture around them.
+          </p>
+        </div>
+      </header>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>Maintained by AGIH</p>
-                <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com" class="footer-link">Hank</a></p>
-            </div>
-        </footer>
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Wargaming navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Browse the section</p>
+            <ul class="nav-menu">
+              <li><span class="nav-link-disabled">Fundamentals coming soon</span></li>
+              <li><span class="nav-link-disabled">Models coming soon</span></li>
+              <li><span class="nav-link-disabled">Simulations coming soon</span></li>
+              <li><a class="nav-link" href="games.html">Games</a></li>
+              <li><a class="nav-link" href="companies.html">Companies</a></li>
+              <li><span class="nav-link-disabled">Specific Games coming soon</span></li>
+              <li><a class="nav-link" href="dandd.html">D&amp;D</a></li>
+              <li><a class="nav-link" href="../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              Wargaming sits at the overlap between history, analysis, simulation, design, and hobby craftsmanship. It can be as simple as counters on a map or as elaborate as painted miniatures, detailed scenarios, and campaign systems.
+            </p>
+            <p>
+              This section is meant to cover both the games themselves and the surrounding hobby infrastructure: rules, makers, design approaches, and related genres.
+            </p>
+          </section>
+
+          <section class="topic-grid" aria-label="Wargaming topics">
+            <article class="topic-card topic-card-muted">
+              <h2>Fundamentals</h2>
+              <p>Core concepts such as scale, turn structure, combat resolution, and the different ways wargames model uncertainty and command.</p>
+            </article>
+            <article class="topic-card topic-card-muted">
+              <h2>Models</h2>
+              <p>Miniatures, basing, painting, and the physical side of tabletop play where presentation and organization matter as much as rules knowledge.</p>
+            </article>
+            <article class="topic-card topic-card-muted">
+              <h2>Simulations</h2>
+              <p>Digital and analytical simulations that extend wargaming beyond the tabletop into training, experimentation, and computer-assisted play.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Games</h2>
+              <p>Published systems, mechanics, eras, and formats, from approachable entry points to dense historical or operational studies.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Companies</h2>
+              <p>The publishers and designers behind the hobby, including the styles and niches that distinguish one company from another.</p>
+            </article>
+            <article class="topic-card topic-card-muted">
+              <h2>Specific Games</h2>
+              <p>Detailed writeups, notes, and observations on individual titles once that material is broken out into dedicated pages.</p>
+            </article>
+            <article class="topic-card">
+              <h2>Dungeons &amp; Dragons</h2>
+              <p>A parallel branch of gaming with direct roots in wargaming, relevant both historically and as part of the wider hobby ecosystem.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
