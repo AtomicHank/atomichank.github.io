@@ -14,8 +14,166 @@
   </header>
   <div class="gallery">
     <div class="thumbnail"> 
-      <a href="#"><img src="../images/placeholder.png" alt="The Battle of 73 Easting" class="cards"/></a>
       <p class="tag">Gulf War, Armor, United States, Desert</p>
+      <section class="battle-map" data-battle-map>
+        <div class="battle-map-header">
+          <h3>Animated Battle Map</h3>
+          <div class="battle-map-status" data-phase-status>Phase 1</div>
+        </div>
+        <figure class="battle-map-figure">
+          <svg
+            class="battle-map-svg"
+            viewBox="0 0 900 520"
+            role="img"
+            aria-label="Animated schematic battle map of 73 Easting"
+          >
+            <defs>
+              <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#245fa8"></path>
+              </marker>
+              <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#9a2d23"></path>
+              </marker>
+            </defs>
+
+            <g class="battle-map-grid">
+              <line x1="120" y1="40" x2="120" y2="470"></line>
+              <line x1="280" y1="40" x2="280" y2="470"></line>
+              <line x1="450" y1="40" x2="450" y2="470"></line>
+              <line x1="620" y1="40" x2="620" y2="470"></line>
+              <line x1="780" y1="40" x2="780" y2="470"></line>
+              <text x="108" y="28">67 Easting</text>
+              <text x="268" y="28">70 Easting</text>
+              <text x="438" y="28">73 Easting</text>
+              <text x="608" y="28">75 Easting</text>
+              <text x="768" y="28">78 Easting</text>
+            </g>
+
+            <text class="battle-map-terrain" x="112" y="478">Coalition approach from the west</text>
+            <text class="battle-map-label" x="564" y="194">Iraqi defensive belt</text>
+            <path class="battle-map-boundary" d="M 470 102 C 515 145 550 145 585 182 S 652 246 705 284 S 738 360 790 404"></path>
+
+            <g data-phase="1" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 120 150 C 180 155 232 164 288 178"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 120 286 C 192 286 238 284 300 282"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 120 390 C 184 370 230 356 292 338"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="88" y="132" width="90" height="34"></rect>
+              <text class="battle-map-unit-text" x="133" y="154">2 ACR N</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="92" y="268" width="90" height="34"></rect>
+              <text class="battle-map-unit-text" x="137" y="290">2 ACR C</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="88" y="372" width="90" height="34"></rect>
+              <text class="battle-map-unit-text" x="133" y="394">2 ACR S</text>
+            </g>
+
+            <g data-phase="2" class="battle-map-phase">
+              <path class="battle-map-front" d="M 326 110 C 372 160 358 212 404 258 S 384 355 424 412"></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 210 280 C 268 280 322 278 388 270"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-red"
+                d="M 570 238 C 520 244 476 256 430 266"
+                marker-end="url(#arrow-red)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="326" y="250" width="108" height="36"></rect>
+              <text class="battle-map-unit-text" x="380" y="273">E TROOP</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="518" y="220" width="126" height="36"></rect>
+              <text class="battle-map-unit-text" x="581" y="243">18TH MECH BDE</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="520" y="300" width="120" height="36"></rect>
+              <text class="battle-map-unit-text" x="580" y="323">T AWAKALNA</text>
+            </g>
+
+            <g data-phase="3" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 404 174 C 442 172 486 176 532 190 S 618 214 672 208"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 404 278 C 456 274 512 276 565 286 S 654 310 708 318"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 398 356 C 446 342 504 328 560 328 S 660 334 724 344"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="380" y="156" width="110" height="36"></rect>
+              <text class="battle-map-unit-text" x="435" y="179">1-41 IN</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="378" y="258" width="112" height="36"></rect>
+              <text class="battle-map-unit-text" x="434" y="281">2 ACR MAIN</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="372" y="340" width="112" height="36"></rect>
+              <text class="battle-map-unit-text" x="428" y="363">SUPPORTING AXIS</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="642" y="178" width="114" height="36"></rect>
+              <text class="battle-map-unit-text" x="699" y="201">REAR POSITIONS</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="650" y="314" width="98" height="36"></rect>
+              <text class="battle-map-unit-text" x="699" y="337">RETREAT</text>
+            </g>
+
+            <g data-phase="4" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 530 242 C 602 238 666 236 760 228"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 542 330 C 618 334 684 348 786 376"
+                marker-end="url(#arrow-blue)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="522" y="222" width="124" height="38"></rect>
+              <text class="battle-map-unit-text" x="584" y="246">COALITION LINE</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="554" y="352" width="122" height="38"></rect>
+              <text class="battle-map-unit-text" x="615" y="376">OBJECTIVE EAST</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="734" y="192" width="92" height="34"></rect>
+              <text class="battle-map-unit-text" x="780" y="214">BROKEN</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="744" y="362" width="80" height="34"></rect>
+              <text class="battle-map-unit-text" x="784" y="384">WITHDRAW</text>
+            </g>
+          </svg>
+          <figcaption class="battle-map-caption">
+            Schematic map, not to scale. It is meant to show the sequence of movement and contact rather than precise unit locations.
+          </figcaption>
+        </figure>
+        <div class="battle-map-controls">
+          <button type="button" class="battle-map-button" data-map-prev>Prev</button>
+          <button type="button" class="battle-map-button" data-map-next>Next</button>
+          <button type="button" class="battle-map-button" data-map-play aria-pressed="false">Play</button>
+        </div>
+        <ol class="battle-map-step-list">
+          <li class="battle-map-step" data-phase-step="1" data-phase-title="Phase 1 | West-to-east advance">
+            <strong class="battle-map-step-title">Phase 1</strong>
+            <p>2nd Armored Cavalry Regiment advances east through poor visibility, maintaining multiple troop axes across the desert frontage.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="2" data-phase-title="Phase 2 | Contact at 73 Easting">
+            <strong class="battle-map-step-title">Phase 2</strong>
+            <p>E Troop and adjacent elements hit Iraqi prepared positions near the 73 Easting line and force a rapid engagement.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="3" data-phase-title="Phase 3 | Assault through the defense">
+            <strong class="battle-map-step-title">Phase 3</strong>
+            <p>Coalition armored formations press through the defensive belt, using thermal sights, gunnery, and command speed to keep momentum.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="4" data-phase-title="Phase 4 | Collapse and exploitation">
+            <strong class="battle-map-step-title">Phase 4</strong>
+            <p>Iraqi cohesion breaks down and surviving elements pull east as coalition units continue the advance into the wider ground campaign.</p>
+          </li>
+        </ol>
+      </section>
       <p class="text_column">The Battle of 73 Easting in February 1991 was a brief but revealing armored clash during the Gulf War. U.S. cavalry and armored units smashed Iraqi Republican Guard elements in poor visibility, showing the enormous advantages of training, sensors, and fire control in modern mechanized warfare.</p>
       <p class="text_column">The battle took place during the coalition's sweeping left-hook ground offensive into Iraq and Kuwait. Rather than a deliberate set-piece battle, it emerged from aggressive movement and contact in a fast-moving operational environment.</p>
       <p class="text_column">Desert conditions, dust, smoke, and limited visibility made detection and engagement difficult. Yet thermal sights, navigation systems, and superior gunnery allowed coalition crews to find and destroy targets at ranges and speeds that overwhelmed Iraqi defenders.</p>
@@ -36,5 +194,6 @@
     </div>
   </div>
 </div>
+<script src="../battle-map.js"></script>
 </body>
 </html>

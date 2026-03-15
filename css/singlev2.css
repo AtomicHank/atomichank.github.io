@@ -163,6 +163,209 @@ header::before {
   font-style: italic;
 }
 
+.battle-map {
+  margin: 0 0 24px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(9, 19, 26, 0.08);
+}
+
+.battle-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.battle-map-header h3 {
+  margin: 0;
+}
+
+.battle-map-status {
+  color: #5f4c18;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.battle-map-figure {
+  margin: 0;
+}
+
+.battle-map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, #d7bc86 0%, #c8a76a 100%);
+  box-shadow: inset 0 0 0 1px rgba(9, 19, 26, 0.12);
+}
+
+.battle-map-grid line {
+  stroke: rgba(73, 49, 12, 0.2);
+  stroke-width: 1;
+}
+
+.battle-map-grid text,
+.battle-map-label,
+.battle-map-terrain {
+  fill: rgba(54, 38, 16, 0.82);
+  font-family: "proxima-nova", "Segoe UI", sans-serif;
+}
+
+.battle-map-grid text,
+.battle-map-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.battle-map-terrain {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.battle-map-boundary {
+  stroke: rgba(73, 49, 12, 0.5);
+  stroke-dasharray: 9 8;
+  stroke-width: 2;
+}
+
+.battle-map-phase {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.battle-map-phase.is-active {
+  opacity: 1;
+}
+
+.battle-map-arrow {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 7;
+}
+
+.battle-map-arrow-blue {
+  stroke: #245fa8;
+}
+
+.battle-map-arrow-red {
+  stroke: #9a2d23;
+}
+
+.battle-map-front {
+  stroke: rgba(17, 24, 39, 0.6);
+  stroke-width: 3;
+  stroke-dasharray: 5 5;
+}
+
+.battle-map-unit {
+  rx: 8;
+  ry: 8;
+  stroke-width: 2;
+}
+
+.battle-map-unit-blue {
+  fill: rgba(36, 95, 168, 0.92);
+  stroke: #102845;
+}
+
+.battle-map-unit-red {
+  fill: rgba(154, 45, 35, 0.92);
+  stroke: #4b1510;
+}
+
+.battle-map-unit-text {
+  fill: #f8fafc;
+  font-family: "ff-tisa-sans-web-pro", "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-anchor: middle;
+}
+
+.battle-map-step-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.battle-map-step {
+  padding: 14px 16px;
+  border: 1px solid rgba(73, 49, 12, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 247, 229, 0.58);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.battle-map-step.is-active {
+  border-color: rgba(36, 95, 168, 0.45);
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: 0 12px 24px rgba(9, 19, 26, 0.12);
+  transform: translateY(-2px);
+}
+
+.battle-map-step-title {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--text);
+  font-family: "ff-tisa-sans-web-pro", "Segoe UI", sans-serif;
+  font-size: 1rem;
+}
+
+.battle-map-step p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.battle-map-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.battle-map-button {
+  min-width: 88px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #0f2230;
+  color: #f8fafc;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.battle-map-button[disabled] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.battle-map-caption {
+  margin: 12px 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 720px) {
   .container {
     width: min(calc(100% - 20px), 1180px);
@@ -180,5 +383,18 @@ header::before {
 
   .cards {
     max-height: 320px;
+  }
+
+  .battle-map {
+    padding: 14px;
+  }
+
+  .battle-map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .battle-map-step-list {
+    grid-template-columns: 1fr;
   }
 }

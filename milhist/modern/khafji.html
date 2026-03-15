@@ -14,8 +14,138 @@
   </header>
   <div class="gallery">
     <div class="thumbnail"> 
-      <a href="#"><img src="../images/placeholder.png" alt="The Battle of Khafji" class="cards"/></a>
       <p class="tag">Gulf War, Saudi Arabia, Iraq, Coalition</p>
+      <section class="battle-map" data-battle-map>
+        <div class="battle-map-header">
+          <h3>Animated Battle Map</h3>
+          <div class="battle-map-status" data-phase-status>Phase 1</div>
+        </div>
+        <figure class="battle-map-figure">
+          <svg
+            class="battle-map-svg"
+            viewBox="0 0 900 520"
+            role="img"
+            aria-label="Animated schematic battle map of Khafji"
+          >
+            <defs>
+              <marker id="khafji-arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#245fa8"></path>
+              </marker>
+              <marker id="khafji-arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#9a2d23"></path>
+              </marker>
+            </defs>
+
+            <rect x="678" y="0" width="222" height="520" fill="#8fc4d6"></rect>
+            <rect x="614" y="66" width="170" height="248" rx="18" ry="18" fill="rgba(240, 225, 194, 0.78)" stroke="rgba(73, 49, 12, 0.18)"></rect>
+            <rect x="636" y="96" width="126" height="46" rx="10" ry="10" fill="rgba(255,255,255,0.34)"></rect>
+            <rect x="636" y="160" width="126" height="46" rx="10" ry="10" fill="rgba(255,255,255,0.34)"></rect>
+            <rect x="636" y="224" width="126" height="46" rx="10" ry="10" fill="rgba(255,255,255,0.34)"></rect>
+            <path d="M 0 112 C 118 102 268 114 430 154 S 638 196 706 206" fill="none" stroke="rgba(73, 49, 12, 0.22)" stroke-width="14"></path>
+            <path d="M 0 368 C 122 358 252 352 408 354 S 604 362 692 378" fill="none" stroke="rgba(73, 49, 12, 0.22)" stroke-width="14"></path>
+            <path class="battle-map-boundary" d="M 146 78 C 218 112 286 148 362 186 S 492 250 574 286"></path>
+
+            <text class="battle-map-terrain" x="702" y="42">Persian Gulf</text>
+            <text class="battle-map-label" x="650" y="86">Khafji urban area</text>
+            <text class="battle-map-label" x="76" y="98">Kuwaiti side</text>
+            <text class="battle-map-label" x="78" y="344">Saudi rear area</text>
+            <text class="battle-map-label" x="188" y="62">Border approach</text>
+
+            <g data-phase="1" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-red"
+                d="M 118 126 C 216 138 304 156 404 180 S 552 218 624 236"
+                marker-end="url(#khafji-arrow-red)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-red"
+                d="M 148 274 C 250 264 352 244 466 232 S 576 222 632 214"
+                marker-end="url(#khafji-arrow-red)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-red" x="78" y="108" width="122" height="36"></rect>
+              <text class="battle-map-unit-text" x="139" y="131">IRAQI COLUMN N</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="108" y="256" width="126" height="36"></rect>
+              <text class="battle-map-unit-text" x="171" y="279">IRAQI COLUMN S</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="520" y="340" width="118" height="36"></rect>
+              <text class="battle-map-unit-text" x="579" y="363">USMC SCREEN</text>
+            </g>
+
+            <g data-phase="2" class="battle-map-phase">
+              <path class="battle-map-front" d="M 602 90 C 628 124 630 168 618 222 S 608 276 628 312"></path>
+              <rect class="battle-map-unit battle-map-unit-red" x="604" y="114" width="134" height="38"></rect>
+              <text class="battle-map-unit-text" x="671" y="138">IRAQI IN TOWN</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="598" y="200" width="142" height="38"></rect>
+              <text class="battle-map-unit-text" x="669" y="224">BLOCKING POSITIONS</text>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 460 348 C 532 328 590 304 632 276"
+                marker-end="url(#khafji-arrow-blue)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="420" y="332" width="124" height="36"></rect>
+              <text class="battle-map-unit-text" x="482" y="355">OBSERVERS / CAS</text>
+            </g>
+
+            <g data-phase="3" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 210 378 C 308 362 410 340 534 314 S 650 278 700 244"
+                marker-end="url(#khafji-arrow-blue)"
+              ></path>
+              <path
+                class="battle-map-arrow battle-map-arrow-blue"
+                d="M 310 446 C 394 420 486 394 594 370 S 682 346 720 318"
+                marker-end="url(#khafji-arrow-blue)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="170" y="360" width="122" height="36"></rect>
+              <text class="battle-map-unit-text" x="231" y="383">SAUDI ATTACK</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="270" y="428" width="136" height="36"></rect>
+              <text class="battle-map-unit-text" x="338" y="451">QATARI / SUPPORT</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="636" y="174" width="118" height="36"></rect>
+              <text class="battle-map-unit-text" x="695" y="197">URBAN FIGHT</text>
+            </g>
+
+            <g data-phase="4" class="battle-map-phase">
+              <path
+                class="battle-map-arrow battle-map-arrow-red"
+                d="M 618 150 C 556 144 490 136 410 128 S 264 116 166 118"
+                marker-end="url(#khafji-arrow-red)"
+              ></path>
+              <rect class="battle-map-unit battle-map-unit-blue" x="620" y="250" width="130" height="38"></rect>
+              <text class="battle-map-unit-text" x="685" y="274">CITY SECURED</text>
+              <rect class="battle-map-unit battle-map-unit-blue" x="520" y="326" width="132" height="38"></rect>
+              <text class="battle-map-unit-text" x="586" y="350">COALITION CONTROL</text>
+              <rect class="battle-map-unit battle-map-unit-red" x="170" y="100" width="110" height="36"></rect>
+              <text class="battle-map-unit-text" x="225" y="123">WITHDRAWAL</text>
+            </g>
+          </svg>
+          <figcaption class="battle-map-caption">
+            Schematic map, not to scale. It emphasizes the Iraqi thrust into Khafji, coalition air-ground shaping, and the counterattack into the city.
+          </figcaption>
+        </figure>
+        <div class="battle-map-controls">
+          <button type="button" class="battle-map-button" data-map-prev>Prev</button>
+          <button type="button" class="battle-map-button" data-map-next>Next</button>
+          <button type="button" class="battle-map-button" data-map-play aria-pressed="false">Play</button>
+        </div>
+        <ol class="battle-map-step-list">
+          <li class="battle-map-step" data-phase-step="1" data-phase-title="Phase 1 | Iraqi incursion southward">
+            <strong class="battle-map-step-title">Phase 1</strong>
+            <p>Iraqi armored and mechanized columns cross the border into Saudi Arabia and push toward Khafji, exploiting the open coastal road approaches.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="2" data-phase-title="Phase 2 | Occupation of Khafji">
+            <strong class="battle-map-step-title">Phase 2</strong>
+            <p>Iraqi forces enter the city and establish positions, but coalition surveillance and air power begin isolating the penetration.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="3" data-phase-title="Phase 3 | Coalition counterattack">
+            <strong class="battle-map-step-title">Phase 3</strong>
+            <p>Saudi and Qatari forces, supported by U.S. Marines and coalition command networks, counterattack into the urban area.</p>
+          </li>
+          <li class="battle-map-step" data-phase-step="4" data-phase-title="Phase 4 | Clearance and Iraqi withdrawal">
+            <strong class="battle-map-step-title">Phase 4</strong>
+            <p>Khafji is retaken and remaining Iraqi elements withdraw north under pressure, showing the failure of the offensive.</p>
+          </li>
+        </ol>
+      </section>
       <p class="text_column">The Battle of Khafji in January 1991 was the first major ground battle of the Gulf War. Iraqi forces crossed into Saudi Arabia and briefly occupied the town, only to be driven out by coalition and Saudi-Qatari counterattacks heavily supported by air power.</p>
       <p class="text_column">The Iraqi move came during the coalition air campaign and appears to have been intended to disrupt coalition plans, score a political success, and test enemy ground response. It was one of the few attempts by Iraq to seize the initiative on the ground.</p>
       <p class="text_column">Khafji revealed the increasing importance of sensors, reconnaissance, and command networks. Coalition forces often knew far more about Iraqi movement than would have been possible in earlier eras.</p>
@@ -36,5 +166,6 @@
     </div>
   </div>
 </div>
+<script src="../battle-map.js"></script>
 </body>
 </html>
