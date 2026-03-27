@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Alphabetical list of Soviet bases in 1989, built from the workbook in this folder."
+    >
+    <title>Soviet Bases List - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link rel="stylesheet" href="./soviet-bases.css">
+    <script src="./soviet-bases.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="../../images/tank.jpg" alt="Cold War armored vehicle image">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>List of Soviet Bases</h1>
+          <p class="hero-text">
+            An alphabetical lookup page for Soviet bases and barracks locations when you want direct name access instead of browsing the map.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Soviet bases list navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><a class="nav-link" href="index.html">Soviet Bases Overview</a></li>
+              <li><a class="nav-link" href="refmap.html">Clickable Map</a></li>
+              <li><span class="nav-link-active">Alphabetical List</span></li>
+              <li><a class="nav-link" href="Soviet Force Structure 1989.xlsx">Download Workbook</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This page presents the aggregated base collection in alphabetical order. It is the faster option when you already know the base or barracks name and only need a compact summary before jumping to the map.
+            </p>
+          </section>
+
+          <section class="topic-card filter-card" aria-label="Soviet bases list filters">
+            <div class="filter-toolbar">
+              <label class="filter-field" for="list-search">
+                <span>Search</span>
+                <input id="list-search" type="search" placeholder="Try Abakan, GDR, or Siberian MD">
+              </label>
+              <label class="filter-field" for="list-host-filter">
+                <span>Host Country</span>
+                <select id="list-host-filter">
+                  <option value="">All host countries</option>
+                </select>
+              </label>
+              <label class="filter-field" for="list-md-filter">
+                <span>Military District</span>
+                <select id="list-md-filter">
+                  <option value="">All districts</option>
+                </select>
+              </label>
+              <p id="list-result-count" class="filter-result">Loading bases...</p>
+            </div>
+          </section>
+
+          <section class="base-list-card" aria-label="Alphabetical list of Soviet bases">
+            <div id="base-list" class="base-card-grid"></div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

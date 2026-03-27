@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Interactive map of Soviet bases in 1989, derived from the workbook in this folder."
+    >
+    <title>Soviet Bases Map - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link rel="stylesheet" href="./soviet-bases.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="./soviet-bases.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="../../images/tank.jpg" alt="Cold War armored vehicle image">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>Soviet Bases Map</h1>
+          <p class="hero-text">
+            An interactive map view of the 1989 Soviet basing workbook. Each marker represents an aggregated base location rather than a raw spreadsheet row.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Soviet bases map navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><a class="nav-link" href="index.html">Soviet Bases Overview</a></li>
+              <li><span class="nav-link-active">Clickable Map</span></li>
+              <li><a class="nav-link" href="list.html">Alphabetical List</a></li>
+              <li><a class="nav-link" href="Soviet Force Structure 1989.xlsx">Download Workbook</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              The workbook has been reduced to named base sites with location data, command relationships, and a short force summary for each marker. Use the filters when you want to isolate one host country or military district.
+            </p>
+          </section>
+
+          <section class="topic-card filter-card" aria-label="Soviet bases map filters">
+            <div class="filter-toolbar">
+              <label class="filter-field" for="map-search">
+                <span>Search</span>
+                <input id="map-search" type="search" placeholder="Try Kaliningrad, GoF DEU, or Tank Army">
+              </label>
+              <label class="filter-field" for="map-host-filter">
+                <span>Host Country</span>
+                <select id="map-host-filter">
+                  <option value="">All host countries</option>
+                </select>
+              </label>
+              <label class="filter-field" for="map-md-filter">
+                <span>Military District</span>
+                <select id="map-md-filter">
+                  <option value="">All districts</option>
+                </select>
+              </label>
+              <p id="map-result-count" class="filter-result">Loading bases...</p>
+            </div>
+          </section>
+
+          <section class="explorer-grid">
+            <section class="topic-card map-card-static" aria-label="Soviet base map panel">
+              <div class="map-frame">
+                <div id="base-map"></div>
+                <div id="base-map-status" class="map-status">Loading Soviet base data...</div>
+              </div>
+            </section>
+
+            <div class="directory-panel">
+              <section class="topic-card directory-card-static" aria-label="Visible Soviet bases">
+                <div class="directory-head">
+                  <p class="menu-title">Visible bases</p>
+                </div>
+                <div id="base-directory" class="directory-list"></div>
+              </section>
+
+              <section class="topic-card detail-card-static" aria-labelledby="base-detail-title">
+                <p class="detail-eyebrow">Selected base</p>
+                <h2 id="base-detail-title" class="detail-title">Loading...</h2>
+                <p id="base-detail-meta" class="detail-meta">The workbook data is still loading.</p>
+                <div id="base-detail-body" class="detail-body"></div>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

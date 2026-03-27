@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Interactive Cold War 1985 deployment map built directly from the local KMZ dataset."
+    >
+    <title>Cold War 1985 Map - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link rel="stylesheet" href="./coldwar-sites.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero hero-coldwar">
+        <div class="hero-image coldwar-hero" aria-hidden="true">
+          <div class="coldwar-grid"></div>
+          <div class="coldwar-frontier"></div>
+          <div class="coldwar-glow coldwar-glow-west"></div>
+          <div class="coldwar-glow coldwar-glow-east"></div>
+          <div class="coldwar-ring coldwar-ring-a"></div>
+          <div class="coldwar-ring coldwar-ring-b"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>Cold War 1985 Map</h1>
+          <p class="hero-text">
+            This page reads the local KMZ directly in the browser and turns it into an interactive force map. Use the unit directory and alliance filters to move through NATO and Warsaw Pact formations while keeping the original KMZ notes attached to each marker.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Cold War site navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><span class="nav-link-active">Cold War 1985 Explorer</span></li>
+              <li><a class="nav-link" href="Cold War 1985.kmz">Download KMZ Source</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              The KMZ contains 1985 Cold War force placement data organized through a folder hierarchy, custom insignia, and short notes for selected formations. Instead of flattening that into a one-off image, this page preserves the structure so you can browse it geographically and by command chain.
+            </p>
+            <p>
+              Search for formations by name, click markers to inspect their hierarchy, and use the alliance toggles when you want to isolate one side of the map.
+            </p>
+          </section>
+
+          <section class="topic-card stat-strip" aria-label="Cold War map summary">
+            <article class="stat-card">
+              <p class="stat-label">Total formations</p>
+              <p id="stat-total" class="stat-value">--</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">NATO</p>
+              <p id="stat-nato" class="stat-value">--</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Warsaw Pact</p>
+              <p id="stat-warsaw" class="stat-value">--</p>
+            </article>
+          </section>
+
+          <section class="topic-card explorer-shell" aria-label="Cold War 1985 unit explorer">
+            <div class="toolbar">
+              <label class="search-wrap" for="unit-search">
+                <span class="search-label">Search units, locations, or notes</span>
+                <input
+                  id="unit-search"
+                  class="search-input"
+                  type="search"
+                  placeholder="Try V Corps, 3rd AD, Dresden, or 1 GTA"
+                  autocomplete="off"
+                >
+              </label>
+
+              <div class="filter-group" role="group" aria-label="Alliance filters">
+                <button type="button" class="filter-button is-active" data-filter="All">All</button>
+                <button type="button" class="filter-button" data-filter="NATO">NATO</button>
+                <button type="button" class="filter-button" data-filter="Warsaw Pact">Warsaw Pact</button>
+              </div>
+
+              <p id="load-status" class="status-line" aria-live="polite">Loading KMZ...</p>
+            </div>
+
+            <div class="explorer-grid">
+              <section class="topic-card map-card" aria-label="Cold War deployment map">
+                <div class="map-head">
+                  <h2>Deployment Map</h2>
+                  <p>
+                    Marker art and force labels are read from the KMZ package at page load, so the map reflects the source file instead of a hand-copied subset.
+                  </p>
+                </div>
+                <div class="map-frame">
+                  <div id="map"></div>
+                  <div id="map-status" class="map-status">Parsing KMZ and placing units...</div>
+                </div>
+              </section>
+
+              <div class="directory-panel">
+                <section class="topic-card directory-card" aria-label="Unit directory">
+                  <div class="directory-head">
+                    <p class="menu-title">Visible formations</p>
+                    <p id="result-count" class="result-count">-- results</p>
+                  </div>
+                  <div id="unit-list" class="unit-list"></div>
+                </section>
+
+                <section class="topic-card detail-card" aria-labelledby="detail-title">
+                  <p class="detail-eyebrow">Selected formation</p>
+                  <h2 id="detail-title" class="detail-title">Loading...</h2>
+                  <p id="detail-path" class="detail-meta">The KMZ is still being parsed.</p>
+                  <p id="detail-coords" class="detail-meta"></p>
+                  <div id="detail-description" class="detail-body"></div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="./coldwar-sites.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Overview page for Soviet Bases 1989, built from the force-structure workbook in this folder."
+    >
+    <title>Soviet Bases 1989 - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <link rel="stylesheet" href="./soviet-bases.css">
+    <script src="./soviet-bases.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="../../images/tank.jpg" alt="Cold War armored vehicle image">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>Soviet Bases 1989</h1>
+          <p class="hero-text">
+            A workbook-driven reference subsection for Soviet Cold War basing. The spreadsheet in this folder is turned into a clickable map and an alphabetical base list so the force structure can be browsed spatially instead of row by row.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="Soviet bases navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><span class="nav-link-active">Soviet Bases Overview</span></li>
+              <li><a class="nav-link" href="refmap.html">Clickable Map</a></li>
+              <li><a class="nav-link" href="list.html">Alphabetical List</a></li>
+              <li><a class="nav-link" href="Soviet Force Structure 1989.xlsx">Download Workbook</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              Unlike the Soviet airfields dataset, this workbook is a force-structure sheet with thousands of individual unit rows. These pages aggregate those rows into base locations so you can browse where formations were actually stationed and then drill into the command chain behind each site.
+            </p>
+            <p>
+              Use the map when you want geography first, and use the list when you already know the base name or host country you want to inspect.
+            </p>
+          </section>
+
+          <section class="topic-card stat-strip" aria-label="Soviet bases summary">
+            <article class="stat-card">
+              <p class="stat-label">Base locations</p>
+              <p class="stat-value" data-summary="baseCount">--</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Mapped bases</p>
+              <p class="stat-value" data-summary="mappedBaseCount">--</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Host countries</p>
+              <p class="stat-value" data-summary="hostCountryCount">--</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Workbook rows</p>
+              <p class="stat-value" data-summary="recordCount">--</p>
+            </article>
+          </section>
+
+          <section class="feature-grid" aria-label="Soviet bases features">
+            <article class="topic-card feature-card">
+              <a class="feature-link" href="refmap.html">
+                <img class="feature-image" src="../../images/tank.jpg" alt="Armored vehicle reference image">
+                <div class="feature-content">
+                  <h2>Soviet Base Map</h2>
+                  <p class="feature-tag">Map | Reference | Clickable</p>
+                  <p>Browse aggregated base locations geographically and inspect the formations tied to each site.</p>
+                </div>
+              </a>
+            </article>
+            <article class="topic-card feature-card">
+              <a class="feature-link" href="list.html">
+                <img class="feature-image" src="../../images/tank.jpg" alt="Cold War armored vehicle image">
+                <div class="feature-content">
+                  <h2>Soviet Base List</h2>
+                  <p class="feature-tag">List | Reference | Alphabetical</p>
+                  <p>Use the alphabetical base list for direct lookup by barracks name, location, country, or military district.</p>
+                </div>
+              </a>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
