@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1st Infantry Division ~WWI</title>
+<link href="../US Army OOB 1989/division-detail.css" rel="stylesheet" type="text/css">
+<style>
+  :root {
+    --board-columns: 11;
+    --sec2-row-height: 234px;
+  }
+
+  .unit-board {
+    grid-template-columns: repeat(var(--board-columns), var(--board-column));
+    width: fit-content;
+    min-width: calc(var(--board-columns) * var(--board-column) + (var(--board-columns) - 1) * var(--board-gap));
+    margin: 0 auto;
+  }
+
+  .wwi-board.has-top-hierarchy > section:nth-child(n + 2)::before,
+  .wwi-board.has-left-ticks > section:has(img)::after {
+    display: none;
+  }
+
+  .wwi-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 12)::before {
+    display: block;
+  }
+
+  .unit-board.wwi-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 12) img {
+    margin: var(--top-row-icon-offset) auto 0;
+  }
+
+  .unit-board.wwi-board.has-top-hierarchy > section:nth-child(n + 13) img {
+    margin: 0 auto;
+  }
+
+  .wwi-board #sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wwi-board #sec2 .unit-label {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .wwi-board.has-left-ticks > section[id="sec2"]:has(.stack-line)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(var(--top-row-icon-offset) + 75px);
+    left: -7px;
+    width: var(--left-tick-length);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .wwi-board.has-left-ticks > section[id="sec3"]:has(img)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--sec3-tick-center);
+    left: var(--left-stack-offset);
+    width: var(--left-tick-length-lower);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .board-caption {
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .board-caption a {
+    color: #fff4cf;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .board-caption a:hover,
+  .board-caption a:focus-visible {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero-compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Modern Era Reference</p>
+        <h1>1st Infantry Division</h1>
+        <p>
+          The First Division (Regulars), nicknamed The Big Red One, is shown here in a World War I order of battle styled to match the 1989 division boards. This layout keeps the division symbol on top, the major subordinate units beneath it, and the infantry battalions stacked below their regiments.
+        </p>
+        <div class="top-nav">
+          <a href="1ID.html">Back to 1ID History</a>
+          <a href="1ID_WWII.html">WWII OOB</a>
+          <a href="1ID_Vietnam.html">1960s / Vietnam OOB</a>
+          <a href="div_index.html">Back to Division Index</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>The board below follows the same presentation as the WWII 1ID page, but uses the WWI organization you provided: four infantry regiments, three artillery regiments, three machine gun regiments, and the 1st Engineers Battalion. The infantry battalions are shown beneath their parent regiments, and units without a dedicated local icon use the shared placeholder symbol from the repo root.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board wwi-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 16 IN RGT.png" alt="16th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+            <p class="unit-label">16th Infantry Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 18 IN RGT.png" alt="18th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+            <p class="unit-label">18th Infantry Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 26 IN RGT.png" alt="26th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+            <p class="unit-label">26th Infantry Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 28 IN RGT.png" alt="28th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+            <p class="unit-label">28th Infantry Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="5th Artillery Regiment placeholder symbol" title="5th Artillery Regiment" width="150" height="150">
+            <p class="unit-label">5th Artillery Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="6th Artillery Regiment placeholder symbol" title="6th Artillery Regiment" width="150" height="150">
+            <p class="unit-label">6th Artillery Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="7th Artillery Regiment placeholder symbol" title="7th Artillery Regiment" width="150" height="150">
+            <p class="unit-label">7th Artillery Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Machine Gun Regiment placeholder symbol" title="1st Machine Gun Regiment" width="150" height="150">
+            <p class="unit-label">1st Machine Gun Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="2nd Machine Gun Regiment placeholder symbol" title="2nd Machine Gun Regiment" width="150" height="150">
+            <p class="unit-label">2nd Machine Gun Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="3rd Machine Gun Regiment placeholder symbol" title="3rd Machine Gun Regiment" width="150" height="150">
+            <p class="unit-label">3rd Machine Gun Regiment</p>
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU 1 ENG BN short v1.png" alt="1st Engineers Battalion symbol" title="1st Engineers Battalion" width="150" height="150">
+            <p class="unit-label">1st Engineers Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 16 IN RGT.png" alt="1st Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 28 IN RGT.png" alt="1st Battalion, 28th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 16 IN RGT.png" alt="2nd Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 18 IN RGT.png" alt="2nd Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 26 IN RGT.png" alt="2nd Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 28 IN RGT.png" alt="2nd Battalion, 28th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 16 IN RGT.png" alt="3rd Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 18 IN RGT.png" alt="3rd Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 26 IN RGT.png" alt="3rd Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 28 IN RGT.png" alt="3rd Battalion, 28th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Infantry regiment reference pages:
+          <a href="../US Infantry Regiments/16RGT.html">16th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/18RGT.html">18th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/28RGT.html">28th Infantry Regiment</a>.
+        </p>
+        <p class="board-caption">
+          Units shown with the root placeholder icon because no dedicated local symbol was found: the 5th, 6th, and 7th Artillery Regiments and the 1st, 2nd, and 3rd Machine Gun Regiments. The 1st Engineers Battalion uses the closest matching 1ID engineer art already present in the repo.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

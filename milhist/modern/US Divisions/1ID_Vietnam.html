@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1st Infantry Division ~1960s / Vietnam</title>
+<link href="../US Army OOB 1989/division-detail.css" rel="stylesheet" type="text/css">
+<style>
+  :root {
+    --board-columns: 7;
+    --sec2-row-height: 234px;
+    --sec3-row-height: 184px;
+    --sec3-step: calc(var(--sec3-row-height) + var(--board-gap));
+  }
+
+  .unit-board {
+    grid-template-columns: repeat(var(--board-columns), var(--board-column));
+    width: fit-content;
+    min-width: calc(var(--board-columns) * var(--board-column) + (var(--board-columns) - 1) * var(--board-gap));
+    margin: 0 auto;
+  }
+
+  .sixties-board {
+    --board-columns: 5;
+  }
+
+  .sixties-board.has-top-hierarchy > section:nth-child(n + 2)::before,
+  .sixties-board.has-left-ticks > section:has(img)::after {
+    display: none;
+  }
+
+  .sixties-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 6)::before {
+    display: block;
+  }
+
+  .unit-board.sixties-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 6) img {
+    margin: var(--top-row-icon-offset) auto 0;
+  }
+
+  .unit-board.sixties-board.has-top-hierarchy > section:nth-child(n + 7) img {
+    margin: 0 auto;
+  }
+
+  .sixties-board #sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sixties-board #sec3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sixties-board .unit-label {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .sixties-board .unit-label-sm {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.76rem;
+    line-height: 1.28;
+    max-width: 138px;
+    text-align: center;
+  }
+
+  .sixties-board.has-left-ticks > section[id="sec2"]:has(.stack-line)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(var(--top-row-icon-offset) + 75px);
+    left: -7px;
+    width: var(--left-tick-length);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .sixties-board.has-left-ticks > section[id="sec3"]:has(img)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--sec3-tick-center);
+    left: var(--left-stack-offset);
+    width: var(--left-tick-length-lower);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .vietnam-board.has-top-hierarchy > section:nth-child(n + 2)::before,
+  .vietnam-board.has-left-ticks > section:has(img)::after {
+    display: none;
+  }
+
+  .vietnam-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 8)::before {
+    display: block;
+  }
+
+  .unit-board.vietnam-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 8) img {
+    margin: var(--top-row-icon-offset) auto 0;
+  }
+
+  .unit-board.vietnam-board.has-top-hierarchy > section:nth-child(n + 9) img {
+    margin: 0 auto;
+  }
+
+  .vietnam-board #sec2,
+  .vietnam-board #sec3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vietnam-board .unit-label {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .vietnam-board .unit-label-sm {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.76rem;
+    line-height: 1.28;
+    max-width: 138px;
+    text-align: center;
+  }
+
+  .vietnam-board.has-left-ticks > section[id="sec2"]:has(.stack-line)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(var(--top-row-icon-offset) + 75px);
+    left: -7px;
+    width: var(--left-tick-length);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .vietnam-board.has-left-ticks > section[id="sec3"]:has(img)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--sec3-tick-center);
+    left: var(--left-stack-offset);
+    width: var(--left-tick-length-lower);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .board-caption {
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .board-caption a {
+    color: #fff4cf;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .board-caption a:hover,
+  .board-caption a:focus-visible {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero-compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Modern Era Reference</p>
+        <h1>1st Infantry Division</h1>
+        <p>
+          This page now splits the Big Red One's pre-Vietnam and Vietnam-service structures into separate boards: one for the early 1960s Pentomic-era division and one for the units that actually served in Vietnam between 1965 and 1970.
+        </p>
+        <div class="top-nav">
+          <a href="1ID.html">Back to 1ID History</a>
+          <a href="1ID_WWI.html">WWI OOB</a>
+          <a href="1ID_WWII.html">WWII OOB</a>
+          <a href="div_index.html">Back to Division Index</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>Early 1960s OOB. This board shows the pre-1964 Pentomic-era maneuver structure documented for the 1st Infantry Division's 1962-1963 Long Thrust rotations to Berlin: 2nd Battle Group, 12th Infantry; 1st Battle Group, 13th Infantry; 2nd Battle Group, 26th Infantry; and 1st Battle Group, 28th Infantry, alongside division artillery. A battalion row is shown beneath the battle groups using the corresponding numbered battalion symbols.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board sixties-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 12 IN RGT.png" alt="2nd Battle Group, 12th Infantry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">2nd Battle Group,<br>12th Infantry</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 13 IN RGT.png" alt="1st Battle Group, 13th Infantry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">1st Battle Group,<br>13th Infantry</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 26 IN RGT.png" alt="2nd Battle Group, 26th Infantry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">2nd Battle Group,<br>26th Infantry</p>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 28 IN RGT.png" alt="1st Battle Group, 28th Infantry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">1st Battle Group,<br>28th Infantry</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU FAB-1ID short v1.png" alt="1st Infantry Division Artillery symbol" width="150" height="150">
+            <p class="unit-label">1st Infantry Division<br>Artillery</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 12 IN RGT.png" alt="2nd Battalion, 12th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>12th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 13 IN RGT.png" alt="1st Battalion, 13th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>13th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 26 IN RGT.png" alt="2nd Battalion, 26th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>26th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 28 IN RGT.png" alt="1st Battalion, 28th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>28th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Early-1960s regiment reference pages:
+          <a href="../US Infantry Regiments/12RGT.html">12th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/13RGT.html">13th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/28RGT.html">28th Infantry Regiment</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>Vietnam-service OOB. This board keeps only the units that served in Vietnam and groups them under the 1st, 2nd, and 3rd Brigades plus the principal divisional combat, aviation, artillery, reconnaissance, and support commands.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board vietnam-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 1-1ID ABCT short v1.png" alt="1st Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 4;" aria-hidden="true"></span>
+            <p class="unit-label">1st Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 2-1ID ABCT short v1.png" alt="2nd Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">2nd Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 3-1ID ABCT short v1.png" alt="3rd Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 4;" aria-hidden="true"></span>
+            <p class="unit-label">3rd Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU 1-4 CAV (R) short v1.png" alt="1st Squadron, 4th Cavalry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 1;" aria-hidden="true"></span>
+            <p class="unit-label">1st Squadron,<br>4th Cavalry</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU FAB-1ID short v1.png" alt="Division Artillery symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 4;" aria-hidden="true"></span>
+            <p class="unit-label">Division Artillery</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU CAB-1ID short v1.png" alt="Division Aviation symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">Division Aviation</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU SB-1ID short v1.png" alt="Division Support symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 5;" aria-hidden="true"></span>
+            <p class="unit-label">Division Support</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 28 IN RGT.png" alt="1st Battalion, 28th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>28th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 2-16 IN v1.png" alt="2nd Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-16 IN v1.png" alt="1st Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Company F, 52nd Infantry placeholder symbol" title="Company F, 52nd Infantry (Long Range Patrol)" width="125" height="125">
+            <p class="unit-label-sm">Company F,<br>52nd Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-5 FA  v1.png" alt="1st Battalion, 5th Artillery symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>5th Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Aviation Battalion placeholder symbol" title="1st Aviation Battalion (Airmobile)" width="125" height="125">
+            <p class="unit-label-sm">1st Aviation<br>Battalion</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 ENG BN short v1.png" alt="1st Engineer Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Engineer<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 2 IN RGT.png" alt="1st Battalion, 2nd Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>2nd Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>18th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 28 IN RGT.png" alt="2nd Battalion, 28th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>28th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Company I, 75th Infantry placeholder symbol" title="Company I, 75th Infantry (Ranger)" width="125" height="125">
+            <p class="unit-label-sm">Company I,<br>75th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Battalion, 7th Artillery placeholder symbol" title="1st Battalion, 7th Artillery (105mm)" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>7th Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="162nd Aviation Company placeholder symbol" title="162nd Aviation Company (Airmobile)" width="125" height="125">
+            <p class="unit-label-sm">162nd Aviation<br>Company</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Medical Battalion placeholder symbol" title="1st Medical Battalion" width="125" height="125">
+            <p class="unit-label-sm">1st Medical<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>26th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 18 IN RGT.png" alt="2nd Battalion, 18th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>18th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 2 IN RGT.png" alt="2nd Battalion, 2nd Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>2nd Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="2nd Battalion, 33rd Artillery placeholder symbol" title="2nd Battalion, 33rd Artillery (105mm)" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>33rd Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="173rd Aviation Company placeholder symbol" title="173rd Aviation Company (Airmobile)" width="125" height="125">
+            <p class="unit-label-sm">173rd Aviation<br>Company</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 121 SIG BN short v1.png" alt="121st Signal Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">121st Signal<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 2 IN RGT.png" alt="2nd Battalion, 2nd Infantry mechanized symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>2nd Infantry (M)</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-16 IN v1.png" alt="1st Battalion, 16th Infantry mechanized symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>16th Infantry (M)</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>18th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="8th Battalion, 6th Artillery placeholder symbol" title="8th Battalion, 6th Artillery (155mm)" width="125" height="125">
+            <p class="unit-label-sm">8th Battalion,<br>6th Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Troop C, 16th Cavalry placeholder symbol" title="Troop C, 16th Cavalry (Air)" width="125" height="125">
+            <p class="unit-label-sm">Troop C,<br>16th Cavalry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Supply and Service Battalion placeholder symbol" title="1st Supply & Service Battalion" width="125" height="125">
+            <p class="unit-label-sm">1st Supply &amp;<br>Service Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 28 IN RGT.png" alt="2nd Battalion, 28th Infantry symbol second assignment" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>28th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry symbol later assignment" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>26th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU D-25 TA FA  v1.png" alt="Battery D, 25th Artillery symbol" width="125" height="125">
+            <p class="unit-label-sm">Battery D,<br>25th Artillery</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="701st Maintenance Battalion placeholder symbol" title="701st Maintenance Battalion" width="125" height="125">
+            <p class="unit-label-sm">701st Maintenance<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 MP v1.png" alt="1st Military Police Company symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Military Police<br>Company</p>
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Infantry regiment reference pages:
+          <a href="../US Infantry Regiments/2RGT.html">2nd Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/16RGT.html">16th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/18RGT.html">18th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/28RGT.html">28th Infantry Regiment</a>.
+        </p>
+        <p class="board-caption">
+          This board focuses on the principal combat, artillery, reconnaissance, aviation, and division-support elements listed for the 1st Infantry Division's Vietnam service rather than every short-duration attachment or detachment. The top row uses the generic 1ID brigade and command icons from the local Generic Brigades folder, and units shown with the root placeholder icon are those without a dedicated local symbol in the repo.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1st Infantry Division ~WWII</title>
+<link href="../US Army OOB 1989/division-detail.css" rel="stylesheet" type="text/css">
+<style>
+  :root {
+    --board-columns: 9;
+  }
+
+  .unit-board {
+    grid-template-columns: repeat(var(--board-columns), var(--board-column));
+    width: fit-content;
+    min-width: calc(var(--board-columns) * var(--board-column) + (var(--board-columns) - 1) * var(--board-gap));
+    margin: 0 auto;
+  }
+
+  .wwii-board.has-top-hierarchy > section:nth-child(n + 2)::before,
+  .wwii-board.has-left-ticks > section:has(img)::after {
+    display: none;
+  }
+
+  .wwii-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 10)::before {
+    display: block;
+  }
+
+  .wwii-board.has-top-hierarchy > section:first-child::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--hq-icon-size);
+    left: 50%;
+    width: var(--connector-width);
+    height: calc((var(--hq-row-height) - var(--hq-icon-size)) + var(--board-gap) - var(--connector-branch-offset));
+    background: var(--connector-color);
+    pointer-events: none;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  .unit-board.wwii-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 10) img {
+    margin: var(--top-row-icon-offset) auto 0;
+  }
+
+  .unit-board.wwii-board.has-top-hierarchy > section:nth-child(n + 11) img {
+    margin: 0 auto;
+  }
+
+  .wwii-board.has-left-ticks > section[id="sec2"]:has(.stack-line)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(var(--top-row-icon-offset) + 75px);
+    left: -7px;
+    width: var(--left-tick-length);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .wwii-board.has-left-ticks > section[id="sec3"]:has(img)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--sec3-tick-center);
+    left: var(--left-stack-offset);
+    width: var(--left-tick-length-lower);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .board-caption {
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .board-caption a {
+    color: #fff4cf;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .board-caption a:hover,
+  .board-caption a:focus-visible {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero-compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Modern Era Reference</p>
+        <h1>1st Infantry Division</h1>
+        <p>
+          A World War II order of battle page styled to match the 1989 division boards. The layout keeps the division symbol at the top, the major subordinate units beneath it, and the infantry, artillery, and division support elements arranged in the rows below.
+        </p>
+        <div class="top-nav">
+          <a href="1ID.html">Back to 1ID History</a>
+          <a href="1ID_WWI.html">WWI OOB</a>
+          <a href="1ID_Vietnam.html">1960s / Vietnam OOB</a>
+          <a href="div_index.html">Back to Division Index</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>The icon board below uses the 1989 OOB page style while expanding the 1st Infantry Division's World War II order of battle beyond the infantry chain to include reconnaissance, divisional artillery, engineers, medical, special troops, and attached anti-aircraft artillery. Units without dedicated local artwork use the shared placeholder symbol from the repo root.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board wwii-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 16 IN RGT.png" alt="16th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 18 IN RGT.png" alt="18th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+          </section>
+          <section id="sec2">
+            <img src="../US Infantry Regiments/images/BLU USA 26 IN RGT.png" alt="26th Infantry Regiment symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 2;" aria-hidden="true"></span>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Cavalry Reconnaissance Troop (Mechanized) placeholder symbol" title="1st Cavalry Reconnaissance Troop (Mechanized)" width="150" height="150">
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU FAB-1ID short v1.png" alt="1st Infantry Division Artillery symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU 1 ENG BN short v1.png" alt="1st Engineer Combat Battalion symbol" width="150" height="150">
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Medical Battalion placeholder symbol" title="1st Medical Battalion" width="150" height="150">
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="Headquarters, Special Troops, 1st Infantry Division placeholder symbol" title="Headquarters, Special Troops, 1st Infantry Division" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 6;" aria-hidden="true"></span>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="103rd Anti-Aircraft Artillery Battalion placeholder symbol" title="103rd Anti-Aircraft Artillery Battalion (Automatic Weapons)" width="150" height="150">
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 16 IN RGT.png" alt="1st Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="5th Field Artillery Battalion placeholder symbol" title="5th Field Artillery Battalion (155mm)" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Headquarters Company, 1st Infantry Division placeholder symbol" title="Headquarters Company, 1st Infantry Division" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 16 IN RGT.png" alt="2nd Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 18 IN RGT.png" alt="2nd Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 2 BN 26 IN RGT.png" alt="2nd Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="7th Field Artillery Battalion placeholder symbol" title="7th Field Artillery Battalion (105mm)" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="701st Ordnance Light Maintenance Company placeholder symbol" title="701st Ordnance Light Maintenance Company" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 16 IN RGT.png" alt="3rd Battalion, 16th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 18 IN RGT.png" alt="3rd Battalion, 18th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 3 BN 26 IN RGT.png" alt="3rd Battalion, 26th Infantry Regiment symbol" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="32nd Field Artillery Battalion placeholder symbol" title="32nd Field Artillery Battalion (105mm)" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Quartermaster Company placeholder symbol" title="1st Quartermaster Company" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="33rd Field Artillery Battalion placeholder symbol" title="33rd Field Artillery Battalion (105mm)" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Signal Company placeholder symbol" title="1st Signal Company" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 MP v1.png" alt="Military Police Platoon symbol" title="Military Police Platoon" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Infantry Division Band placeholder symbol" title="Band" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="1st Counterintelligence Corps Detachment placeholder symbol" title="1st Counterintelligence Corps Detachment" width="125" height="125">
+          </section>
+          <section id="sec3">
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Regiment reference pages:
+          <a href="../US Infantry Regiments/16RGT.html">16th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/18RGT.html">18th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>.
+        </p>
+        <p class="board-caption">
+          Units shown with the root placeholder icon because no dedicated local symbol was found: 1st Cavalry Reconnaissance Troop (Mechanized), 1st Medical Battalion, Headquarters, Special Troops, 1st Infantry Division, 103rd Anti-Aircraft Artillery Battalion, the 5th/7th/32nd/33rd Field Artillery Battalions, Headquarters Company, 701st Ordnance Light Maintenance Company, 1st Quartermaster Company, 1st Signal Company, Band, and the 1st Counterintelligence Corps Detachment. The 1st Engineer Combat Battalion, Division Artillery, and Military Police Platoon use the closest matching 1ID unit art already present in the repo.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

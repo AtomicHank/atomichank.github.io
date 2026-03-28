@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Divisions - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <style>
+      .division-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .division-section + .division-section {
+        margin-top: 36px;
+      }
+
+      .section-card {
+        margin-bottom: 24px;
+      }
+
+      .card-image-link {
+        display: block;
+      }
+
+      .collection-title-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .collection-title-link:hover,
+      .collection-title-link:focus-visible {
+        text-decoration: underline;
+      }
+
+      .card-subnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .card-subnav-link {
+        display: inline-block;
+        padding: 6px 10px;
+        border: 1px solid rgba(255, 212, 120, 0.24);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        color: #fff4cf;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+      }
+
+      .card-subnav-link:hover,
+      .card-subnav-link:focus-visible {
+        background: rgba(255, 212, 120, 0.1);
+        border-color: rgba(255, 212, 120, 0.45);
+      }
+
+      @media (max-width: 1200px) {
+        .division-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .division-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 600px) {
+        .division-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-image">
+          <img src="BLU 1ID short v1.png" alt="US division symbol">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>US Divisions</h1>
+          <p class="hero-text">
+            A visual index of U.S. Army division symbols, grouped into infantry, armored, and cavalry formations. Open a card to view a dedicated subpage when one exists, or the full symbol image when it does not.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="US Divisions navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><span class="nav-link-active">Division Index</span></li>
+              <li><a class="nav-link" href="#infantry">Infantry Divisions</a></li>
+              <li><a class="nav-link" href="#armored">Armored Divisions</a></li>
+              <li><a class="nav-link" href="#cavalry">Cavalry Divisions</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This index displays the U.S. division symbol set currently available in this folder. The cards are grouped by infantry, armored, and cavalry formations. When a division subpage exists, the card opens that page; otherwise it opens the corresponding PNG file.
+            </p>
+          </section>
+
+          <div id="division-sections"></div>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const divisionGroups = [
+          {
+            sectionId: "infantry",
+            title: "Infantry Divisions",
+            label: "Infantry",
+            code: "ID",
+            description:
+              "Infantry division symbols in numerical order, using the image set currently available in this reference folder.",
+            numbers: Array.from({ length: 108 }, (_, index) => index + 1),
+          },
+          {
+            sectionId: "armored",
+            title: "Armored Divisions",
+            label: "Armored",
+            code: "AD",
+            description:
+              "Armored division symbols in numerical order, separated from the infantry set for faster browsing.",
+            numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 22, 27, 30, 40, 48, 49, 50],
+          },
+          {
+            sectionId: "cavalry",
+            title: "Cavalry Divisions",
+            label: "Cavalry",
+            code: "CD",
+            description:
+              "Cavalry division symbols in numerical order, collected at the end of the index as requested.",
+            numbers: [1, 2, 3, 21, 24, 61, 62, 63, 65, 66],
+          },
+        ];
+
+        const sectionsHost = document.getElementById("division-sections");
+        const cardOverrides = {
+          "1ID": {
+            detailPath: "1ID.html",
+            subpages: [
+              { href: "1ID_WWI.html", label: "WWI" },
+              { href: "1ID_WWII.html", label: "WWII" },
+              { href: "1ID_Vietnam.html", label: "1960s / Vietnam" },
+              { href: "1ID_1970s.html", label: "1970s" },
+            ],
+          },
+        };
+
+        function ordinal(number) {
+          const mod100 = number % 100;
+          if (mod100 >= 11 && mod100 <= 13) {
+            return number + "th";
+          }
+
+          switch (number % 10) {
+            case 1:
+              return number + "st";
+            case 2:
+              return number + "nd";
+            case 3:
+              return number + "rd";
+            default:
+              return number + "th";
+          }
+        }
+
+        function buildFileName(number, code) {
+          return "BLU " + number + code + " short v1.png";
+        }
+
+        function buildCardMarkup(number, group) {
+          const fileName = buildFileName(number, group.code);
+          const assetPath = encodeURI(fileName);
+          const unitKey = number + group.code;
+          const override = cardOverrides[unitKey];
+          const title = ordinal(number) + " " + group.label + " Division";
+          const tag = unitKey;
+
+          if (override) {
+            const subpageLinks = override.subpages
+              .map((subpage) => {
+                return (
+                  '<a class="card-subnav-link" href="' +
+                  subpage.href +
+                  '">' +
+                  subpage.label +
+                  "</a>"
+                );
+              })
+              .join("");
+
+            return (
+              '<article class="topic-card collection-card">' +
+              '<a class="collection-link card-image-link" href="' +
+              override.detailPath +
+              '">' +
+              '<img class="collection-image" src="' +
+              assetPath +
+              '" alt="' +
+              title +
+              '">' +
+              "</a>" +
+              '<div class="collection-content">' +
+              '<div class="card-subnav">' +
+              subpageLinks +
+              "</div>" +
+              '<h2><a class="collection-title-link" href="' +
+              override.detailPath +
+              '">' +
+              title +
+              "</a></h2>" +
+              '<p class="collection-tag">' +
+              tag +
+              "</p>" +
+              "</div>" +
+              "</article>"
+            );
+          }
+
+          return (
+            '<article class="topic-card collection-card">' +
+            '<a class="collection-link" href="' +
+            assetPath +
+            '" target="_blank" rel="noopener">' +
+            '<img class="collection-image" src="' +
+            assetPath +
+            '" alt="' +
+            title +
+            '">' +
+            '<div class="collection-content">' +
+            "<h2>" +
+            title +
+            "</h2>" +
+            '<p class="collection-tag">' +
+            tag +
+            "</p>" +
+            "</div>" +
+            "</a>" +
+            "</article>"
+          );
+        }
+
+        divisionGroups.forEach((group) => {
+          const section = document.createElement("section");
+          section.className = "division-section";
+          section.id = group.sectionId;
+
+          const cardsMarkup = group.numbers
+            .map((number) => buildCardMarkup(number, group))
+            .join("");
+
+          section.innerHTML =
+            '<div class="intro-card section-card">' +
+            "<h2>" +
+            group.title +
+            "</h2>" +
+            "<p>" +
+            group.description +
+            " This section contains " +
+            group.numbers.length +
+            " symbols." +
+            "</p>" +
+            "</div>" +
+            '<div class="division-grid" aria-label="' +
+            group.title +
+            ' cards">' +
+            cardsMarkup +
+            "</div>";
+
+          sectionsHost.appendChild(section);
+        });
+      })();
+    </script>
+  </body>
+</html>

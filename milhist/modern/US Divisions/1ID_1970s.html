@@ -1,0 +1,441 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1st Infantry Division ~1970s</title>
+<link href="../US Army OOB 1989/division-detail.css" rel="stylesheet" type="text/css">
+<style>
+  :root {
+    --board-columns: 7;
+    --sec2-row-height: 234px;
+    --sec3-row-height: 184px;
+    --sec3-step: calc(var(--sec3-row-height) + var(--board-gap));
+  }
+
+  .unit-board {
+    grid-template-columns: repeat(var(--board-columns), var(--board-column));
+    width: fit-content;
+    min-width: calc(var(--board-columns) * var(--board-column) + (var(--board-columns) - 1) * var(--board-gap));
+    margin: 0 auto;
+  }
+
+  .seventies-board.has-top-hierarchy > section:nth-child(n + 2)::before,
+  .seventies-board.has-left-ticks > section:has(img)::after {
+    display: none;
+  }
+
+  .seventies-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 8)::before {
+    display: block;
+  }
+
+  .seventies-board.has-top-hierarchy > section:first-child::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--hq-icon-size);
+    left: 50%;
+    width: var(--connector-width);
+    height: calc((var(--hq-row-height) - var(--hq-icon-size)) + var(--board-gap) - var(--connector-branch-offset));
+    background: var(--connector-color);
+    pointer-events: none;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  .unit-board.seventies-board.has-top-hierarchy > section:nth-child(n + 2):nth-child(-n + 8) img {
+    margin: var(--top-row-icon-offset) auto 0;
+  }
+
+  .unit-board.seventies-board.has-top-hierarchy > section:nth-child(n + 9) img {
+    margin: 0 auto;
+  }
+
+  .seventies-board #sec2,
+  .seventies-board #sec3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seventies-board .unit-label {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .seventies-board .unit-label-sm {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.76rem;
+    line-height: 1.28;
+    max-width: 138px;
+    text-align: center;
+  }
+
+  .seventies-board.has-left-ticks > section[id="sec2"]:has(.stack-line)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(var(--top-row-icon-offset) + 75px);
+    left: -7px;
+    width: var(--left-tick-length);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .seventies-board.has-left-ticks > section[id="sec3"]:has(img)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: var(--sec3-tick-center);
+    left: var(--left-stack-offset);
+    width: var(--left-tick-length-lower);
+    height: var(--connector-width);
+    background: var(--connector-color);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .board-caption {
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .board-caption a {
+    color: #fff4cf;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .board-caption a:hover,
+  .board-caption a:focus-visible {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero-compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Modern Era Reference</p>
+        <h1>1st Infantry Division</h1>
+        <p>
+          This page splits the Big Red One's 1970s Cold War organization into two views: the immediate post-Vietnam transition after the division returned to Fort Riley in April 1970, and a late-decade REFORGER-oriented structure that adds the battalions known to have joined the division by 1979.
+        </p>
+        <div class="top-nav">
+          <a href="1ID.html">Back to 1ID History</a>
+          <a href="1ID_Vietnam.html">1960s / Vietnam OOB</a>
+          <a href="1ID_WWII.html">WWII OOB</a>
+          <a href="div_index.html">Back to Division Index</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>1970-1974 transition structure. This board focuses on the division's return from Vietnam, its mechanized retraining at Fort Riley, and the Germany-based 3rd Brigade / Division Forward component used for the REFORGER mission. Confirmed combat battalions are shown by name; placeholders mark brigade or support elements that still need dedicated period icons.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board seventies-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 1-1ID ABCT short v1.png" alt="1st Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">1st Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 2-1ID ABCT short v1.png" alt="2nd Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">2nd Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 3-1ID ABCT short v1.png" alt="3rd Brigade, 1st Infantry Division Forward symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">3rd Brigade /<br>Division Forward</p>
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU 1-4 CAV (R) short v1.png" alt="1st Squadron, 4th Cavalry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">1st Squadron,<br>4th Cavalry</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU FAB-1ID short v1.png" alt="Division Artillery symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 1;" aria-hidden="true"></span>
+            <p class="unit-label">Division Artillery</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="Division Aviation placeholder symbol" title="Division Aviation / Air Cavalry element" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">Division Aviation</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU SB-1ID short v1.png" alt="Division Support symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">Division Support</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 2-16 IN v1.png" alt="2nd Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>18th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-16 IN v1.png" alt="1st Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU A-1-4 CAV v1.png" alt="A Troop, 1st Squadron, 4th Cavalry symbol" width="125" height="125">
+            <p class="unit-label-sm">A Troop,<br>1-4 Cavalry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-5 FA  v1.png" alt="1st Battalion, 5th Field Artillery symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>5th Field Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Division aviation element placeholder symbol" title="Division aviation element" width="125" height="125">
+            <p class="unit-label-sm">Aviation<br>Detachment</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 ENG BN short v1.png" alt="1st Engineer Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Engineer<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>26th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Forward field artillery battalion placeholder symbol" title="Forward field artillery battalion at Neu Ulm" width="125" height="125">
+            <p class="unit-label-sm">Forward FA<br>Battalion</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 121 SIG BN short v1.png" alt="121st Signal Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">121st Signal<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Forward armor battalion placeholder symbol" title="Forward armor battalion" width="125" height="125">
+            <p class="unit-label-sm">Forward Armor<br>Battalion</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 MP v1.png" alt="1st Military Police Company symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Military Police<br>Company</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Second forward armor battalion placeholder symbol" title="Second forward armor battalion" width="125" height="125">
+            <p class="unit-label-sm">Second Forward<br>Armor Battalion</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Division maintenance and support element placeholder symbol" title="Division maintenance and support element" width="125" height="125">
+            <p class="unit-label-sm">Maintenance /<br>Support Element</p>
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Local regiment reference pages:
+          <a href="../US Infantry Regiments/16RGT.html">16th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/18RGT.html">18th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>.
+        </p>
+        <p class="board-caption">
+          This section compresses the immediate post-Vietnam transition into a single OOB view. The 16th Infantry Regiment Association records 2-16 Infantry as reorganized as mechanized at Fort Riley in April 1970, while 1-16 Infantry also served as mechanized infantry in the Germany-based 3rd Brigade. The 26th Infantry lineage places 1-26 Infantry back in Germany with the forward brigade after Vietnam.
+        </p>
+      </div>
+    </section>
+
+    <section class="board-shell">
+      <div class="board-header">
+        <p>Late-1970s REFORGER structure. This board keeps the same overall Cold War framework but shifts to the end of the decade, when the division had settled into its mechanized NATO mission. 1-34 Armor is shown only here because it rejoined the division at Fort Riley on 1 August 1979.</p>
+      </div>
+      <div class="board-scroll">
+        <div class="unit-board seventies-board has-top-hierarchy has-left-ticks">
+          <section id="sec1">
+            <img src="BLU 1ID short v1.png" alt="1st Infantry Division symbol" width="200" height="200">
+          </section>
+
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 1-1ID ABCT short v1.png" alt="1st Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 1;" aria-hidden="true"></span>
+            <p class="unit-label">1st Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 2-1ID ABCT short v1.png" alt="2nd Brigade, 1st Infantry Division symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 1;" aria-hidden="true"></span>
+            <p class="unit-label">2nd Brigade</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU 3-1ID ABCT short v1.png" alt="3rd Brigade, 1st Infantry Division Forward symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">3rd Brigade /<br>Division Forward</p>
+          </section>
+          <section id="sec2">
+            <img src="../../industrial/1ID/BLU 1-4 CAV (R) short v1.png" alt="1st Squadron, 4th Cavalry symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">1st Squadron,<br>4th Cavalry</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU FAB-1ID short v1.png" alt="Division Artillery symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 1;" aria-hidden="true"></span>
+            <p class="unit-label">Division Artillery</p>
+          </section>
+          <section id="sec2">
+            <img src="../../BLU Unit Placeholder.png" alt="Division Aviation placeholder symbol" title="Division Aviation / Air Cavalry element" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 0;" aria-hidden="true"></span>
+            <p class="unit-label">Division Aviation</p>
+          </section>
+          <section id="sec2">
+            <img src="Generic Brigades/BLU SB-1ID short v1.png" alt="Division Support symbol" width="150" height="150">
+            <span class="stack-line" style="--stack-depth: 3;" aria-hidden="true"></span>
+            <p class="unit-label">Division Support</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 2-16 IN v1.png" alt="2nd Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">2nd Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 18 IN RGT.png" alt="1st Battalion, 18th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>18th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-16 IN v1.png" alt="1st Battalion, 16th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>16th Infantry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU A-1-4 CAV v1.png" alt="A Troop, 1st Squadron, 4th Cavalry symbol" width="125" height="125">
+            <p class="unit-label-sm">A Troop,<br>1-4 Cavalry</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-5 FA  v1.png" alt="1st Battalion, 5th Field Artillery symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>5th Field Artillery</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Division aviation element placeholder symbol" title="Division aviation element" width="125" height="125">
+            <p class="unit-label-sm">Aviation<br>Detachment</p>
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 ENG BN short v1.png" alt="1st Engineer Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Engineer<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1-34 AR  v1.png" alt="1st Battalion, 34th Armor symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>34th Armor</p>
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Second brigade mechanized battalion placeholder symbol" title="Second brigade mechanized battalion" width="125" height="125">
+            <p class="unit-label-sm">Second Brigade<br>Maneuver Battalion</p>
+          </section>
+          <section id="sec3">
+            <img src="../US Infantry Regiments/images/battalion images/BLU USA 1 BN 26 IN RGT.png" alt="1st Battalion, 26th Infantry symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Battalion,<br>26th Infantry</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Forward field artillery battalion placeholder symbol" title="Forward field artillery battalion at Neu Ulm" width="125" height="125">
+            <p class="unit-label-sm">Forward FA<br>Battalion</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 121 SIG BN short v1.png" alt="121st Signal Battalion symbol" width="125" height="125">
+            <p class="unit-label-sm">121st Signal<br>Battalion</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="3rd Battalion, 63rd Armor placeholder symbol" title="3rd Battalion, 63rd Armor" width="125" height="125">
+            <p class="unit-label-sm">3rd Battalion,<br>63rd Armor</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../industrial/1ID/BLU 1 MP v1.png" alt="1st Military Police Company symbol" width="125" height="125">
+            <p class="unit-label-sm">1st Military Police<br>Company</p>
+          </section>
+
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Second forward armor battalion placeholder symbol" title="Second forward armor battalion" width="125" height="125">
+            <p class="unit-label-sm">Second Forward<br>Armor Battalion</p>
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+          </section>
+          <section id="sec3">
+            <img src="../../BLU Unit Placeholder.png" alt="Division maintenance and support element placeholder symbol" title="Division maintenance and support element" width="125" height="125">
+            <p class="unit-label-sm">Maintenance /<br>Support Element</p>
+          </section>
+        </div>
+
+        <p class="board-caption">
+          Regiment reference pages:
+          <a href="../US Infantry Regiments/16RGT.html">16th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/18RGT.html">18th Infantry Regiment</a>,
+          <a href="../US Infantry Regiments/26RGT.html">26th Infantry Regiment</a>.
+        </p>
+        <p class="board-caption">
+          This late-decade view uses the same Cold War framework but adds the battalions clearly tied to the division by the end of the 1970s. The 1-34 Armor lineage places that battalion at Fort Riley with the Big Red One from 1 August 1979, while the 1st Infantry Division's Cold War history and the 26th Infantry lineage confirm the continued Germany-based forward brigade with 1-26 Infantry, two armor battalions, 1-4 Cavalry, and a field artillery battalion.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
