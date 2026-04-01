@@ -61,6 +61,18 @@
         border-color: rgba(255, 212, 120, 0.45);
       }
 
+      .card-subnav-tag {
+        display: inline-block;
+        padding: 6px 10px;
+        border: 1px solid rgba(177, 179, 179, 0.24);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.02);
+        color: rgba(244, 247, 248, 0.82);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
       @media (max-width: 1200px) {
         .division-grid {
           grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -174,6 +186,76 @@
               { href: "1ID_1970s.html", label: "1970s" },
             ],
           },
+          "2ID": {
+            detailPath: "2ID_WWI.html",
+            subpages: [
+              { href: "2ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "Korea" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "3ID": {
+            detailPath: "3ID_WWI.html",
+            subpages: [
+              { href: "3ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "Korea" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "4ID": {
+            detailPath: "4ID_WWI.html",
+            subpages: [
+              { href: "4ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "5ID": {
+            detailPath: "5ID_WWI.html",
+            subpages: [
+              { href: "5ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "6ID": {
+            detailPath: "6ID_WWI.html",
+            subpages: [
+              { href: "6ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "7ID": {
+            detailPath: "7ID_WWI.html",
+            subpages: [
+              { href: "7ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "Korea" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "8ID": {
+            detailPath: "8ID_WWI.html",
+            subpages: [
+              { href: "8ID_WWI.html", label: "WWI" },
+              { label: "WWII" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "9ID": {
+            subpages: [
+              { label: "WWII" },
+              { label: "1960s / Vietnam" },
+            ],
+          },
+          "10ID": {
+            subpages: [
+              { label: "WWII" },
+            ],
+          },
         };
 
         function ordinal(number) {
@@ -207,14 +289,27 @@
           const tag = unitKey;
 
           if (override) {
+            const detailPath = override.detailPath || assetPath;
+            const detailLinkAttributes =
+              detailPath === assetPath
+                ? '" target="_blank" rel="noopener'
+                : "";
             const subpageLinks = override.subpages
               .map((subpage) => {
+                if (subpage.href) {
+                  return (
+                    '<a class="card-subnav-link" href="' +
+                    subpage.href +
+                    '">' +
+                    subpage.label +
+                    "</a>"
+                  );
+                }
+
                 return (
-                  '<a class="card-subnav-link" href="' +
-                  subpage.href +
-                  '">' +
+                  '<span class="card-subnav-tag">' +
                   subpage.label +
-                  "</a>"
+                  "</span>"
                 );
               })
               .join("");
@@ -222,7 +317,8 @@
             return (
               '<article class="topic-card collection-card">' +
               '<a class="collection-link card-image-link" href="' +
-              override.detailPath +
+              detailPath +
+              detailLinkAttributes +
               '">' +
               '<img class="collection-image" src="' +
               assetPath +
@@ -235,7 +331,8 @@
               subpageLinks +
               "</div>" +
               '<h2><a class="collection-title-link" href="' +
-              override.detailPath +
+              detailPath +
+              detailLinkAttributes +
               '">' +
               title +
               "</a></h2>" +

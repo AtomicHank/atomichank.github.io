@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Reference index for independent U.S. Army artillery battalion symbols."
+    >
+    <title>US Artillery Independent Battalions - Modern Era</title>
+    <link rel="stylesheet" href="../subsection.css">
+    <style>
+      .hero.hero-artillery .hero-image img {
+        object-fit: contain;
+        object-position: right center;
+        padding: 28px;
+        opacity: 0.82;
+      }
+
+      .section-card {
+        margin-top: 24px;
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: var(--panel-strong);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .section-card h2 {
+        margin: 0 0 12px;
+        font-size: clamp(1.6rem, 2.2vw, 2rem);
+      }
+
+      .section-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .section-card p + p {
+        margin-top: 14px;
+      }
+
+      .battalion-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 18px;
+      }
+
+      .battalion-card {
+        overflow: hidden;
+      }
+
+      .battalion-card .collection-image {
+        height: 180px;
+      }
+
+      .battalion-card .collection-content {
+        padding: 18px 18px 20px;
+      }
+
+      .battalion-card .collection-content h2 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.45;
+      }
+
+      .battalion-card .collection-tag {
+        margin: 0 0 8px;
+      }
+
+      .noscript-note {
+        margin-top: 18px;
+        padding: 18px 20px;
+        border: 1px solid rgba(255, 212, 120, 0.18);
+        border-radius: 16px;
+        background: rgba(255, 212, 120, 0.08);
+        color: #fff4cf;
+      }
+
+      @media (max-width: 1280px) {
+        .battalion-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 980px) {
+        .battalion-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .battalion-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .section-card {
+          padding: 24px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .battalion-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero hero-artillery">
+        <div class="hero-image">
+          <img src="BLU USA 1 FA BN.png" alt="1st Field Artillery Battalion symbol">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Modern Era Reference</p>
+          <h1>US Artillery Independent Battalions</h1>
+          <p class="hero-text">
+            A symbol index for the independent U.S. Army artillery battalions in the current modern reference set.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="US Artillery Independent Battalions navigation">
+          <div class="menu-panel">
+            <p class="menu-title">Navigation</p>
+            <ul class="nav-menu">
+              <li><span class="nav-link-active">Battalion Index</span></li>
+              <li><a class="nav-link" href="rgt_index.html">Regiment Index</a></li>
+              <li><a class="nav-link" href="#independent-battalions">Independent Battalions</a></li>
+              <li><a class="nav-link" href="../modern.html">Back to Modern Era</a></li>
+              <li><a class="nav-link" href="../../milhist_v2.html">Back to Military History</a></li>
+              <li><a class="nav-link" href="../../../indexmain.html">Back to Home</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="intro-card">
+            <h2>Overview</h2>
+            <p>
+              This page now focuses only on the independent artillery battalion symbols in the current set.
+            </p>
+            <p>
+              The current index covers 56 independent field artillery battalion symbols.
+            </p>
+            <p>
+              For regiment symbols and regiment-linked battalion pages, use the artillery regiment index.
+            </p>
+          </section>
+
+          <section class="section-card" id="independent-battalions">
+            <h2>Independent Battalions</h2>
+            <p>
+              These battalions are shown as the stand-alone portion of the artillery battalion collection.
+            </p>
+            <div id="independent-grid" class="battalion-grid" aria-label="Independent field artillery battalion symbols"></div>
+          </section>
+
+          <noscript>
+            <div class="noscript-note">
+              This page uses a small inline script to assemble the battalion grids from the local image set. Enable JavaScript to view the full index.
+            </div>
+          </noscript>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <p class="footer-title">Maintained by AGIH</p>
+          <p>Submit corrections to <a href="mailto:atomicgihank@gmail.com">Hank</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const independentNumbers = [
+        ...Array.from({ length: 42 }, (_, index) => index + 1),
+        73, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 86, 92, 94
+      ];
+
+      function ordinal(value) {
+        const mod10 = value % 10;
+        const mod100 = value % 100;
+
+        if (mod100 >= 11 && mod100 <= 13) {
+          return `${value}th`;
+        }
+
+        if (mod10 === 1) {
+          return `${value}st`;
+        }
+
+        if (mod10 === 2) {
+          return `${value}nd`;
+        }
+
+        if (mod10 === 3) {
+          return `${value}rd`;
+        }
+
+        return `${value}th`;
+      }
+
+      function createCard({ imageName, tagText, titleText, altText, href }) {
+        const article = document.createElement("article");
+        article.className = "topic-card collection-card battalion-card";
+
+        const link = document.createElement("a");
+        link.className = "collection-link";
+        link.href = href;
+
+        const image = document.createElement("img");
+        image.className = "collection-image";
+        image.src = imageName;
+        image.alt = altText;
+        image.loading = "lazy";
+        image.decoding = "async";
+
+        const content = document.createElement("div");
+        content.className = "collection-content";
+
+        const tag = document.createElement("p");
+        tag.className = "collection-tag";
+        tag.textContent = tagText;
+
+        const heading = document.createElement("h2");
+        heading.textContent = titleText;
+
+        content.append(tag, heading);
+        link.append(image, content);
+        article.append(link);
+        return article;
+      }
+
+      const independentRoot = document.getElementById("independent-grid");
+      independentNumbers.forEach((battalionNumber) => {
+        independentRoot.append(
+          createCard({
+            imageName: `BLU USA ${battalionNumber} FA BN.png`,
+            tagText: "Independent Battalion",
+            titleText: `${ordinal(battalionNumber)} Field Artillery Battalion`,
+            altText: `${ordinal(battalionNumber)} Field Artillery Battalion symbol`,
+            href: `battalions/independent/${battalionNumber}fabn.html`
+          })
+        );
+      });
+    </script>
+  </body>
+</html>
