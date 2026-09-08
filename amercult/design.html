@@ -1,76 +1,174 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Design</title>
-<link href="../css/grid.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!-- Main Container -->
-<div class="container"> 
-  <!-- Header -->
-  <header class="header">
-    <h4 class="logo">Design</h4>
-  </header>
-  <!-- Hero Section -->
-  <section class="intro">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-  </section>
-  <!-- Stats Gallery Section -->
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Furniture, graphics, and everyday objects reveal how designers made modern life legible and appealing." name="description"/>
+  <title>
+   Design | American Culture
+  </title>
+  <link href="culture.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <div class="site-shell">
+   <header class="hero">
+    <div class="hero-image">
+     <img alt="" height="400" src="images/eames-plywood.svg" width="800"/>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+    <div class="hero-copy">
+     <p class="eyebrow">
+      American Culture
+     </p>
+     <h1>
+      Design
+     </h1>
+     <p class="hero-text">
+      Furniture, graphics, and everyday objects reveal how designers made modern life legible and appealing.
+     </p>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+   </header>
+   <div class="content-grid">
+    <aside aria-label="American Culture navigation" class="sidebar">
+     <nav class="menu-panel">
+      <p class="menu-title">
+       Browse topics
+      </p>
+      <ul class="nav-menu">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Home
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="amercult.html">
+         American Culture
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="architecture.html">
+         Architecture
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="autos.html">
+         Automobiles
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="highways.html">
+         Highways
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="signs.html">
+         Signs
+        </a>
+       </li>
+       <li>
+        <span aria-current="page" class="nav-link-active">
+         Design
+        </span>
+       </li>
+      </ul>
+     </nav>
+    </aside>
+    <main class="main" id="main">
+     <section class="intro-card">
+      <h2>
+       Explore design
+      </h2>
+      <p>
+       Furniture, graphics, and everyday objects reveal how designers made modern life legible and appealing.
+      </p>
+      <p>
+       Choose one of the four subjects below for its history, distinguishing features, and further reading.
+      </p>
+     </section>
+     <section aria-label="Design subjects" class="topic-grid battle-grid">
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="design/eames-plywood.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/eames-plywood.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          Eames Molded Plywood
+         </h2>
+         <p class="battle-tag">
+          Design developed in 1945
+         </p>
+         <p>
+          Charles and Ray Eames used molded plywood to explore a new approach to everyday seating.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="design/streamlining.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/streamlining.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          Streamlined Design
+         </h2>
+         <p class="battle-tag">
+          American furniture of the 1930s
+         </p>
+         <p>
+          Horizontal lines, curves, and polished surfaces gave modern objects a new visual language.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="design/wpa-posters.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/wpa-posters.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          WPA Travel Posters
+         </h2>
+         <p class="battle-tag">
+          New Deal graphic design
+         </p>
+         <p>
+          Publicly supported poster art promoted travel, recreation, and public programs.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="design/subway-graphics.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/subway-graphics.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          New York Subway Graphics
+         </h2>
+         <p class="battle-tag">
+          A coordinated visual system
+         </p>
+         <p>
+          Maps and signs made a complex urban network easier to read.
+         </p>
+        </div>
+       </a>
+      </article>
+     </section>
+    </main>
+   </div>
+   <footer class="site-footer">
+    <div class="footer-panel">
+     <p class="footer-title">
+      Maintained by AGIH
+     </p>
+     <p>
+      Submit corrections to
+      <a href="mailto:atomicgihank@gmail.com">
+       Hank
+      </a>
+      .
+     </p>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
+   </footer>
   </div>
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Design (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-  </div>
-  <!-- Footer Section -->
-         <div class="footer"></div>
-	            <div>
-                <div class="col-1">Maintained by AGIH
-                <p>Submit corrections to <a href="mailto: atomicgihank@gmail.com">Hank</a></p>
-                </div>
-            </div>
-<!-- Main Container Ends -->
-</body>
+ </body>
 </html>

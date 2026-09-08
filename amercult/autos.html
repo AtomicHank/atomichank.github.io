@@ -1,76 +1,174 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Automobiles</title>
-<link href="../css/grid.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!-- Main Container -->
-<div class="container"> 
-  <!-- Header -->
-  <header class="header">
-    <h4 class="logo">Automobiles</h4>
-  </header>
-  <!-- Hero Section -->
-  <section class="intro">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-  </section>
-  <!-- Stats Gallery Section -->
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Four vehicles trace changing ideas about affordability, utility, performance, and personal expression." name="description"/>
+  <title>
+   Automobiles | American Culture
+  </title>
+  <link href="culture.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <div class="site-shell">
+   <header class="hero">
+    <div class="hero-image">
+     <img alt="" height="400" src="images/model-t.svg" width="800"/>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+    <div class="hero-copy">
+     <p class="eyebrow">
+      American Culture
+     </p>
+     <h1>
+      Automobiles
+     </h1>
+     <p class="hero-text">
+      Four vehicles trace changing ideas about affordability, utility, performance, and personal expression.
+     </p>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
+   </header>
+   <div class="content-grid">
+    <aside aria-label="American Culture navigation" class="sidebar">
+     <nav class="menu-panel">
+      <p class="menu-title">
+       Browse topics
+      </p>
+      <ul class="nav-menu">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Home
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="amercult.html">
+         American Culture
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="architecture.html">
+         Architecture
+        </a>
+       </li>
+       <li>
+        <span aria-current="page" class="nav-link-active">
+         Automobiles
+        </span>
+       </li>
+       <li>
+        <a class="nav-link" href="highways.html">
+         Highways
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="signs.html">
+         Signs
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="design.html">
+         Design
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </aside>
+    <main class="main" id="main">
+     <section class="intro-card">
+      <h2>
+       Explore automobiles
+      </h2>
+      <p>
+       Four vehicles trace changing ideas about affordability, utility, performance, and personal expression.
+      </p>
+      <p>
+       Choose one of the four subjects below for its history, distinguishing features, and further reading.
+      </p>
+     </section>
+     <section aria-label="Automobiles subjects" class="topic-grid battle-grid">
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="autos/model-t.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/model-t.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          Ford Model T
+         </h2>
+         <p class="battle-tag">
+          1908–1927
+         </p>
+         <p>
+          A durable, widely produced car that helped bring motoring into everyday American life.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="autos/jeep.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/jeep.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          The Jeep
+         </h2>
+         <p class="battle-tag">
+          Military utility to civilian life
+         </p>
+         <p>
+          A small wartime four-wheel-drive vehicle became a lasting civilian vehicle type.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="autos/corvette.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/corvette.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          Chevrolet Corvette
+         </h2>
+         <p class="battle-tag">
+          Introduced in 1953
+         </p>
+         <p>
+          A two-seat sports car became a showcase for an American manufacturer's performance ambitions.
+         </p>
+        </div>
+       </a>
+      </article>
+      <article class="topic-card battle-card">
+       <a class="battle-link" href="autos/mustang.html">
+        <img alt="" class="battle-image" height="400" loading="lazy" src="images/mustang.svg" width="800"/>
+        <div class="battle-content">
+         <h2>
+          Ford Mustang
+         </h2>
+         <p class="battle-tag">
+          Introduced in 1964
+         </p>
+         <p>
+          An accessible sporty car linked mass production with the promise of individual choice.
+         </p>
+        </div>
+       </a>
+      </article>
+     </section>
+    </main>
+   </div>
+   <footer class="site-footer">
+    <div class="footer-panel">
+     <p class="footer-title">
+      Maintained by AGIH
+     </p>
+     <p>
+      Submit corrections to
+      <a href="mailto:atomicgihank@gmail.com">
+       Hank
+      </a>
+      .
+     </p>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
+   </footer>
   </div>
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/placeholder.png" alt="" width="2000" class="cards"/></a>
-      <h4>Make/Model (Date)</h4>
-      <p class="tag">Tag, Tag, Tag, Tag</p>
-      <p class="text_column">Synopsis</p>
-    </div>
-  </div>
-  <!-- Footer Section -->
-         <div class="footer"></div>
-	            <div>
-                <div class="col-1">Maintained by AGIH
-                <p>Submit corrections to <a href="mailto: atomicgihank@gmail.com">Hank</a></p>
-                </div>
-            </div>
-<!-- Main Container Ends -->
-</body>
+ </body>
 </html>
