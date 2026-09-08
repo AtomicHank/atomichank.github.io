@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Notepad -->
+<!-- (PD) January 25, 2006 - _Crotalus horridus_  -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="85"
+   height="100"
+   id="U.S. 6th Infantry Division Logo">
+  <path
+     fill="#B92241"
+     d="M 42.5,0 L 85,75 H 0 Z"
+     id="Top Overlapping Triangle" />
+  <path
+     fill="#B92241"
+     d="M 42.5,100 L 85,25 H 0 Z"
+     id="Bottom Overlapping Triangle" />
+</svg>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="578.69"
+   height="578.69"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45pre1"
+   sodipodi:docbase="C:\Documents and Settings\Ed\My Documents\Wikipedia"
+   sodipodi:docname="45th Infantry insignia (thunderbird).svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   sodipodi:modified="true">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.84718356"
+     inkscape:cx="674.19355"
+     inkscape:cy="325.29915"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1400"
+     inkscape:window-height="995"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     width="578.69px"
+     height="578.69px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-42.096498,-100.68623)">
+    <rect
+       style="fill:#aa0000;fill-opacity:1;stroke:#000000;stroke-width:5.85086632;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2221"
+       width="400.81433"
+       height="400.81433"
+       x="309.7511"
+       y="-158.97798"
+       transform="matrix(0.7071068,0.7071068,-0.7071068,0.7071068,0,0)" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#7c2f2f;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3211"
+       width="383.60773"
+       height="383.60773"
+       x="318.35446"
+       y="-150.37468"
+       transform="matrix(0.7071068,0.7071068,-0.7071068,0.7071068,0,0)" />
+    <path
+       style="fill:#ffd42a;fill-rule:evenodd;stroke:#ffd42a;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 323.28555,217.02505 C 291.65843,217.40531 275.98319,247.91561 275.98319,247.91561 C 293.29612,249.96111 319.2543,255.58513 294.63123,285.17682 L 187.24162,285.17682 L 187.24162,454.82251 L 235.44794,454.82251 L 235.44794,406.31633 L 259.66766,406.31633 L 259.66766,342.06248 L 282.50242,342.06248 L 282.50242,418.4391 L 229.40098,520.96544 L 251.07251,542.59907 L 267.1519,525.81127 L 283.41813,542.58767 L 299.24394,525.81731 L 315.6118,542.38339 L 331.65631,525.82871 L 347.50259,542.38339 L 363.80067,525.81127 L 379.84519,542.36595 L 395.83367,525.89847 L 411.95131,542.45048 L 434.38089,520.96544 L 380.36676,418.03357 L 380.36676,342.02759 L 403.67682,342.02759 L 403.67682,406.34819 L 427.89653,406.34819 L 427.89653,454.78762 L 476.10285,454.78762 L 476.10285,286.12136 L 359.86149,285.2117 C 359.86153,285.2117 378.42637,216.36207 323.28555,217.02505 z M 331.92733,232.7925 L 340.83442,241.69959 L 331.92733,250.56879 L 323.05813,241.69959 L 331.92733,232.7925 z "
+       id="path3281"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

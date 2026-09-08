@@ -1,0 +1,86 @@
+"""Supplementary sources and service notes; incomplete dates stay out of lookup."""
+
+SOURCES = {
+218: ('https://www.armyupress.army.mil/Portals/7/combat-studies-institute/csi-books/StrykersInAfghanistan.pdf','U.S. Army Combat Studies Institute: Strykers in Afghanistan'),
+214: ('https://home.army.mil/jackson/units-tenants/193BDE/2nd-battalion-13th-infantry-regiment','Fort Jackson: 2d Battalion, 13th Infantry training mission'),
+215: ('https://www.benning.army.mil/infantry/199th/ocs/index.html','Fort Benning: 3d Battalion, 11th Infantry Officer Candidate School'),
+216: ('https://www.moore.army.mil/infantry/199th/ibolc/content/pdf/IBOLC%20Standards%20Book.pdf','U.S. Army: 2d Battalion, 11th Infantry IBOLC standards book'),
+217: ('https://history.army.mil/portals/143/Images/Publications/catalog/101-20.pdf','U.S. Army historical summary, FY 1988: 2d Battalion, 29th Infantry sniper instruction'),
+201: ('https://1-22infantry.org/pics5/reflagpics.htm','1st Battalion, 22nd Infantry veterans: March 2014 reflagging'),
+202: ('https://www.army.mil/medalofhonor/richardson/','U.S. Army: 28th Infantry history and March 2023 inactivation'),
+203: ('https://www.army.mil/article/160006/3rd_brigade_combat_team_transitions_into_task_force','U.S. Army: December 2015 transition to Task Force 1-28'),
+204: ('https://11thairbornedivision.army.mil/Phonebook/','11th Airborne Division: unit directory'),
+205: ('https://www.armyupress.army.mil/Portals/7/military-review/Archives/English/Online-Exclusive/2023/Arctic-Angels/EIFLER-ARCTIC-ANGELS-UA.pdf','Military Review: Arctic Angels and the 2022 reflagging'),
+206: ('https://home.army.mil/carson/units-tenants/4th-infantry-division/1sbct/1sbct-units','Fort Carson: 1st Stryker Brigade, 4th Infantry Division units'),
+207: ('https://16thinfassn.org/history/regimental-battalions/','16th Infantry Regiment Association: battalion histories'),
+208: ('https://www.3ad.org/unitpages.cfm?levelsDeep=2&subpage=5058','3d Armored Division Association: 4th Battalion, 18th Infantry lineage'),
+209: ('https://www.3ad.org/unitpages.cfm?levelsDeep=2&subpage=5062','3d Armored Division Association: 5th Battalion, 18th Infantry lineage'),
+210: ('https://armyhistory.org/21st-infantry-regiment/','Army Historical Foundation: 21st Infantry Regiment'),
+211: ('https://www.15thinfantry.org/commanders.php','15th Infantry Regiment Association: battalion commanders'),
+212: ('https://www.army.mil/article/105339/v_corps_inactivates_after_nearly_a_century_of_service_to_u_s_army','U.S. Army: 170th Brigade inactivated in October 2012'),
+213: ('https://www.armyupress.army.mil/Journals/NCO-Journal/Archives/2013/May/','NCO Journal: 172nd Infantry Brigade cases its colors, May 2013'),
+}
+
+# source, transitions appended to an existing row. A change sourced only to
+# a month is represented as an uncertain month, not an invented exact day.
+UPDATES = {
+(9,2): (1009,'2015-06-01 unk;2015-07-01 inactive'),
+(5,1): (205,'2022-06-06 ab11'),
+(21,3): (205,'2022-06-06 ab11'),
+(24,1): (205,'2022-06-06 ab11'),
+(22,1): (201,'2014-03-17 inactive'),
+(28,1): (203,'2015-12-15 d3;2023-03-24 inactive'),
+(16,2): (207,'2015-05-01 inactive'),
+(4,3): (212,'2012-10-01 unk;2012-11-01 inactive'),
+(18,2): (212,'2012-10-01 unk;2012-11-01 inactive'),
+(2,1): (213,'2013-05-01 unk;2013-06-01 inactive'),
+(28,2): (213,'2013-05-01 unk;2013-06-01 inactive'),
+}
+
+EXTRA_ROWS = [
+(11,2,1011,'1987-08-14 training'),
+(11,3,1011,'1987-08-14 training'),
+(9,4,1009,'2006-06-01 d2;2014-03-17 d4'),
+(1,4,1001,'1967-11-24 d6;1968-07-24 ind;1969-07-21 inactive'),
+(1,5,1001,'1967-11-24 d6;1968-07-24 ind;1969-07-21 inactive'),
+(1,6,1001,'1967-11-24 d6;1968-07-24 ind;1969-07-21 inactive'),
+]
+
+# regiment, battalion, title, factual summary, source.
+EVIDENCE = [
+(11,2,'Infantry officer training','The Army IBOLC standards book identifies the battalion as the infantry officer training organization. Its earlier battle-group assignment dates remain incomplete here.',216),
+(11,3,'Officer Candidate School','The Army school directory identifies the battalion as the Federal Officer Candidate School. This is institutional training, not a division assignment.',215),
+(29,2,'Sniper instruction','The Army\'s fiscal year 1988 historical summary identifies Company D, 2d Battalion, 29th Infantry conducting sniper instruction with the Army Marksmanship Unit. A full assignment chronology is not established here.',217),
+(1,3,'Vietnam service','Served with the 11th Infantry Brigade in Vietnam and subsequently the Americal Division. The secondary history dates its inactivation to 1971; exact assignment boundaries are not established here.',1001),
+(6,5,'Fort Hood and Fort Polk','Served with the 1st Armored Division in 1970-1971 and later with the 5th Infantry Division. Exact transition dates remain unverified.',1006),
+(6,6,'Gulf War service','Served with the 1st Armored Division in Germany and deployed for Desert Shield and Desert Storm in 1990-1991.',1006),
+(6,7,'Gulf War service','Served with the 1st Armored Division in Germany and deployed for Desert Shield and Desert Storm in 1990-1991.',1006),
+(7,1,'24th and 3d Infantry Divisions','The regimental history records service with the 24th Infantry Division from December 1987 and the 3d Infantry Division from February 1996. Earlier and later boundaries remain incomplete.',1007),
+(7,4,'Germany and the Gulf War','Served with the 3d Infantry Division in Germany. Its brigade fought attached to the 1st Armored Division in the Gulf War; the attachment is distinct from its formal assignment.',1007),
+(8,3,'Vietnam service','The regimental history documents this battalion in Vietnam with the 4th Infantry Division. A complete sequence of battalion assignment dates is not established here.',1008),
+(8,4,'Germany and Kuwait','Served with the 8th Infantry Division in Germany and deployed to Kuwait in 1991. The regiment history also describes its later move to Fort Lewis.',1008),
+(9,3,'Panama','Participated in Operation Just Cause in 1989-1990 with the 7th Infantry Division. Exact assignment boundaries remain incomplete.',1009),
+(9,4,'Earlier service: Alaska, Vietnam and Southwest Asia','Before the dated Fort Carson row, the battalion served in Alaska, fought with the 25th Infantry Division in Vietnam, and deployed to Iraq and Afghanistan. The secondary history also identifies element deployments to Afghanistan in 2018-2019 and Iraq/Syria in 2021-2022.',1009),
+(9,5,'Alaska','The regimental history records activation with the 6th Infantry Division in 1986 and reflagging in 1994. Exact day-level boundaries remain unverified.',1009),
+(12,3,'Vietnam, Germany and Bosnia','Served in Vietnam with the 4th Infantry Division. Later service included the 1st Armored Division and Bosnia before inactivation in Germany in 1997.',1012),
+(12,4,'Vietnam and Bosnia','Served in Vietnam with the 199th Light Infantry Brigade. Later served with the 8th Infantry and 1st Armored Divisions and deployed to Bosnia before inactivation in 1997.',1012),
+(12,5,'Vietnam','Deployed with the 199th Light Infantry Brigade and was inactivated after returning to Fort Benning in October 1970.',1012),
+(13,2,'Basic Combat Training','Fort Jackson identifies the battalion as a Basic Combat Training unit under the 193d Infantry Brigade. Exact boundaries between its earlier divisional service and training role remain incomplete here.',214),
+(14,5,'Hawaii','Served with the 25th Infantry Division at Schofield Barracks from December 1986 to August 1995. Month-level dates are not expanded into exact assignment bars.',1014),
+(15,2,'Germany','Served with the 3d Infantry Division; the regimental history records inactivation in 1996. Exact start and end boundaries remain incomplete.',1015),
+(15,4,'Fort Knox','The association records service with the 194th Armored Brigade beginning in 1987, followed by battalion inactivation in 1990-1991. Two companies continued until 1995.',211),
+(15,5,'Schweinfurt','The association records activation on 16 June 1989 and reflagging as the 1st Battalion on 14 June 1991. This note does not infer a division assignment from the garrison alone.',211),
+(16,3,'Army Reserve service','Served with the 94th Infantry Division from May 1959 to January 1963, then the separate 187th Infantry Brigade. The association records inactivation on 15 April 1994.',207),
+(16,4,'Germany','Activated in February 1983, served with the 1st Infantry Division (Forward) at Goppingen, and was inactivated on 16 July 1991.',207),
+(16,5,'Fort Riley','Activated in February 1983, served with the 1st Infantry Division at Fort Riley, and was inactivated on 16 July 1991.',207),
+(18,4,'Berlin and 3d Armored Division','Activated with the Berlin Brigade on 1 September 1963. A later activation on 16 June 1989 assigned it to the 3d Armored Division; the association records inactivation in 1991.',208),
+(18,5,'3d Armored Division','Activated and assigned to the 3d Armored Division in Germany on 16 June 1989. The cited lineage does not establish its subsequent end date.',209),
+(20,1,'Vietnam','Served with the 11th Infantry Brigade in Vietnam, later part of the Americal Division. Complete day-level assignment boundaries are not established here.',1020),
+(20,4,'Panama','Served with the 193d Infantry Brigade in Panama. The separate brigade was not an infantry division.',1020),
+(21,2,'Hawaii and Germany','The regimental history describes the 2d Battle Group with the 25th Infantry Division, later the 2d Battalion with the 24th Infantry Division, and inactivation in April 1970.',1021),
+(21,4,'Vietnam and Panama','Deployed to Vietnam in 1968 with the 196th Infantry Brigade; assigned to the Americal Division in February 1969. Later participated in Operation Just Cause with the 7th Infantry Division in 1989.',210),
+(21,5,'Panama','Participated in Operation Just Cause in 1989 with the 7th Infantry Division, including an air assault at Coclecito.',210),
+(23,5,'Alaska','The regimental history records activation on 14 January 1966 with the 172d Infantry Brigade. A complete assignment sequence is not established here.',1023),
+(27,3,'Central America','The regimental history identifies deployments with the 7th Infantry Division to Honduras in 1988 and Panama in 1989.',1027),
+(27,4,'Gulf War elements','Served with the 25th Infantry Division in Hawaii. Elements deployed for Desert Storm and performed security duties; this was not a deployment of the entire division.',1027),
+]

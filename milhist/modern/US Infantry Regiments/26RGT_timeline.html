@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A division-assignment timeline for the 26th Infantry Regiment and its successor units, from 1916 through September 2026.">
+<title>26th Infantry · Division Timeline</title>
+<link rel="stylesheet" href="regiment-timeline.css">
+<script src="regiment-timeline.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to timeline</a>
+<div class="site-shell">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../../index.html">Home</a> / <a href="../modern.html">Modern Era</a> / <a href="26RGT.html">26th Infantry</a> / <span aria-current="page">Division timeline</span></nav>
+<header class="timeline-hero">
+  <div><p class="eyebrow">Format preview · Blue Spaders</p><h1>26th Infantry Regiment</h1><p class="hero-subtitle">A century of division assignments</p><p class="hero-text">1916 to present · Regimental service, battle groups, and battalions.</p></div>
+  <figure class="regiment-mark"><img src="images/BLU%20USA%2026%20IN%20RGT.png" alt="26th Infantry Regiment unit graphic"><figcaption>26th Infantry · Blue Spaders</figcaption></figure>
+</header>
+<main id="main">
+<section class="summary-grid" aria-label="Timeline summary">
+<div class="summary-card"><span class="summary-label">First recorded division</span><strong>1st Expeditionary Division</strong><span>8 June 1917 · Later the 1st Infantry Division</span></div>
+<div class="summary-card"><span class="summary-label">Current · 1st Battalion</span><strong>101st Airborne Division</strong><span>2nd Mobile Brigade Combat Team · Fort Campbell</span></div>
+<div class="summary-card"><span class="summary-label">Research cutoff</span><strong>8 September 2026</strong><span>Current unit directory checked on this date</span></div>
+</section>
+<section class="reading-note"><h2>One regiment, separate assignments</h2><p>The regiment held the division assignment until <strong>15 February 1957</strong>. After conversion to a parent regiment under the Combat Arms Regimental System, its battle groups and battalions held their own assignments. The rows below separate those histories. A deployment or temporary attachment does not, by itself, change the assigned division.</p><p>Earlier regimental battalions are covered by the common regimental row. Post-1957 rows follow the CMH lineages of the 1st and 2d Battalions, derived from Companies A and B; they are not a claim that the old battalion organizations continued unchanged.</p></section>
+<section class="panel" aria-labelledby="patch-title"><h2 id="patch-title">Division patches</h2><div class="patch-grid"><a class="patch-key" href="#period-2"><img src="images/division-patches/1st-infantry.svg" alt="" width="64" height="88"><strong>1st Infantry Division</strong></a><a class="patch-key" href="#period-4"><img src="images/division-patches/8th-infantry.svg" alt="" width="64" height="88"><strong>8th Infantry Division</strong></a><a class="patch-key" href="#period-5"><img src="images/division-patches/2d-infantry.svg" alt="" width="64" height="88"><strong>2d Infantry Division</strong></a><a class="patch-key" href="#period-13"><img src="images/division-patches/101st-airborne.svg" alt="" width="64" height="88"><strong>101st Airborne Division</strong></a></div><p class="chart-help">Patches identify the divisions represented in the timeline. Artwork is representative; the exact pattern was not necessarily worn throughout every period.</p></section>
+<section class="overview panel" id="overview" hidden aria-labelledby="overview-title">
+<div class="section-heading"><div><p class="eyebrow">At a glance</p><h2 id="overview-title">Assignments across time</h2></div><p>Bar widths follow elapsed time.</p></div>
+<p class="chart-help" id="chart-help">Scroll horizontally on a small screen. Select a segment to open its dated entry. Diamond markers open deployments; their positions indicate the labeled year, not an exact start date or duration. Short assignments are easier to inspect in the list below.</p>
+<div class="chart-scroll" tabindex="0" role="region" aria-label="Scrollable assignment overview" aria-describedby="chart-help"><div class="timeline-chart" id="timeline-chart"></div></div>
+<ul class="legend" aria-label="Timeline key">
+<li><span class="swatch first"></span>1st Infantry</li><li><span class="swatch eighth"></span>8th Infantry</li><li><span class="swatch second"></span>2d Infantry</li><li><span class="swatch airborne"></span>101st Airborne</li><li><span class="swatch training"></span>Training · no division</li><li><span class="swatch inactive"></span>Inactive</li><li><span class="swatch unknown"></span>Unverified / last reported</li>
+</ul>
+</section>
+<section class="date-explorer panel" id="date-explorer" hidden aria-labelledby="date-title">
+<div><p class="eyebrow">Explore a date</p><h2 id="date-title">Who were they with?</h2><p>Look up dated regimental, 1st and 2d Battalion assignments. The 3d and 4th Battalion notes have incomplete dates and are excluded from this lookup.</p></div>
+<div class="date-control"><label for="assignment-date">Date between 1916 and the research cutoff</label><input id="assignment-date" type="date" min="1916-01-01" max="2026-09-08" value="2026-09-08"><button id="latest-date" type="button">Latest verified date</button></div>
+<div id="date-results" class="date-results" aria-live="polite" aria-atomic="true"></div>
+</section>
+<section class="chronology" aria-labelledby="chronology-title">
+<div class="section-heading"><div><p class="eyebrow">The dated record</p><h2 id="chronology-title">Division timeline</h2></div><a href="26RGT_battalions.html">Battalion overview →</a></div>
+<div class="timeline-controls" id="timeline-controls" hidden>
+<label for="unit-filter">Follow a unit</label>
+<select id="unit-filter"><option value="one">Regiment → 1st Battalion</option><option value="two">Regiment → 2d Battalion</option><option value="three">3d Battalion - documented service</option><option value="four">4th Battalion - documented service</option><option value="all">All documented elements</option></select>
+<p id="filter-status" role="status"></p>
+</div>
+<p class="deployment-intro">Deployments and overseas operations appear inside their division-assignment cards. Dates retain the precision of each source; some entries document only part of a tour or a company-sized element. This is a sourced selection, not a complete movement log. The date lookup above continues to show division assignments.</p>
+<p class="date-convention">Each dated assignment ends when the next begins. “Present” means the research cutoff above. Inactive periods and uncertain dates remain visible.</p>
+<ol class="period-list" id="period-list">
+<li class="period unknown" id="period-1" data-unit="reg" data-start="1916-01-01" data-end="1917-06-08" data-kind="unknown">
+  <div class="period-date">1916 – 8 Jun 1917</div>
+  <article class="period-card">
+    <p class="unit-label">26th Infantry Regiment</p>
+    <h3>Division not established</h3>
+    <p class="period-note">The cited lineage’s first division assignment begins in June 1917. The preceding period remains unverified here.</p>
+    <p class="period-sources"><a href="#source-reg">CMH</a></p>
+  </article>
+</li>
+<li class="period first" id="period-2" data-unit="reg" data-start="1917-06-08" data-end="1957-02-15" data-kind="first">
+  <div class="period-date">8 Jun 1917 – 15 Feb 1957</div>
+  <article class="period-card">
+    <p class="unit-label">26th Infantry Regiment</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Initially the 1st Expeditionary Division; later the 1st Division and 1st Infantry Division. One continuous assignment across the world wars.</p>
+    <p class="period-sources"><a href="#source-reg">CMH</a></p>
+<section class="deployments" aria-label="Deployments during this assignment"><h4>Deployments &amp; overseas operations</h4><ol class="deployment-list">
+<li class="deployment" id="deployment-1" data-year="1917"><p class="deployment-date">1917-1919</p><h5>France and occupation duty</h5><p class="deployment-unit">Regiment (wartime battalions) &middot; World War I</p><p>Served in France with the 1st Division, followed by occupation duty in Germany. Years summarize overseas service.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+<li class="deployment" id="deployment-2" data-year="1942"><p class="deployment-date">1942-1945</p><h5>North Africa, Sicily and Northwest Europe</h5><p class="deployment-unit">Regiment (wartime battalions) &middot; World War II</p><p>Served in North Africa, Sicily, France, Belgium and Germany with the 1st Infantry Division. Postwar occupation duty followed.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+</ol></section>
+  </article>
+</li>
+<li class="period first" id="period-3" data-unit="one" data-start="1957-02-15" data-end="1959-04-14" data-kind="first">
+  <div class="period-date">15 Feb 1957 – 14 Apr 1959</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battle Group</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Company A’s lineage becomes the 1st Battle Group; the parent regiment leaves the divisional structure.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a> · <a href="#source-reg">CMH</a></p>
+  </article>
+</li>
+<li class="period inactive" id="period-14" data-unit="two" data-start="1957-02-15" data-end="1963-02-01" data-kind="inactive">
+  <div class="period-date">15 Feb 1957 – 1 Feb 1963</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battle Group lineage</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Company B’s lineage becomes the inactive 2d Battle Group headquarters.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a></p>
+  </article>
+</li>
+<li class="period eighth" id="period-4" data-unit="one" data-start="1959-04-14" data-end="1962-10-24" data-kind="eighth">
+  <div class="period-date">14 Apr 1959 – 24 Oct 1962</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battle Group</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/8th-infantry.svg" alt="" width="56" height="76"><h3>8th Infantry Division</h3></div>
+    <p class="period-note">Reassigned from the 1st Infantry Division.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period second" id="period-5" data-unit="one" data-start="1962-10-24" data-end="1963-02-15" data-kind="second">
+  <div class="period-date">24 Oct 1962 – 15 Feb 1963</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battle Group</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/2d-infantry.svg" alt="" width="56" height="76"><h3>2d Infantry Division</h3></div>
+    <p class="period-note">A brief assignment before returning to the Big Red One.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period first" id="period-15" data-unit="two" data-start="1963-02-01" data-end="1964-01-13" data-kind="first">
+  <div class="period-date">1 Feb 1963 – 13 Jan 1964</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battle Group</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Activated at Fort Riley. Its assignment overlaps the 1st Battle Group’s brief service with the 2d Division.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a></p>
+  </article>
+</li>
+<li class="period first" id="period-6" data-unit="one" data-start="1963-02-15" data-end="1983-02-24" data-kind="first">
+  <div class="period-date">15 Feb 1963 – 24 Feb 1983</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battle Group → 1st Battalion</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Redesignated as the 1st Battalion on 13 January 1964; division unchanged.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+<section class="deployments" aria-label="Deployments during this assignment"><h4>Deployments &amp; overseas operations</h4><ol class="deployment-list">
+<li class="deployment" id="deployment-3" data-year="1965"><p class="deployment-date">1965-1970</p><h5>South Vietnam</h5><p class="deployment-unit">1st Battalion &middot; Vietnam War</p><p>Combat service with the 1st Infantry Division; the battalion subsequently returned to Germany.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+</ol></section>
+  </article>
+</li>
+<li class="period inactive" id="period-16" data-unit="two" data-start="1964-01-13" data-end="1987-04-03" data-kind="inactive">
+  <div class="period-date">13 Jan 1964 – 3 Apr 1987</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battle Group lineage</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Inactivated and released from the 1st Infantry Division.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a></p>
+  </article>
+</li>
+<li class="period inactive" id="period-7" data-unit="one" data-start="1983-02-24" data-end="1987-04-03" data-kind="inactive">
+  <div class="period-date">24 Feb 1983 – 3 Apr 1987</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Inactivated in Germany and released from divisional assignment.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period training" id="period-8" data-unit="one" data-start="1987-04-03" data-end="1996-01-15" data-kind="training">
+  <div class="period-date">3 Apr 1987 – 15 Jan 1996</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion headquarters</p>
+    <h3>TRADOC · No division</h3>
+    <p class="period-note">Activated for training at Fort Dix; later inactivated at Fort Jackson.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period training" id="period-17" data-unit="two" data-start="1987-04-03" data-end="1990-07-18" data-kind="training">
+  <div class="period-date">3 Apr 1987 – 18 Jul 1990</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battalion headquarters</p>
+    <h3>TRADOC · No division</h3>
+    <p class="period-note">Redesignated and activated at Fort Dix for training.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a></p>
+  </article>
+</li>
+<li class="period inactive" id="period-18" data-unit="two" data-start="1990-07-18" data-end="2007-04-16" data-kind="inactive">
+  <div class="period-date">18 Jul 1990 – 16 Apr 2007</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battalion</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Inactivated at Fort Dix; no division assignment in this interval.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a></p>
+  </article>
+</li>
+<li class="period inactive" id="period-9" data-unit="one" data-start="1996-01-15" data-end="1996-02-16" data-kind="inactive">
+  <div class="period-date">15 Jan – 16 Feb 1996</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Between training service and divisional reactivation.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period first" id="period-10" data-unit="one" data-start="1996-02-16" data-end="2008-03-16" data-kind="first">
+  <div class="period-date">16 Feb 1996 – 16 Mar 2008</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Reactivated in Germany.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+<section class="deployments" aria-label="Deployments during this assignment"><h4>Deployments &amp; overseas operations</h4><ol class="deployment-list">
+<li class="deployment" id="deployment-4" data-year="1996"><p class="deployment-date">Feb-Sep 1996; Oct 1996-Apr 1997</p><h5>Bosnia and Herzegovina</h5><p class="deployment-unit">Company D, then 1st Battalion &middot; Balkan peacekeeping</p><p>Company D deployed first; the battalion followed in October. The two tours are distinguished here.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+<li class="deployment" id="deployment-5" data-year="1998"><p class="deployment-date">Mar-Sep 1998</p><h5>Macedonia (now North Macedonia)</h5><p class="deployment-unit">1st Battalion &middot; Balkan peacekeeping</p><p>A separate Balkan deployment before the Kosovo mission.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+<li class="deployment" id="deployment-6" data-year="1999"><p class="deployment-date">1999</p><h5>Kosovo</h5><p class="deployment-unit">Task Force 1-26 Infantry &middot; Operation Joint Guardian</p><p>Served with Task Force Falcon during the initial Kosovo peacekeeping deployment. The CMH account identifies the battalion in the June task organization. This year marker does not specify its full tour dates.</p><a href="https://history.army.mil/Portals/143/Images/Publications/Publication%20By%20Title%20Images/O%20titles%20PDF/cmhPub_70-109-1.pdf">CMH: Operation Joint Guardian (PDF)</a></li>
+<li class="deployment" id="deployment-7" data-year="2004"><p class="deployment-date">2004-2005</p><h5>Iraq</h5><p class="deployment-unit">1st Battalion &middot; Operation Iraqi Freedom</p><p>Deployed with the 1st Infantry Division; operated in Samarra.</p><a href="https://bluespader.org/history/">26th Infantry Regiment Association</a></li>
+<li class="deployment" id="deployment-8" data-year="2006"><p class="deployment-date">2006-2007</p><h5>Iraq</h5><p class="deployment-unit">1st Battalion and attached elements &middot; Operation Iraqi Freedom</p><p>Returned to Iraq, including operations in Baghdad. Companies could serve under different task forces.</p><a href="https://bluespader.org/history/">26th Infantry Regiment Association</a></li>
+</ol></section>
+  </article>
+</li>
+<li class="period first" id="period-19" data-unit="two" data-start="2007-04-16" data-end="2008-03-01" data-kind="first">
+  <div class="period-date">16 Apr 2007 – March 2008</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battalion · 3d Brigade Combat Team</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Activated at Fort Hood. The following inactivation is documented to the month, not an exact day.</p>
+    <p class="period-sources"><a href="#source-two">CMH</a> · <a href="#source-two2008">GlobalSecurity (secondary)</a></p>
+  </article>
+</li>
+<li class="period unknown" id="period-20" data-unit="two" data-start="2008-03-01" data-end="2008-04-01" data-kind="unknown">
+  <div class="period-date">March 2008 · exact day unverified</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battalion</p>
+    <h3>Inactivation transition</h3>
+    <p class="period-note">Inactivated during March; personnel reflagged as 1st Battalion. This entire month is marked uncertain in the date lookup.</p>
+    <p class="period-sources"><a href="#source-two2008">GlobalSecurity (secondary)</a></p>
+  </article>
+</li>
+<li class="period first" id="period-11" data-unit="one" data-start="2008-03-16" data-end="2014-07-15" data-kind="first">
+  <div class="period-date">16 Mar 2008 – 15 Jul 2014</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion · 3d Brigade Combat Team</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><h3>1st Infantry Division</h3></div>
+    <p class="period-note">Formal assignment shifts to the brigade combat team; division affiliation remains the same.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+<section class="deployments" aria-label="Deployments during this assignment"><h4>Deployments &amp; overseas operations</h4><ol class="deployment-list">
+<li class="deployment" id="deployment-9" data-year="2008"><p class="deployment-date">Jul 2008-Jul 2009</p><h5>Kunar Province, Afghanistan</h5><p class="deployment-unit">1st Battalion &middot; Operation Enduring Freedom</p><p>Served from dispersed outposts in eastern Afghanistan, then returned to Fort Hood.</p><a href="https://en.wikipedia.org/wiki/26th_Infantry_Regiment_(United_States)">Regimental history (secondary)</a></li>
+<li class="deployment" id="deployment-10" data-year="2010"><p class="deployment-date">Deployment began Dec 2010; operations in 2011</p><h5>Khost Province, Afghanistan</h5><p class="deployment-unit">1st Battalion &middot; Operation Enduring Freedom</p><p>The former battalion commander describes the December departure and movement to remote combat outposts in January 2011. The marker records the departure year; no return date is inferred.</p><a href="https://bluespader.org/blue-spaders-2010-2012-afghanistan-deployment-history/">LTC Jesse Pearson: deployment account</a></li>
+<li class="deployment" id="deployment-11" data-year="2013"><p class="deployment-date">2013-2014</p><h5>Afghanistan</h5><p class="deployment-unit">1st Battalion &middot; Operation Enduring Freedom</p><p>An Army biography records the battalion deployment under LTC Daniel Jacobs. Company C also has a separate July 2013-February 2014 Afghanistan unit-award period in its CMH lineage; award dates are not assumed to define the entire battalion tour.</p><a href="https://media-cdn.dvidshub.net/pubs/pdf_38235.pdf">U.S. Army Benelux newsletter, 7 July 2017 (PDF)</a></li>
+</ol></section>
+  </article>
+</li>
+<li class="period reported" id="period-21" data-unit="two" data-start="2008-04-01" data-end="2026-09-09" data-kind="reported">
+  <div class="period-date">After March 2008 – present review</div>
+  <article class="period-card">
+    <p class="unit-label">2d Battalion</p>
+    <h3>Last reported inactive</h3>
+    <p class="period-note">The 2011 history reports the 2008 inactivation. No later reactivation is established by the sources used here; this is not a current lineage certification.</p>
+    <p class="period-sources"><a href="#source-two2008">GlobalSecurity (secondary)</a></p>
+  </article>
+</li>
+<li class="period inactive" id="period-12" data-unit="one" data-start="2014-07-15" data-end="2015-04-16" data-kind="inactive">
+  <div class="period-date">15 Jul 2014 – 16 Apr 2015</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion</p>
+    <h3>Inactive</h3>
+    <p class="period-note">Inactivated at Fort Knox before reactivation at Fort Campbell.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a></p>
+  </article>
+</li>
+<li class="period airborne" id="period-13" data-unit="one" data-start="2015-04-16" data-end="2026-09-09" data-kind="airborne">
+  <div class="period-date">16 Apr 2015 – present</div>
+  <article class="period-card">
+    <p class="unit-label">1st Battalion · 2d Brigade Combat Team</p>
+    <div class="division-heading"><img class="division-patch" src="images/division-patches/101st-airborne.svg" alt="" width="56" height="76"><h3>101st Airborne Division</h3></div>
+    <p class="period-note">Current brigade title: 2nd Mobile Brigade Combat Team, “Strike.” Fort Campbell, Kentucky; checked 8 September 2026.</p>
+    <p class="period-sources"><a href="#source-one">CMH</a> · <a href="#source-now">Fort Campbell</a></p>
+<section class="deployments" aria-label="Deployments during this assignment"><h4>Deployments &amp; overseas operations</h4><ol class="deployment-list">
+<li class="deployment" id="deployment-12" data-year="2016"><p class="deployment-date">2016-2017 rotation; reported Aug 2016</p><h5>Baghdad, Iraq</h5><p class="deployment-unit">1st Battalion elements &middot; Operation Inherent Resolve</p><p>Army reporting identifies Blue Spader advisers at Baghdad Operations Command. The brigade rotation ran from May 2016 to January 2017; this does not imply every battalion element deployed for that entire period.</p><a href="https://www.army.mil/article/173700/blue_spaders_advise_assist_at_baghdad_operations_command">U.S. Army: Blue Spaders advise and assist</a></li>
+<li class="deployment" id="deployment-13" data-year="2019"><p class="deployment-date">2019; documented 16 Sep</p><h5>Yavoriv, Ukraine</h5><p class="deployment-unit">Company D / 1st Battalion elements &middot; Training mission - Rapid Trident</p><p>Army imagery documents Company D in the multinational exercise at Combat Training Center-Yavoriv. This is a training mission before the 2022 invasion, not a combat deployment.</p><a href="https://www.dvidshub.net/image/5764473/d-1-26-live-fire-exercise">DVIDS: Company D in Ukraine</a></li>
+<li class="deployment" id="deployment-14" data-year="2023"><p class="deployment-date">Documented 16 Jan 2023</p><h5>Romania</h5><p class="deployment-unit">1st Battalion elements &middot; NATO reassurance and deterrence</p><p>Army reporting confirms the battalion in Romania supporting NATO allies. The source establishes presence during the rotation, not its complete departure and return dates.</p><a href="https://www.dvidshub.net/news/436986/upgrading-raven-technology">DVIDS: Upgrading Raven Technology</a></li>
+<li class="deployment" id="deployment-15" data-year="2025"><p class="deployment-date">Documented 10 Aug 2025</p><h5>Novo Selo, Bulgaria</h5><p class="deployment-unit">1st Battalion elements &middot; Overseas training</p><p>Army imagery documents a live-fire exercise in Bulgaria. The date marks documented overseas activity; the full rotation dates are not established here.</p><a href="https://www.dvidshub.net/image/9256928/1st-battalion-26th-infantry-regiment-conducts-live-fire-exercise-bulgaria">DVIDS: live-fire exercise in Bulgaria</a></li>
+</ol></section>
+  </article>
+</li>
+</ol>
+<div class="battalion-evidence panel" id="battalion-three" data-unit="three">
+<p class="eyebrow">Additional battalion - partial record</p><h3>3d Battalion, 26th Infantry</h3>
+<div class="division-heading"><img class="division-patch" src="images/division-patches/1st-infantry.svg" alt="" width="56" height="76"><strong>1st Infantry Division - World War II</strong></div>
+<p>The battalion's journal documents service with the 1st Infantry Division, including preparations in England and operations in Normandy in April-June 1944. This is service within the wartime regiment, whose division assignment appears in the common regimental row.</p>
+<p><strong>Dates incomplete:</strong> the journal establishes this wartime service, not the battalion's complete activation history or its later division assignments. No continuous post-1957 span is inferred.</p>
+<p><a href="#source-three">Read the battalion journal →</a></p>
+</div>
+<div class="battalion-evidence panel" id="battalion-four" data-unit="four">
+<p class="eyebrow">Additional battalion - partial record</p><h3>4th Battalion, 26th Infantry</h3>
+<p><strong>Fort Dix, New Jersey - division unverified</strong></p>
+<p>An Army-published biography of Colonel Walter Piatt records his command of Company A, 4th Battalion, 26th Infantry Regiment, at Fort Dix. This confirms another battalion beyond the three previously listed.</p>
+<p><strong>Dates incomplete:</strong> the biography does not give the battalion's activation, inactivation, or division-assignment dates. This entry therefore has no proportional time bar or division patch.</p>
+<p><a href="#source-four">Read the Army biography →</a></p>
+</div>
+<noscript><p>The complete dated record is shown above. Enable JavaScript to use the overview, unit filter, and date lookup.</p></noscript>
+</section>
+<section class="research panel" aria-labelledby="research-title"><h2 id="research-title">Scope and source notes</h2>
+<ul>
+<li><strong>1916–1917:</strong> the CMH lineage establishes the 8 June 1917 assignment. A preceding division assignment has not been established here; the opening interval is unverified, not asserted to be independent service.</li>
+<li><strong>Other battalions:</strong> the 3d and 4th Battalions have separate service notes. Their complete assignment dates remain unverified, so they have no continuous bars and are excluded from the date lookup.</li>
+<li><strong>Training service:</strong> TRADOC is a command, not a division. Headquarters activations for training are labeled accordingly.</li>
+<li><strong>2008:</strong> the CMH record gives 16 March for the 1st Battalion’s brigade assignment. The secondary account gives only March for the 2d Battalion’s inactivation; the chart marks that month as uncertain.</li>
+<li><strong>2015:</strong> use the official lineage’s effective date, 16 April, for the 101st assignment. An activation ceremony can occur on a different date.</li>
+<li><strong>Current affiliation:</strong> the Fort Campbell directory lists 1st Battalion, 26th Infantry under the 2nd Mobile Brigade Combat Team. Historical entries retain the brigade title used in their source.</li>
+</ul>
+<h3>Sources</h3><ol class="sources"><li id="source-reg"><a href="https://history.army.mil/Portals/143/LineageAndHonorsDocuments/InfantryIncludingRangers/26th%20Infantry%20Regiment.pdf?ver=Q5iXKhX6aKVwsJf7MM9s-Q%3D%3D">CMH: 26th Infantry Regiment lineage</a> (PDF)</li>
+<li id="source-one"><a href="https://history.army.mil/Portals/143/LineageAndHonorsDocuments/InfantryIncludingRangers/1st%20Battalion%2026th%20Infantry%20Regiment.pdf?ver=K1epCsLz-xPsbvRRt8jERA%3D%3D">CMH: 1st Battalion lineage (25 April 2015)</a> (PDF)</li>
+<li id="source-two"><a href="https://history.army.mil/Portals/143/LineageAndHonorsDocuments/InfantryIncludingRangers/2d%20Battalion%2026th%20Infantry%20Regiment.pdf?ver=aTh5gweYNzOYfcUJho20lw%3D%3D">CMH: 2d Battalion lineage (15 May 2007)</a> (PDF)</li>
+<li id="source-now"><a href="https://home.army.mil/campbell/101st/2ndbct">Fort Campbell: 2nd Mobile Brigade Combat Team directory</a></li>
+<li id="source-two2008"><a href="https://www.globalsecurity.org/military/agency/army/2-26inf.htm">GlobalSecurity: 2nd Battalion history</a> · Secondary history, last modified in 2011; used for the March 2008 transition.</li><li id="source-three"><a href="https://historicaltextarchive.org/books/22/chapter/7">Journal for the 3rd Battalion, 26th Infantry, 1st Infantry Division: April-June 1944</a> - Compiled by John D. Stromer and Paul W. Lunnie; hosted by Historical Text Archive.</li><li id="source-four"><a href="https://www.benning.army.mil/Infantry/Magazine/issues/2012/APR-AUG/pdfs/APR-AUG12.pdf#page=29">U.S. Army Infantry magazine, April-August 2012</a> - Colonel Walter Piatt's biography, printed page 27 (PDF).</li></ol>
+<h3>Deployment sources</h3><p>Each deployment links directly to its source. Early service and some tour dates use a secondary regimental history; official Army histories, reporting, and the former battalion commander’s account provide additional evidence. No deployments are inferred for the later 2d, 3d, or 4th Battalion from the 1st Battalion’s service. <a href="https://home.army.mil/campbell/index.php/units/history">Fort Campbell’s brigade history</a> supplies the May 2016-January 2017 brigade rotation context.</p>
+<h3>Patch artwork</h3><p>Local copies of artwork from Wikimedia Commons; original file pages provide authorship and public-domain notices.</p><ul class="sources"><li><a href="https://commons.wikimedia.org/wiki/File:1st_Infantry_Division_SSI_(1918-2015).svg">1st Infantry Division - artwork and credits</a></li><li><a href="https://commons.wikimedia.org/wiki/File:8th_Infantry_Division_patch.svg">8th Infantry Division - artwork and credits</a></li><li><a href="https://commons.wikimedia.org/wiki/File:2nd_Infantry_Division_SSI_(full_color).svg">2d Infantry Division - artwork and credits</a></li><li><a href="https://commons.wikimedia.org/wiki/File:US_101st_Airborne_Division_patch.svg">101st Airborne Division - artwork and credits</a></li></ul>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-panel"><p class="footer-title">26th Infantry · Timeline format preview</p><p><a href="26RGT.html">Regimental history</a> · <a href="26RGT_battalions.html">Battalions</a> · <a href="rgt_index.html">Infantry Regiment Index</a></p><p>Maintained by AGIH · <a href="mailto:atomicgihank@gmail.com">Submit a correction</a></p></div><nav aria-label="Timeline series"><a href="25RGT_timeline.html">← 25th Infantry</a> · <a href="infantry_timelines.html">All 200 timeline pages</a> · <a href="27RGT_timeline.html">27th Infantry →</a></nav></footer>
+</div>
+</body>
+</html>
+
