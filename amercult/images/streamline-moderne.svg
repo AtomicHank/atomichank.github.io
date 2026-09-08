@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title">
+  <title id="title">Streamline Moderne — schematic illustration</title>
+  <rect width="800" height="400" fill="#102a3a"/>
+  <circle cx="650" cy="60" r="200" fill="#183847"/>
+  <path d="M80 345H720" stroke="#345364" stroke-width="2"/>
+  <path d="M165 335V145H545Q645 145 645 235V335Z" fill="#dfc89a"/>
+  <path d="M250 145V90H485Q535 90 535 145" fill="#dfc89a"/>
+  <path d="M165 170H545Q620 170 620 235M165 275H640M165 290H640" fill="none" stroke="#c67351" stroke-width="8"/>
+  <path d="M190 195H535Q585 195 585 235V250H190Z" fill="#274d5e"/>
+  <path d="M270 195V250M350 195V250M430 195V250M510 195V250" stroke="#dfc89a" stroke-width="6"/>
+  <path d="M240 335V305H300V335" fill="#274d5e"/>
+  <g fill="#6aabb4" stroke="#274d5e" stroke-width="5"><circle cx="295" cy="120" r="12"/><circle cx="355" cy="120" r="12"/><circle cx="415" cy="120" r="12"/></g>
+</svg>

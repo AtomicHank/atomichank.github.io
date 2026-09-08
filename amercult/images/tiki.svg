@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title">
+  <title id="title">Tiki Style — schematic illustration</title>
+  <rect width="800" height="400" fill="#102a3a"/>
+  <circle cx="650" cy="60" r="200" fill="#183847"/>
+  <path d="M80 345H720" stroke="#345364" stroke-width="2"/>
+  <path d="M230 220H575V335H230Z" fill="#a98960"/>
+  <path d="M200 235L400 65L610 235L490 215L400 115L310 215Z" fill="#c67351"/>
+  <path d="M290 335L400 110L515 335M365 105L410 65" fill="none" stroke="#dfc89a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M365 335V245H435V335" fill="#274d5e"/>
+  <path d="M245 245V310M270 245V310M540 245V310M565 245V310" stroke="#dfc89a" stroke-width="6"/>
+  <path d="M140 335Q170 230 145 165M665 335Q635 250 660 180" fill="none" stroke="#a98960" stroke-width="12"/>
+  <path d="M145 165Q80 110 70 190Q100 155 145 165Q130 90 190 105Q160 130 145 165Q215 125 220 185Q185 158 145 165M660 180Q605 120 590 190Q625 160 660 180Q660 100 710 130Q675 140 660 180Q715 155 740 205Q695 180 660 180" fill="#849373"/>
+</svg>
