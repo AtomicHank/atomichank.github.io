@@ -1,0 +1,28 @@
+/* Site presentation only; model geometry and camera controls are unchanged. */
+:root { --ink:#d7dee2; --muted:#afbdc5; --paper:#07141f; --line:#344956; --gold:#ffd478; --green:#ffd478; }
+body { font-family:"Segoe UI",sans-serif; }
+aside { background:#102331; }
+header { background:linear-gradient(135deg,#07141f,#193548); }
+.eyebrow,h2 { color:#ffd478; }
+.badge { background:#243b48; color:#d7dee2; }
+button { background:#193548; border-radius:9px; }
+button:hover { background:#2a495b; }
+button.active,button.active:hover { background:#ffd478; color:#07141f; }
+button:focus-visible,input:focus-visible { outline:3px solid #ffd478; outline-offset:3px; }
+.topbar,.bottom { color:#253432; --muted:#53665e; --ink:#253432; --line:#d9dcd2; }
+.group small { color:#afbdc5; }
+.error { color:#ffd478; }
+@media(max-width:620px) {
+ body { height:auto; min-height:100vh; flex-direction:column; overflow:auto; }
+ main { order:0; flex:none; height:430px; }
+ aside { order:1; width:100%; border-right:0; border-top:1px solid var(--line); }
+ aside header { display:none; }
+ .scroll { overflow:visible; padding:20px; }
+ .presets { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .presets button:last-child { grid-column:span 1; }
+ .presets button { font-size:12px; min-height:44px; }
+ .groups { grid-template-columns:1fr 1fr; gap:4px 12px; }
+ .group { font-size:12px; min-height:30px; }
+ .group small { display:none; }
+ footer { padding:15px 20px; }
+}
